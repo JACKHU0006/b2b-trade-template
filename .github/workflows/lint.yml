@@ -1,11 +1,13 @@
-name: Lint and Type Check
+name: Build Check
 
 on:
+  push:
+    branches: [main]
   pull_request:
     branches: [main]
 
 jobs:
-  lint:
+  build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -17,8 +19,8 @@ jobs:
 
       - run: npm ci
 
-      - name: Run ESLint
-        run: npm run lint || true
+      - name: Build Project
+        run: npm run build
 
-      - name: Check Types
+      - name: Type Check
         run: npx astro check || true
