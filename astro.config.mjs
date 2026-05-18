@@ -4,7 +4,7 @@ import sitemap from '@astrojs/sitemap';
 import cloudflare from '@astrojs/cloudflare';
 
 export default defineConfig({
-  site: 'https://b2b-trade-template.pages.dev',
+  site: 'https://fabletech.example.com',
   output: 'static',
   integrations: [sitemap()],
   vite: {
