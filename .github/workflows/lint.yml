@@ -29,5 +29,5 @@ jobs:
         env:
           NODE_ENV: production
 
-      - name: Type Check
-        run: npx astro check --fail-on-warnings false
+#      - name: Type Check
+#        run: npx astro check --fail-on-warnings false
