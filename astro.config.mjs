@@ -3,7 +3,7 @@ import tailwindcss from '@tailwindcss/vite';
 import sitemap from '@astrojs/sitemap';
 
 export default defineConfig({
-  site: 'https://fabletech.example.com',
+  site: 'https://www.fabletech.cc.cd',
   output: 'static',
   integrations: [sitemap()],
   vite: {
