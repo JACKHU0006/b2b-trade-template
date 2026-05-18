@@ -1,0 +1,118 @@
+---
+interface CookieBannerProps {
+  locale: string;
+}
+
+const { locale } = Astro.props;
+
+const messages = {
+  en: {
+    title: 'We value your privacy',
+    message: 'We use cookies to enhance your experience. By continuing to visit this site you agree to our use of cookies.',
+    accept: 'Accept All',
+    settings: 'Cookie Settings',
+    reject: 'Reject All',
+    learnMore: 'Learn More',
+  },
+  de: {
+    title: 'Wir schätzen Ihre Privatsphäre',
+    message: 'Wir verwenden Cookies, um Ihre Erfahrung zu verbessern. Wenn Sie diese Website weiterhin besuchen, stimmen Sie der Verwendung von Cookies zu.',
+    accept: 'Alle akzeptieren',
+    settings: 'Cookie-Einstellungen',
+    reject: 'Alle ablehnen',
+    learnMore: 'Mehr erfahren',
+  },
+  fr: {
+    title: 'Nous valorisons votre vie privée',
+    message: 'Nous utilisons des cookies pour améliorer votre expérience. En continuant à visiter ce site, vous acceptez notre utilisation des cookies.',
+    accept: 'Tout accepter',
+    settings: 'Paramètres des cookies',
+    reject: 'Tout rejeter',
+    learnMore: 'En savoir plus',
+  },
+  es: {
+    title: 'Valoramos su privacidad',
+    message: 'Utilizamos cookies para mejorar su experiencia. Al continuar visitando este sitio, acepta nuestro uso de cookies.',
+    accept: 'Aceptar todo',
+    settings: 'Configuración de cookies',
+    reject: 'Rechazar todo',
+    learnMore: 'Más información',
+  },
+  ar: {
+    title: 'نقدر خصوصيتك',
+    message: 'نستخدم ملفات الكوكيز لتحسين تجربتك. بمجرد الاستمرار في زيارة هذا الموقع، فأنت توافق على استخدامنا لملفات الكوكيز.',
+    accept: 'قبول الكل',
+    settings: 'إعدادات الكوكيز',
+    reject: 'رفض الكل',
+    learnMore: 'معرفة المزيد',
+  },
+};
+
+const content = messages[locale as keyof typeof messages] || messages.en;
+---
+
+<div id="cookie-banner" class="fixed bottom-0 left-0 right-0 bg-gray-900 text-white p-4 z-50 shadow-lg transform translate-y-full transition-transform duration-300">
+  <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+    <div class="flex-1">
+      <h3 class="font-semibold mb-1">{content.title}</h3>
+      <p class="text-sm text-gray-300">{content.message}</p>
+    </div>
+    <div class="flex flex-wrap items-center gap-2">
+      <a href="/cookies" class="text-sm text-gray-300 hover:text-white underline">
+        {content.learnMore}
+      </a>
+      <button
+        id="reject-cookies"
+        class="px-4 py-2 text-sm border border-gray-600 rounded hover:bg-gray-800 transition-colors"
+      >
+        {content.reject}
+      </button>
+      <button
+        id="cookie-settings"
+        class="px-4 py-2 text-sm border border-gray-600 rounded hover:bg-gray-800 transition-colors"
+      >
+        {content.settings}
+      </button>
+      <button
+        id="accept-cookies"
+        class="px-4 py-2 text-sm bg-primary text-white rounded hover:bg-primary/90 transition-colors"
+      >
+        {content.accept}
+      </button>
+    </div>
+  </div>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const banner = document.getElementById('cookie-banner');
+    const acceptBtn = document.getElementById('accept-cookies');
+    const rejectBtn = document.getElementById('reject-cookies');
+    const settingsBtn = document.getElementById('cookie-settings');
+
+    function showBanner() {
+      banner?.classList.remove('translate-y-full');
+    }
+
+    function hideBanner() {
+      banner?.classList.add('translate-y-full');
+    }
+
+    function setCookieConsent(consent: 'accepted' | 'rejected' | 'custom') {
+      localStorage.setItem('cookie_consent', consent);
+      localStorage.setItem('cookie_consent_date', new Date().toISOString());
+      hideBanner();
+    }
+
+    const consent = localStorage.getItem('cookie_consent');
+    if (!consent) {
+      setTimeout(showBanner, 1000);
+    }
+
+    acceptBtn?.addEventListener('click', () => setCookieConsent('accepted'));
+    rejectBtn?.addEventListener('click', () => setCookieConsent('rejected'));
+    settingsBtn?.addEventListener('click', () => {
+      window.location.href = '/cookies';
+    });
+  });
+</script>

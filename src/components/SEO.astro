@@ -1,0 +1,80 @@
+---
+interface SEOProps {
+  title: string;
+  description: string;
+  image?: string;
+  type?: 'website' | 'article';
+  publishedTime?: string;
+  modifiedTime?: string;
+  author?: string;
+  locale?: string;
+  alternateLocales?: string[];
+}
+
+const {
+  title,
+  description,
+  image = '/og-image.jpg',
+  type = 'website',
+  publishedTime,
+  modifiedTime,
+  author,
+  locale = 'en',
+  alternateLocales = ['en', 'de', 'fr', 'es', 'ar'],
+} = Astro.props;
+
+const siteUrl = import.meta.env.SITE_URL || 'https://fabletech.example.com';
+const canonicalUrl = new URL(Astro.url.pathname, siteUrl).href;
+const imageUrl = new URL(image, siteUrl).href;
+---
+
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content={description} />
+<meta name="author" content={author || 'FableTech Group'} />
+<link rel="canonical" href={canonicalUrl} />
+
+{alternateLocales.map((altLocale) => (
+  <link
+    rel="alternate"
+    hreflang={altLocale}
+    href={altLocale === 'en' ? canonicalUrl : `${siteUrl}/${altLocale}${Astro.url.pathname}`}
+  />
+))}
+<link rel="alternate" hreflang="x-default" href={canonicalUrl} />
+
+<meta property="og:type" content={type} />
+<meta property="og:url" content={canonicalUrl} />
+<meta property="og:title" content={title} />
+<meta property="og:description" content={description} />
+<meta property="og:image" content={imageUrl} />
+<meta property="og:locale" content={locale} />
+<meta property="og:site_name" content="FableTech Group" />
+
+{alternateLocales.map((altLocale) => (
+  <meta
+    property="og:locale:alternate"
+    content={altLocale}
+  />
+))}
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:url" content={canonicalUrl} />
+<meta name="twitter:title" content={title} />
+<meta name="twitter:description" content={description} />
+<meta name="twitter:image" content={imageUrl} />
+<meta name="twitter:site" content="@fabletech" />
+
+{type === 'article' && publishedTime && (
+  <meta property="article:published_time" content={publishedTime} />
+)}
+
+{type === 'article' && modifiedTime && (
+  <meta property="article:modified_time" content={modifiedTime} />
+)}
+
+{type === 'article' && author && (
+  <meta property="article:author" content={author} />
+)}
+
+<title>{title} | FableTech Group</title>

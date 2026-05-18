@@ -1,0 +1,109 @@
+---
+interface SchemaOrgProps {
+  type?: 'Organization' | 'LocalBusiness' | 'WebSite' | 'Product' | 'Article';
+  name?: string;
+  description?: string;
+  url?: string;
+  logo?: string;
+  contactPoint?: {
+    telephone?: string;
+    email?: string;
+    contactType?: string;
+  };
+  address?: {
+    streetAddress?: string;
+    addressLocality?: string;
+    addressRegion?: string;
+    postalCode?: string;
+    addressCountry?: string;
+  };
+  priceRange?: string;
+  openingHours?: string;
+}
+
+const {
+  type = 'Organization',
+  name = 'FableTech Group',
+  description = 'Professional B2B industrial solutions provider',
+  url = 'https://fabletech.example.com',
+  logo = 'https://fabletech.example.com/favicon.svg',
+  contactPoint = {
+    telephone: '+86 21 1234 5678',
+    email: 'info@fabletech.com',
+    contactType: 'sales',
+  },
+  address = {
+    streetAddress: '123 Industrial Road',
+    addressLocality: 'Shanghai',
+    addressRegion: 'Shanghai',
+    postalCode: '200000',
+    addressCountry: 'CN',
+  },
+  priceRange = '$$',
+  openingHours = 'Mo-Fr 08:00-18:00',
+} = Astro.props;
+
+const schemaData = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': type,
+      '@id': `${url}/#organization`,
+      name,
+      description,
+      url,
+      logo,
+      contactPoint: {
+        '@type': 'ContactPoint',
+        ...contactPoint,
+      },
+      address: {
+        '@type': 'PostalAddress',
+        ...address,
+      },
+      sameAs: [
+        'https://www.linkedin.com/company/fabletech',
+        'https://twitter.com/fabletech',
+        'https://www.facebook.com/fabletech',
+      ],
+    },
+    {
+      '@type': 'WebSite',
+      '@id': `${url}/#website`,
+      url,
+      name,
+      publisher: {
+        '@id': `${url}/#organization`,
+      },
+      potentialAction: {
+        '@type': 'SearchAction',
+        target: {
+          '@type': 'EntryPoint',
+          urlTemplate: `${url}/search?q={search_term_string}`,
+        },
+        'query-input': 'required name=search_term_string',
+      },
+    },
+    {
+      '@type': 'LocalBusiness',
+      '@id': `${url}/#business`,
+      name,
+      description,
+      url,
+      priceRange,
+      openingHours,
+      address: {
+        '@type': 'PostalAddress',
+        ...address,
+      },
+      geo: {
+        '@type': 'GeoCoordinates',
+        latitude: 31.2304,
+        longitude: 121.4737,
+      },
+    },
+  ],
+};
+---
+
+<script type="application/ld+json" set:html={JSON.stringify(schemaData)} />

@@ -1,0 +1,220 @@
+{
+  "meta": {
+    "title": "FableTech Group - Professional B2B Industrial Solutions",
+    "description": "Leading B2B supplier of industrial products with global reach. Quality manufacturing, competitive pricing, and reliable supply chain solutions.",
+    "keywords": "B2B, industrial products, manufacturing, export, supplier, wholesale"
+  },
+  "header": {
+    "home": "Home",
+    "about": "About",
+    "products": "Products",
+    "news": "News",
+    "factory": "Factory",
+    "service": "Service",
+    "faq": "FAQ",
+    "contact": "Contact",
+    "search": "Search",
+    "account": "Account"
+  },
+  "footer": {
+    "company": {
+      "title": "Company",
+      "about": "About Us",
+      "factory": "Our Factory",
+      "news": "News & Events",
+      "service": "Services"
+    },
+    "products": {
+      "title": "Products",
+      "all": "All Products",
+      "steel": "Steel Products",
+      "aluminum": "Aluminum",
+      "copper": "Copper"
+    },
+    "support": {
+      "title": "Support",
+      "faq": "FAQ",
+      "contact": "Contact Us",
+      "technical": "Technical Support",
+      "sitemap": "Sitemap"
+    },
+    "legal": {
+      "title": "Legal",
+      "privacy": "Privacy Policy",
+      "terms": "Terms of Service",
+      "cookies": "Cookie Policy"
+    },
+    "copyright": "2024 FableTech Group. All rights reserved.",
+    "address": "123 Industrial Road, Shanghai, China",
+    "phone": "+86 21 1234 5678",
+    "email": "info@fabletech.com",
+    "hours": "Mon-Fri: 8:00 - 18:00"
+  },
+  "home": {
+    "hero": {
+      "title": "Premium B2B Industrial Solutions",
+      "subtitle": "Your trusted global partner for quality industrial products and manufacturing excellence",
+      "cta": "Explore Products",
+      "ctaSecondary": "Contact Us"
+    },
+    "stats": {
+      "years": "Years Experience",
+      "customers": "Global Customers",
+      "countries": "Countries Served",
+      "products": "Product Categories"
+    },
+    "features": {
+      "title": "Why Choose FableTech",
+      "quality": {
+        "title": "Premium Quality",
+        "description": "ISO 9001 certified manufacturing with rigorous quality control"
+      },
+      "price": {
+        "title": "Competitive Pricing",
+        "description": "Factory-direct pricing with flexible MOQ options"
+      },
+      "delivery": {
+        "title": "Fast Delivery",
+        "description": "Efficient logistics network for timely global delivery"
+      },
+      "service": {
+        "title": "24/7 Support",
+        "description": "Dedicated team ready to assist with any inquiries"
+      }
+    },
+    "products": {
+      "title": "Featured Products",
+      "subtitle": "Discover our comprehensive range of industrial solutions",
+      "viewAll": "View All Products"
+    },
+    "news": {
+      "title": "Latest News",
+      "subtitle": "Stay updated with industry insights and company updates",
+      "readMore": "Read More"
+    },
+    "cta": {
+      "title": "Ready to Partner with Us?",
+      "subtitle": "Contact our team today for quotes, samples, and partnership opportunities",
+      "button": "Get in Touch"
+    }
+  },
+  "about": {
+    "title": "About FableTech Group",
+    "story": {
+      "title": "Our Story",
+      "content": "Founded in 2010, FableTech Group has grown from a local manufacturer to a global leader in industrial product solutions. Our commitment to quality, innovation, and customer satisfaction has earned us the trust of businesses in over 50 countries."
+    },
+    "mission": {
+      "title": "Our Mission",
+      "content": "To provide world-class industrial products and solutions that empower businesses globally, while maintaining the highest standards of quality, sustainability, and ethical business practices."
+    },
+    "vision": {
+      "title": "Our Vision",
+      "content": "To be the most trusted B2B partner for industrial solutions, recognized for our product excellence, operational efficiency, and unwavering commitment to customer success."
+    },
+    "values": {
+      "title": "Our Values",
+      "quality": "Quality First",
+      "integrity": "Integrity Always",
+      "innovation": "Continuous Innovation",
+      "sustainability": "Sustainable Growth"
+    },
+    "certifications": {
+      "title": "Certifications & Standards",
+      "iso": "ISO 9001:2015",
+      "ce": "CE Certification",
+      "ul": "UL Listed",
+      "rohs": "RoHS Compliant"
+    }
+  },
+  "products": {
+    "title": "Our Products",
+    "subtitle": "Comprehensive range of industrial solutions for every business need",
+    "filter": {
+      "all": "All Products",
+      "steel": "Steel",
+      "aluminum": "Aluminum",
+      "copper": "Copper",
+      "special": "Special Alloys"
+    },
+    "features": {
+      "highQuality": "High Quality",
+      "customSize": "Custom Sizes",
+      "bulkOrder": "Bulk Orders",
+      "fastShipping": "Fast Shipping"
+    },
+    "inquiry": {
+      "title": "Product Inquiry",
+      "button": "Request Quote",
+      "placeholder": "Enter your requirements..."
+    }
+  },
+  "news": {
+    "title": "News & Updates",
+    "subtitle": "Industry insights, company news, and market trends",
+    "categories": {
+      "all": "All",
+      "company": "Company News",
+      "industry": "Industry Insights",
+      "events": "Events"
+    },
+    "readMore": "Read More",
+    "publishedOn": "Published on"
+  },
+  "contact": {
+    "title": "Contact Us",
+    "subtitle": "Get in touch with our team for inquiries, quotes, or partnership opportunities",
+    "form": {
+      "name": "Full Name",
+      "email": "Email Address",
+      "phone": "Phone Number",
+      "company": "Company Name",
+      "subject": "Subject",
+      "message": "Message",
+      "submit": "Send Message",
+      "sending": "Sending...",
+      "success": "Message sent successfully!",
+      "error": "Failed to send message. Please try again."
+    },
+    "info": {
+      "address": "Address",
+      "phone": "Phone",
+      "email": "Email",
+      "hours": "Business Hours"
+    }
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "subtitle": "Find answers to common questions about our products and services",
+    "categories": {
+      "products": "Products",
+      "orders": "Orders & Shipping",
+      "payment": "Payment",
+      "technical": "Technical Support"
+    }
+  },
+  "cookie": {
+    "title": "We value your privacy",
+    "message": "We use cookies to enhance your experience. By continuing to visit this site you agree to our use of cookies.",
+    "accept": "Accept All",
+    "settings": "Cookie Settings",
+    "reject": "Reject All",
+    "learnMore": "Learn More"
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "An error occurred",
+    "retry": "Retry",
+    "back": "Back",
+    "next": "Next",
+    "previous": "Previous",
+    "submit": "Submit",
+    "cancel": "Cancel",
+    "save": "Save",
+    "delete": "Delete",
+    "edit": "Edit",
+    "view": "View",
+    "download": "Download",
+    "share": "Share"
+  }
+}

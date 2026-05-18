@@ -1,0 +1,6 @@
+# FableTech Group - app-ads.txt
+# Authorized Digital Sellers for Mobile Apps
+# Last updated: 2024-01-01
+
+# Add your mobile ad network entries below
+fabletech.example.com, pub-fabletech-001, DIRECT, f08c47fec0942fa0

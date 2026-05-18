@@ -1,0 +1,186 @@
+{
+  "$schema": "https://cdn.sveltia.io/cms-schema.json",
+  "name": "FableTech Group CMS",
+  "description": "Content Management System for FableTech Group B2B Website",
+  "backend": {
+    "name": "github",
+    "repo": "JACKHU0006/fabletech",
+    "branch": "main",
+    "media_folder": "public/images",
+    "public_folder": "/images"
+  },
+  "collections": [
+    {
+      "name": "products",
+      "label": "Products",
+      "label_plural": "Products",
+      "folder": "src/content/products",
+      "create": true,
+      "slug": "{{slug}}",
+      "fields": [
+        {
+          "name": "id",
+          "label": "Product ID",
+          "widget": "string",
+          "hint": "Unique identifier (e.g., prod-001)"
+        },
+        {
+          "name": "title",
+          "label": "Product Name",
+          "widget": "string"
+        },
+        {
+          "name": "description",
+          "label": "Description",
+          "widget": "markdown"
+        },
+        {
+          "name": "category",
+          "label": "Category",
+          "widget": "select",
+          "options": ["steel", "aluminum", "copper", "special"]
+        },
+        {
+          "name": "price",
+          "label": "Price",
+          "widget": "string",
+          "hint": "Price range or starting price"
+        },
+        {
+          "name": "specifications",
+          "label": "Specifications",
+          "widget": "list",
+          "field": {
+            "label": "Spec",
+            "widget": "string"
+          }
+        },
+        {
+          "name": "features",
+          "label": "Features",
+          "widget": "list",
+          "field": {
+            "label": "Feature",
+            "widget": "string"
+          }
+        },
+        {
+          "name": "images",
+          "label": "Images",
+          "widget": "list",
+          "field": {
+            "label": "Image URL",
+            "widget": "string"
+          }
+        },
+        {
+          "name": "featured",
+          "label": "Featured Product",
+          "widget": "boolean",
+          "default": false
+        },
+        {
+          "name": "published",
+          "label": "Published",
+          "widget": "boolean",
+          "default": true
+        }
+      ]
+    },
+    {
+      "name": "news",
+      "label": "News",
+      "label_plural": "News",
+      "folder": "src/content/news",
+      "create": true,
+      "slug": "{{slug}}",
+      "fields": [
+        {
+          "name": "id",
+          "label": "News ID",
+          "widget": "string",
+          "hint": "Unique identifier (e.g., news-001)"
+        },
+        {
+          "name": "title",
+          "label": "Title",
+          "widget": "string"
+        },
+        {
+          "name": "content",
+          "label": "Content",
+          "widget": "markdown"
+        },
+        {
+          "name": "category",
+          "label": "Category",
+          "widget": "select",
+          "options": ["company", "industry", "events"]
+        },
+        {
+          "name": "author",
+          "label": "Author",
+          "widget": "string"
+        },
+        {
+          "name": "date",
+          "label": "Publish Date",
+          "widget": "datetime"
+        },
+        {
+          "name": "image",
+          "label": "Featured Image",
+          "widget": "string",
+          "hint": "Image URL"
+        },
+        {
+          "name": "published",
+          "label": "Published",
+          "widget": "boolean",
+          "default": true
+        }
+      ]
+    },
+    {
+      "name": "pages",
+      "label": "Pages",
+      "label_plural": "Pages",
+      "folder": "src/content/pages",
+      "create": true,
+      "slug": "{{slug}}",
+      "fields": [
+        {
+          "name": "title",
+          "label": "Page Title",
+          "widget": "string"
+        },
+        {
+          "name": "slug",
+          "label": "URL Slug",
+          "widget": "string"
+        },
+        {
+          "name": "content",
+          "label": "Page Content",
+          "widget": "markdown"
+        },
+        {
+          "name": "seo_title",
+          "label": "SEO Title",
+          "widget": "string"
+        },
+        {
+          "name": "seo_description",
+          "label": "SEO Description",
+          "widget": "text"
+        },
+        {
+          "name": "published",
+          "label": "Published",
+          "widget": "boolean",
+          "default": true
+        }
+      ]
+    }
+  ]
+}

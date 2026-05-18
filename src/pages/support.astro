@@ -1,0 +1,78 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+---
+
+<MainLayout title="Support Center - FableTech Group" description="FableTech Group technical support and customer service center. Get help with products, orders, and technical questions." locale="en">
+  <div class="bg-gray-50 py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <h1 class="text-4xl font-bold text-gray-900 mb-4">Support Center</h1>
+        <p class="text-xl text-gray-600">We're here to help you succeed with FableTech products</p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-6 mb-12">
+        <div class="bg-white rounded-lg shadow-md p-6 text-center">
+          <div class="text-4xl mb-4">💬</div>
+          <h2 class="text-xl font-bold text-gray-900 mb-2">Live Chat</h2>
+          <p class="text-gray-600 mb-4">Instant support during business hours</p>
+          <p class="text-sm text-gray-500">Mon-Fri: 8:00-18:00 (UTC+8)</p>
+        </div>
+
+        <div class="bg-white rounded-lg shadow-md p-6 text-center">
+          <div class="text-4xl mb-4">📧</div>
+          <h2 class="text-xl font-bold text-gray-900 mb-2">Email Support</h2>
+          <p class="text-gray-600 mb-4">Response within 24 hours</p>
+          <a href="mailto:support@fabletech.com" class="text-primary hover:underline">support@fabletech.com</a>
+        </div>
+
+        <div class="bg-white rounded-lg shadow-md p-6 text-center">
+          <div class="text-4xl mb-4">📞</div>
+          <h2 class="text-xl font-bold text-gray-900 mb-2">Phone Support</h2>
+          <p class="text-gray-600 mb-4">Premium support hotline</p>
+          <p class="text-primary font-semibold">+86 21 1234 5678</p>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-lg shadow-md p-8 mb-12">
+        <h2 class="text-2xl font-bold text-gray-900 mb-6">Frequently Asked Questions</h2>
+        <div class="space-y-4">
+          <div class="border rounded-lg p-4">
+            <h3 class="font-semibold text-gray-900 mb-2">How do I track my order?</h3>
+            <p class="text-gray-600">You can track your order using the tracking number provided in your shipping confirmation email. Visit our tracking portal or contact your account manager for real-time updates.</p>
+          </div>
+          <div class="border rounded-lg p-4">
+            <h3 class="font-semibold text-gray-900 mb-2">What payment methods do you accept?</h3>
+            <p class="text-gray-600">We accept T/T, L/C, PayPal, and major credit cards. For bulk orders, we offer flexible payment terms with credit approval.</p>
+          </div>
+          <div class="border rounded-lg p-4">
+            <h3 class="font-semibold text-gray-900 mb-2">How can I request a quote?</h3>
+            <p class="text-gray-600">Submit a quote request through our online form, email your requirements to sales@fabletech.com, or contact your regional sales representative directly.</p>
+          </div>
+          <div class="border rounded-lg p-4">
+            <h3 class="font-semibold text-gray-900 mb-2">Do you offer technical documentation?</h3>
+            <p class="text-gray-600">Yes, we provide comprehensive technical documentation including specifications, CAD drawings, installation guides, and maintenance manuals for all products.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-primary text-white rounded-lg shadow-md p-8">
+        <div class="grid md:grid-cols-2 gap-8">
+          <div>
+            <h2 class="text-2xl font-bold mb-4">Technical Documentation</h2>
+            <p class="mb-4">Access detailed product documentation, CAD files, and engineering resources.</p>
+            <a href="/downloads" class="inline-block bg-white text-primary font-semibold px-6 py-3 rounded-lg hover:bg-gray-100 transition-colors">
+              Visit Download Center
+            </a>
+          </div>
+          <div>
+            <h2 class="text-2xl font-bold mb-4">Submit a Ticket</h2>
+            <p class="mb-4">Need personalized assistance? Our technical team is ready to help.</p>
+            <a href="/contact" class="inline-block bg-secondary text-white font-semibold px-6 py-3 rounded-lg hover:bg-secondary/90 transition-colors">
+              Contact Support
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</MainLayout>

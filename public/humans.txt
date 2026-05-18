@@ -1,0 +1,29 @@
+# FableTech Group - humans.txt
+# We are a team of professionals dedicated to B2B industrial solutions
+
+/* TEAM */
+Company: FableTech Group
+Location: Shanghai, China
+Website: https://fabletech.example.com
+Contact: info@fabletech.com
+
+/* DEVELOPERS */
+Lead Developer: FableTech Tech Team
+Tech Stack: Astro, Tailwind CSS, Cloudflare Pages
+
+/* THANKS */
+Open Source: Astro, Tailwind CSS, Cloudflare
+Icons: Lucide Icons
+
+/* SITE */
+Standards: HTML5, CSS3, ES6+
+Components: Astro Islands Architecture
+Hosting: Cloudflare Pages
+CDN: Cloudflare
+Analytics: Privacy-focused analytics
+
+/* VALUES */
+Quality: First
+Service: Excellence
+Innovation: Continuous
+Sustainability: Commitment

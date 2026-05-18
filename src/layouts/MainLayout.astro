@@ -2,38 +2,75 @@
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import AIChat from '../components/AIChat.astro';
+import CookieBanner from '../components/CookieBanner.astro';
+import WhatsAppButton from '../components/WhatsAppButton.astro';
+import SEO from '../components/SEO.astro';
+import SchemaOrg from '../components/SchemaOrg.astro';
 import '../style.css';
 
 interface MainLayoutProps {
   title: string;
   description?: string;
-  locale: string;
+  locale?: string;
+  image?: string;
+  type?: 'website' | 'article';
+  publishedTime?: string;
+  author?: string;
 }
 
-const { title, description, locale } = Astro.props;
+const { 
+  title, 
+  description, 
+  locale = 'en',
+  image = '/og-image.jpg',
+  type = 'website',
+  publishedTime,
+  author
+} = Astro.props;
+
+const defaultDescription = 'FableTech Group - Professional B2B industrial solutions provider with global reach. Quality manufacturing, competitive pricing, and reliable supply chain solutions.';
 ---
 
 <!DOCTYPE html>
-<html lang={locale}>
+<html lang={locale} class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content={description || ''} />
-    <title>{title}</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <meta name="description" content={description || defaultDescription} />
+    
+    <SEO 
+      title={title}
+      description={description || defaultDescription}
+      image={image}
+      type={type}
+      publishedTime={publishedTime}
+      author={author}
+      locale={locale}
+    />
+    
+    <SchemaOrg />
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    
     <link rel="alternate" hreflang="en" href="https://fabletech.example.com/" />
     <link rel="alternate" hreflang="de" href="https://fabletech.example.com/de/" />
     <link rel="alternate" hreflang="fr" href="https://fabletech.example.com/fr/" />
     <link rel="alternate" hreflang="es" href="https://fabletech.example.com/es/" />
     <link rel="alternate" hreflang="ar" href="https://fabletech.example.com/ar/" />
     <link rel="alternate" hreflang="x-default" href="https://fabletech.example.com/" />
+    
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/manifest.webmanifest" />
   </head>
   <body class={locale === 'ar' ? 'rtl' : ''}>
     <Header locale={locale} />
     <main><slot /></main>
     <Footer locale={locale} />
     <AIChat />
+    <CookieBanner locale={locale} />
+    <WhatsAppButton />
   </body>
 </html>

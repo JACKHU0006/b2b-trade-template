@@ -1,0 +1,9 @@
+# FableTech Group - ads.txt
+# Authorized Digital Sellers for FableTech Group
+# Last updated: 2024-01-01
+
+# Add your ad network entries below
+# Example:
+# google.com, pub-XXXXXXXXXXXXXXXX, DIRECT, f08c47fec0942fa0
+
+fabletech.example.com, pub-fabletech-001, DIRECT, f08c47fec0942fa0

@@ -1,0 +1,220 @@
+{
+  "meta": {
+    "title": "FableTech Group - Professionelle B2B-Industrielösungen",
+    "description": "Führender B2B-Lieferant für Industrieprodukte mit globaler Reichweite. Qualitätsfertigung, wettbewerbsfähige Preise und zuverlässige Lieferkettenlösungen.",
+    "keywords": "B2B, Industrieprodukte, Fertigung, Export, Lieferant, Großhandel"
+  },
+  "header": {
+    "home": "Startseite",
+    "about": "Über uns",
+    "products": "Produkte",
+    "news": "Nachrichten",
+    "factory": "Fabrik",
+    "service": "Service",
+    "faq": "FAQ",
+    "contact": "Kontakt",
+    "search": "Suchen",
+    "account": "Konto"
+  },
+  "footer": {
+    "company": {
+      "title": "Unternehmen",
+      "about": "Über uns",
+      "factory": "Unsere Fabrik",
+      "news": "Nachrichten & Events",
+      "service": "Dienstleistungen"
+    },
+    "products": {
+      "title": "Produkte",
+      "all": "Alle Produkte",
+      "steel": "Stahlprodukte",
+      "aluminum": "Aluminium",
+      "copper": "Kupfer"
+    },
+    "support": {
+      "title": "Support",
+      "faq": "FAQ",
+      "contact": "Kontakt",
+      "technical": "Technischer Support",
+      "sitemap": "Sitemap"
+    },
+    "legal": {
+      "title": "Rechtlich",
+      "privacy": "Datenschutz",
+      "terms": "AGB",
+      "cookies": "Cookie-Richtlinie"
+    },
+    "copyright": "2024 FableTech Group. Alle Rechte vorbehalten.",
+    "address": "123 Industriestraße, Shanghai, China",
+    "phone": "+86 21 1234 5678",
+    "email": "info@fabletech.com",
+    "hours": "Mo-Fr: 8:00 - 18:00"
+  },
+  "home": {
+    "hero": {
+      "title": "Premium B2B-Industrielösungen",
+      "subtitle": "Ihr vertrauenswürdiger globaler Partner für Qualitätsindustrieprodukte und Fertigungsexzellenz",
+      "cta": "Produkte erkunden",
+      "ctaSecondary": "Kontaktieren Sie uns"
+    },
+    "stats": {
+      "years": "Jahre Erfahrung",
+      "customers": "Globale Kunden",
+      "countries": "Länder bedient",
+      "products": "Produktkategorien"
+    },
+    "features": {
+      "title": "Warum FableTech wählen",
+      "quality": {
+        "title": "Premium-Qualität",
+        "description": "ISO 9001-zertifizierte Fertigung mit strenger Qualitätskontrolle"
+      },
+      "price": {
+        "title": "Wettbewerbsfähige Preise",
+        "description": "Direkt ab Werk mit flexiblen Mindestbestellmengen"
+      },
+      "delivery": {
+        "title": "Schnelle Lieferung",
+        "description": "Effizientes Logistiknetz für pünktliche globale Lieferung"
+      },
+      "service": {
+        "title": "24/7 Support",
+        "description": "Dediziertes Team für alle Anfragen"
+      }
+    },
+    "products": {
+      "title": "Ausgewählte Produkte",
+      "subtitle": "Entdecken Sie unser umfassendes Sortiment an Industrieprodukten",
+      "viewAll": "Alle Produkte anzeigen"
+    },
+    "news": {
+      "title": "Aktuelle Nachrichten",
+      "subtitle": "Bleiben Sie über Brancheneinblicke und Unternehmensnachrichten informiert",
+      "readMore": "Weiterlesen"
+    },
+    "cta": {
+      "title": "Bereit für eine Partnerschaft?",
+      "subtitle": "Kontaktieren Sie unser Team für Angebote, Muster und Partnerschaftsmöglichkeiten",
+      "button": "Kontakt aufnehmen"
+    }
+  },
+  "about": {
+    "title": "Über FableTech Group",
+    "story": {
+      "title": "Unsere Geschichte",
+      "content": "Seit der Gründung im Jahr 2010 ist FableTech Group von einem lokalen Hersteller zu einem globalen Marktführer für Industrieproduktlösungen gewachsen."
+    },
+    "mission": {
+      "title": "Unsere Mission",
+      "content": "Weltklasse-Industrieprodukte und -lösungen anzubieten, die Unternehmen weltweit stärken."
+    },
+    "vision": {
+      "title": "Unsere Vision",
+      "content": "Der vertrauenswürdigste B2B-Partner für Industrieprodukte zu sein."
+    },
+    "values": {
+      "title": "Unsere Werte",
+      "quality": "Qualität zuerst",
+      "integrity": "Integrität immer",
+      "innovation": "Kontinuierliche Innovation",
+      "sustainability": "Nachhaltiges Wachstum"
+    },
+    "certifications": {
+      "title": "Zertifizierungen & Standards",
+      "iso": "ISO 9001:2015",
+      "ce": "CE-Zertifizierung",
+      "ul": "UL-gelistet",
+      "rohs": "RoHS-konform"
+    }
+  },
+  "products": {
+    "title": "Unsere Produkte",
+    "subtitle": "Umfassende Palette an Industrieprodukten für jeden Geschäftsbedarf",
+    "filter": {
+      "all": "Alle Produkte",
+      "steel": "Stahl",
+      "aluminum": "Aluminium",
+      "copper": "Kupfer",
+      "special": "Sonderlegierungen"
+    },
+    "features": {
+      "highQuality": "Hohe Qualität",
+      "customSize": "Kundenspezifische Größen",
+      "bulkOrder": "Massensbestellungen",
+      "fastShipping": "Schneller Versand"
+    },
+    "inquiry": {
+      "title": "Produktanfrage",
+      "button": "Angebot anfordern",
+      "placeholder": "Geben Sie Ihre Anforderungen ein..."
+    }
+  },
+  "news": {
+    "title": "Nachrichten & Updates",
+    "subtitle": "Brancheneinblicke, Unternehmensnachrichten und Marktrends",
+    "categories": {
+      "all": "Alle",
+      "company": "Unternehmensnachrichten",
+      "industry": "Brancheneinblicke",
+      "events": "Veranstaltungen"
+    },
+    "readMore": "Weiterlesen",
+    "publishedOn": "Veröffentlicht am"
+  },
+  "contact": {
+    "title": "Kontaktieren Sie uns",
+    "subtitle": "Nehmen Sie Kontakt mit unserem Team auf für Anfragen, Angebote oder Partnerschaftsmöglichkeiten",
+    "form": {
+      "name": "Vollständiger Name",
+      "email": "E-Mail-Adresse",
+      "phone": "Telefonnummer",
+      "company": "Firmenname",
+      "subject": "Betreff",
+      "message": "Nachricht",
+      "submit": "Nachricht senden",
+      "sending": "Wird gesendet...",
+      "success": "Nachricht erfolgreich gesendet!",
+      "error": "Nachricht konnte nicht gesendet werden. Bitte versuchen Sie es erneut."
+    },
+    "info": {
+      "address": "Adresse",
+      "phone": "Telefon",
+      "email": "E-Mail",
+      "hours": "Geschäftszeiten"
+    }
+  },
+  "faq": {
+    "title": "Häufig gestellte Fragen",
+    "subtitle": "Finden Sie Antworten auf häufige Fragen zu unseren Produkten und Dienstleistungen",
+    "categories": {
+      "products": "Produkte",
+      "orders": "Bestellungen & Versand",
+      "payment": "Zahlung",
+      "technical": "Technischer Support"
+    }
+  },
+  "cookie": {
+    "title": "Wir schätzen Ihre Privatsphäre",
+    "message": "Wir verwenden Cookies, um Ihre Erfahrung zu verbessern. Wenn Sie diese Website weiterhin besuchen, stimmen Sie der Verwendung von Cookies zu.",
+    "accept": "Alle akzeptieren",
+    "settings": "Cookie-Einstellungen",
+    "reject": "Alle ablehnen",
+    "learnMore": "Mehr erfahren"
+  },
+  "common": {
+    "loading": "Wird geladen...",
+    "error": "Ein Fehler ist aufgetreten",
+    "retry": "Wiederholen",
+    "back": "Zurück",
+    "next": "Weiter",
+    "previous": "Zurück",
+    "submit": "Absenden",
+    "cancel": "Abbrechen",
+    "save": "Speichern",
+    "delete": "Löschen",
+    "edit": "Bearbeiten",
+    "view": "Ansehen",
+    "download": "Herunterladen",
+    "share": "Teilen"
+  }
+}
