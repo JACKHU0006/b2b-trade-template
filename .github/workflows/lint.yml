@@ -12,18 +12,22 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - uses: actions/setup-node@v4
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
         with:
-          node-version: '22'
+          node-version: '22.12.0'
           cache: 'npm'
 
-      - run: npm ci
+      - name: Install Dependencies
+        run: npm ci
 
       - name: Create .env file from example
         run: cp .env.example .env
 
       - name: Build Project
         run: npm run build
+        env:
+          NODE_ENV: production
 
       - name: Type Check
-        run: npx astro check || true
+        run: npx astro check --fail-on-warnings false

@@ -20,7 +20,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '22'
+          node-version: '22.12.0'
           cache: 'npm'
 
       - name: Install Dependencies
@@ -32,10 +32,10 @@ jobs:
       - name: Build Project
         run: npm run build
         env:
-          NODE_VERSION: 20
+          NODE_ENV: production
 
       - name: Deploy to Cloudflare Pages
-        if: github.event_name == 'push' && github.ref == 'refs/heads/main' && secrets.CLOUDFLARE_API_TOKEN != '' && secrets.CLOUDFLARE_ACCOUNT_ID != ''
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
         uses: cloudflare/pages-action@v1
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
@@ -44,10 +44,6 @@ jobs:
           directory: dist/client
           gitHubToken: ${{ secrets.GITHUB_TOKEN }}
           wranglerVersion: '3'
-
-      - name: Skip Deployment - No Credentials
-        if: github.event_name == 'push' && github.ref == 'refs/heads/main' && (secrets.CLOUDFLARE_API_TOKEN == '' || secrets.CLOUDFLARE_ACCOUNT_ID == '')
-        run: echo "Skipping deployment: Cloudflare credentials not configured. Please set CLOUDFLARE_API_TOKEN and CLOUDFLARE_ACCOUNT_ID in GitHub Secrets."
 
       - name: Upload Build Artifacts
         if: github.event_name == 'pull_request'
