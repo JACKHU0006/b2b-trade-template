@@ -1,9 +1,11 @@
 import { defineConfig } from 'astro/config';
 import tailwindcss from '@tailwindcss/vite';
 import sitemap from '@astrojs/sitemap';
+import cloudflare from '@astrojs/cloudflare';
 
 export default defineConfig({
-  site: 'https://example.com',
+  site: 'https://b2b-trade-template.pages.dev',
+  output: 'static',
   integrations: [sitemap()],
   vite: {
     plugins: [tailwindcss()],
@@ -15,4 +17,9 @@ export default defineConfig({
       prefixDefaultLocale: false,
     },
   },
+  adapter: cloudflare({
+    platformProxy: {
+      enabled: true,
+    },
+  }),
 });
