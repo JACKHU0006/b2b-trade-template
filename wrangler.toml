@@ -1,0 +1,6 @@
+#:schema node_modules/wrangler/config-schema.json
+name = "fabletech"
+compatibility_date = "2026-04-15"
+
+# Pages-specific configuration
+pages_build_output_dir = "dist/client"
