@@ -1,10 +1,14 @@
 ---
 import MainLayout from '../layouts/MainLayout.astro';
-import { Search, Filter, Grid, List, ArrowRight, Lock } from '@lucide/astro';
+import ProductSchema from '../components/ProductSchema.astro';
+import { Search, Filter, Grid, List, ArrowRight, Lock, Eye, User } from '@lucide/astro';
 import { products, getProductCategories } from '../data/products';
+import { supabase, getCurrentUser } from '../lib/supabase';
 
 const locale = 'en';
 const categories = getProductCategories();
+const user = supabase ? await getCurrentUser() : null;
+const isAuthenticated = !!user;
 ---
 
 <MainLayout 
@@ -19,6 +23,13 @@ const categories = getProductCategories();
         <p class="text-lg text-gray-200">
           High-quality industrial metal products for your business needs
         </p>
+        {!isAuthenticated && (
+          <p class="mt-4 flex items-center justify-center gap-2 text-sm">
+            <Lock class="h-4 w-4" />
+            <span>Sign in to view exclusive pricing and download specifications</span>
+            <a href="/auth/login" class="underline hover:text-gray-300">Login</a>
+          </p>
+        )}
       </div>
     </div>
   </section>
@@ -68,41 +79,89 @@ const categories = getProductCategories();
   <section class="py-12">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div id="products-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {products.map((product) => (
-          <div key={product.id} class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
-            <div class="h-48 bg-gray-200 flex items-center justify-center relative">
-              {product.isPrivate && (
-                <div class="absolute top-3 right-3 bg-warning text-white px-2 py-1 rounded-full text-sm flex items-center">
-                  <Lock class="h-4 w-4 mr-1" />
-                  Login to view
+        {products.map((product) => {
+          const isVisible = !product.isPrivate || isAuthenticated;
+          if (!isVisible) return null;
+          
+          return (
+            <div 
+              key={product.id} 
+              id={`product-card-${product.id}`}
+              class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow"
+              data-name={product.name[locale]}
+              data-description={product.description[locale]}
+              data-category={product.category}
+            >
+              <div class="h-48 bg-gray-200 flex items-center justify-center relative overflow-hidden">
+                {product.isPrivate && (
+                  <div class="absolute top-3 right-3 bg-yellow-500 text-white px-2 py-1 rounded-full text-sm flex items-center z-10">
+                    <Eye class="h-4 w-4 mr-1" />
+                    Members Only
+                  </div>
+                )}
+                <img 
+                  src={product.images[0]} 
+                  alt={product.name[locale]} 
+                  class="w-full h-full object-cover"
+                  loading="lazy"
+                />
+              </div>
+              <div class="p-6">
+                <span class="inline-block px-3 py-1 bg-primary/10 text-primary text-sm font-medium rounded-full mb-3">
+                  {product.category}
+                </span>
+                <h3 class="text-lg font-semibold mb-2">{product.name[locale]}</h3>
+                <p class="text-gray-600 text-sm mb-4 line-clamp-2">{product.description[locale]}</p>
+                <div class="flex flex-wrap gap-2 mb-4">
+                  {Object.entries(product.specs).slice(0, 3).map(([key, value]) => (
+                    <span key={key} class="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded">
+                      {key}: {value}
+                    </span>
+                  ))}
                 </div>
-              )}
-              <img src={product.images[0]} alt={product.name[locale]} class="w-full h-full object-cover" />
-            </div>
-            <div class="p-6">
-              <span class="inline-block px-3 py-1 bg-primary/10 text-primary text-sm font-medium rounded-full mb-3">
-                {product.category}
-              </span>
-              <h3 class="text-lg font-semibold mb-2">{product.name[locale]}</h3>
-              <p class="text-gray-600 text-sm mb-4 line-clamp-2">{product.description[locale]}</p>
-              <div class="flex flex-wrap gap-2 mb-4">
-                {Object.entries(product.specs).slice(0, 3).map(([key, value]) => (
-                  <span key={key} class="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded">
-                    {key}: {value}
-                  </span>
-                ))}
+                <div class="flex items-center justify-between">
+                  {isAuthenticated ? (
+                    <span class="text-xl font-bold text-primary">${product.price.toFixed(2)}</span>
+                  ) : (
+                    <button 
+                      onClick={() => window.location.href = '/auth/login'}
+                      class="flex items-center text-gray-500 hover:text-primary transition-colors"
+                    >
+                      <Lock class="h-4 w-4 mr-1" />
+                      <span class="text-sm">Login for price</span>
+                    </button>
+                  )}
+                  <a href={`/products/${product.id}`} class="inline-flex items-center text-secondary font-medium hover:underline">
+                    View Details
+                    <ArrowRight class="ml-2 h-4 w-4" />
+                  </a>
+                </div>
               </div>
-              <div class="flex items-center justify-between">
-                <span class="text-xl font-bold text-primary">${product.price.toFixed(2)}</span>
-                <a href={`/products/${product.id}`} class="inline-flex items-center text-secondary font-medium hover:underline">
-                  View Details
-                  <ArrowRight class="ml-2 h-4 w-4" />
-                </a>
-              </div>
+              <ProductSchema 
+                name={product.name[locale]}
+                description={product.description[locale]}
+                image={product.images[0]}
+                sku={product.id}
+                price={isAuthenticated ? product.price : undefined}
+                category={product.category}
+              />
             </div>
-          </div>
-        ))}
+          );
+        })}
       </div>
+      
+      {!isAuthenticated && products.some(p => p.isPrivate) && (
+        <div class="mt-8 text-center bg-gray-50 border border-gray-200 rounded-lg p-6">
+          <div class="flex items-center justify-center gap-2 mb-2">
+            <User class="h-5 w-5 text-primary" />
+            <span class="font-semibold text-gray-900">Some products are only visible to registered members</span>
+          </div>
+          <p class="text-gray-600 text-sm mb-4">Login to access exclusive products, pricing, and specifications</p>
+          <a href="/auth/login" class="inline-block bg-primary text-white px-6 py-2 rounded-lg hover:bg-primary/90 transition-colors">
+            Sign In / Register
+          </a>
+        </div>
+      )}
     </div>
   </section>
 </MainLayout>

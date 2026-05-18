@@ -1,0 +1,45 @@
+---
+interface ArticleSchemaProps {
+  title: string;
+  description: string;
+  author?: string;
+  publisher?: string;
+  datePublished?: string;
+  dateModified?: string;
+  image?: string;
+}
+
+const { 
+  title, 
+  description, 
+  author,
+  publisher = 'FableTech Group',
+  datePublished,
+  dateModified,
+  image
+} = Astro.props;
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: title,
+  description: description.replace(/<[^>]*>/g, '').substring(0, 500),
+  author: author ? {
+    "@type": "Person",
+    name: author,
+  } : undefined,
+  publisher: {
+    "@type": "Organization",
+    name: publisher,
+    logo: {
+      "@type": "ImageObject",
+      url: "https://fabletech.example.com/favicon.svg",
+    },
+  },
+  datePublished,
+  dateModified,
+  image: image ? [image] : undefined,
+};
+---
+
+<script type="application/ld+json" set:html={JSON.stringify(articleSchema)} />

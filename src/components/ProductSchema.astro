@@ -1,0 +1,60 @@
+---
+interface ProductSchemaProps {
+  name: string;
+  description: string;
+  image?: string;
+  brand?: string;
+  sku?: string;
+  price?: number;
+  currency?: string;
+  category?: string;
+  offers?: Array<{
+    price: number;
+    currency: string;
+    availability?: string;
+  }>;
+}
+
+const { 
+  name, 
+  description, 
+  image, 
+  brand = 'FableTech Group',
+  sku,
+  price,
+  currency = 'USD',
+  category,
+  offers = []
+} = Astro.props;
+
+const productSchema = {
+  "@context": "https://schema.org",
+  "@type": "Product",
+  name,
+  description: description.replace(/<[^>]*>/g, '').substring(0, 500),
+  image: image ? [image] : undefined,
+  brand: {
+    "@type": "Brand",
+    name: brand,
+  },
+  sku,
+  category,
+  offers: offers.length > 0 
+    ? offers.map(offer => ({
+        "@type": "Offer",
+        price: offer.price,
+        priceCurrency: offer.currency,
+        availability: offer.availability || "https://schema.org/InStock",
+      }))
+    : price 
+      ? [{
+          "@type": "Offer",
+          price,
+          priceCurrency: currency,
+          availability: "https://schema.org/InStock",
+        }]
+      : undefined,
+};
+---
+
+<script type="application/ld+json" set:html={JSON.stringify(productSchema)} />

@@ -1,0 +1,59 @@
+---
+interface NewsletterFormProps {
+  title?: string;
+  description?: string;
+  buttonText?: string;
+}
+
+const { 
+  title = 'Subscribe to Our Newsletter',
+  description = 'Get the latest news, product updates, and special offers.',
+  buttonText = 'Subscribe'
+} = Astro.props;
+---
+
+<div class="bg-primary text-white py-12">
+  <div class="max-w-4xl mx-auto px-4 text-center">
+    <h3 class="text-2xl font-bold mb-2">{title}</h3>
+    <p class="text-gray-200 mb-6">{description}</p>
+    <form id="newsletter-form" class="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
+      <input
+        type="email"
+        name="email"
+        required
+        placeholder="Enter your email"
+        class="flex-1 px-4 py-3 rounded-lg text-gray-900 focus:outline-none focus:ring-2 focus:ring-white"
+      />
+      <button
+        type="submit"
+        class="px-6 py-3 bg-white text-primary font-semibold rounded-lg hover:bg-gray-100 transition-colors"
+      >
+        {buttonText}
+      </button>
+    </form>
+    <p id="newsletter-success" class="mt-4 text-green-300 hidden">
+      Thanks for subscribing! Check your email for confirmation.
+    </p>
+  </div>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const form = document.getElementById('newsletter-form');
+    const successMessage = document.getElementById('newsletter-success');
+
+    form?.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const formData = new FormData(form);
+      const email = formData.get('email');
+      
+      if (email) {
+        successMessage.style.display = 'block';
+        form.reset();
+        setTimeout(() => {
+          successMessage.style.display = 'none';
+        }, 5000);
+      }
+    });
+  });
+</script>

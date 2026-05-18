@@ -1,0 +1,43 @@
+---
+interface OptimizedImageProps {
+  src: string;
+  alt: string;
+  width?: number;
+  height?: number;
+  class?: string;
+  loading?: 'lazy' | 'eager';
+  decoding?: 'async' | 'sync' | 'auto';
+}
+
+const { 
+  src, 
+  alt, 
+  width = 800, 
+  height = 600, 
+  class: className = '',
+  loading = 'lazy',
+  decoding = 'async'
+} = Astro.props;
+---
+
+<picture>
+  <source 
+    srcSet={`${src.replace(/\.(jpg|jpeg|png)$/, '.webp')}`} 
+    type="image/webp"
+  />
+  <source 
+    srcSet={src} 
+    type={`image/${src.split('.').pop()}`}
+  />
+  <img
+    src={src}
+    alt={alt}
+    width={width}
+    height={height}
+    class={`${className}`}
+    loading={loading}
+    decoding={decoding}
+    onload="this.style.opacity='1'"
+    style="opacity: 0; transition: opacity 0.3s ease-in-out;"
+  />
+</picture>

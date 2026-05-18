@@ -1,0 +1,135 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+import { supabase, signOut, getCurrentUser } from '../lib/supabase';
+
+let user = null;
+let error = '';
+
+if (supabase) {
+  user = await getCurrentUser();
+}
+
+if (!user) {
+  return Astro.redirect('/auth/login');
+}
+
+if (Astro.request.method === 'POST' && Astro.url.searchParams.get('action') === 'logout') {
+  const { error: logoutError } = await signOut();
+  if (logoutError) {
+    error = logoutError.message;
+  } else {
+    return Astro.redirect('/auth/login');
+  }
+}
+
+const userData = {
+  name: user.email?.split('@')[0] || 'User',
+  email: user.email || '',
+  company: user.user_metadata?.company || 'Not provided',
+  role: 'member',
+};
+---
+
+<MainLayout title="Dashboard - FableTech Group" description="Your account dashboard with exclusive access" locale="en">
+  <div class="min-h-[60vh] py-12">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="md:col-span-1">
+          <div class="bg-white rounded-lg shadow-md p-6">
+            <div class="flex flex-col items-center mb-6">
+              <div class="w-20 h-20 rounded-full bg-primary flex items-center justify-center mb-4">
+                <span class="text-white text-2xl font-bold">
+                  {userData.name.charAt(0).toUpperCase()}
+                </span>
+              </div>
+              <h3 class="text-lg font-semibold text-gray-900">{userData.name}</h3>
+              <p class="text-sm text-gray-500">{userData.email}</p>
+            </div>
+
+            <div class="space-y-4">
+              <div class="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
+                <span class="text-gray-600">Company</span>
+                <span class="font-medium text-gray-900">{userData.company}</span>
+              </div>
+              <div class="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
+                <span class="text-gray-600">Account Type</span>
+                <span class="font-medium text-primary">{userData.role}</span>
+              </div>
+            </div>
+
+            <form method="POST" class="mt-6">
+              <input type="hidden" name="action" value="logout" />
+              <button
+                type="submit"
+                class="w-full bg-gray-100 text-gray-700 py-2 rounded-lg hover:bg-gray-200 transition-colors"
+              >
+                Sign Out
+              </button>
+            </form>
+          </div>
+        </div>
+
+        <div class="md:col-span-2 space-y-6">
+          <div class="bg-white rounded-lg shadow-md p-6">
+            <h2 class="text-xl font-bold text-gray-900 mb-4">Quick Actions</h2>
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
+              <a href="/products" class="p-4 bg-primary/5 rounded-lg hover:bg-primary/10 transition-colors text-center">
+                <div class="text-2xl mb-2">📦</div>
+                <div class="text-sm font-medium text-gray-900">View Products</div>
+                <div class="text-xs text-gray-500">Exclusive pricing</div>
+              </a>
+              <a href="/downloads" class="p-4 bg-primary/5 rounded-lg hover:bg-primary/10 transition-colors text-center">
+                <div class="text-2xl mb-2">📄</div>
+                <div class="text-sm font-medium text-gray-900">Downloads</div>
+                <div class="text-xs text-gray-500">Specifications</div>
+              </a>
+              <a href="/contact" class="p-4 bg-primary/5 rounded-lg hover:bg-primary/10 transition-colors text-center">
+                <div class="text-2xl mb-2">💬</div>
+                <div class="text-sm font-medium text-gray-900">Contact Us</div>
+                <div class="text-xs text-gray-500">Get support</div>
+              </a>
+              <a href="/agent" class="p-4 bg-primary/5 rounded-lg hover:bg-primary/10 transition-colors text-center">
+                <div class="text-2xl mb-2">🌍</div>
+                <div class="text-sm font-medium text-gray-900">Agent Program</div>
+                <div class="text-xs text-gray-500">Partner with us</div>
+              </a>
+            </div>
+          </div>
+
+          <div class="bg-white rounded-lg shadow-md p-6">
+            <h2 class="text-xl font-bold text-gray-900 mb-4">Latest Products</h2>
+            <div class="space-y-4">
+              {['Premium Steel Plate', 'Aluminum Alloy', 'Copper Wire', 'Special Alloy'].map((product, index) => (
+                <div key={index} class="flex items-center justify-between p-4 border rounded-lg hover:border-primary/50 transition-colors">
+                  <div>
+                    <h3 class="font-medium text-gray-900">{product}</h3>
+                    <p class="text-sm text-gray-500">View details and pricing</p>
+                  </div>
+                  <span class="text-sm text-primary font-medium">View</span>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div class="bg-white rounded-lg shadow-md p-6">
+            <h2 class="text-xl font-bold text-gray-900 mb-4">Account Settings</h2>
+            <div class="space-y-4">
+              <div class="flex items-center justify-between p-4 bg-gray-50 rounded-lg">
+                <span class="text-gray-600">Email Notifications</span>
+                <span class="text-green-600 font-medium">✅ Enabled</span>
+              </div>
+              <div class="flex items-center justify-between p-4 bg-gray-50 rounded-lg">
+                <span class="text-gray-600">Price Alerts</span>
+                <span class="text-green-600 font-medium">✅ Enabled</span>
+              </div>
+              <div class="flex items-center justify-between p-4 bg-gray-50 rounded-lg">
+                <span class="text-gray-600">Marketing Emails</span>
+                <span class="text-gray-400 font-medium">❌ Disabled</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</MainLayout>

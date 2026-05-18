@@ -1,0 +1,48 @@
+---
+interface ReCAPTCHAProps {
+  siteKey?: string;
+  size?: 'normal' | 'compact' | 'invisible';
+  theme?: 'light' | 'dark';
+  callback?: string;
+}
+
+const { 
+  siteKey = import.meta.env.PUBLIC_RECAPTCHA_SITE_KEY || 'your-site-key',
+  size = 'normal',
+  theme = 'light',
+  callback = 'onRecaptchaSuccess'
+} = Astro.props;
+---
+
+<script>
+  const siteKey = import.meta.env.PUBLIC_RECAPTCHA_SITE_KEY;
+  
+  if (siteKey) {
+    const script = document.createElement('script');
+    script.src = `https://www.google.com/recaptcha/api.js?render=${siteKey}`;
+    script.async = true;
+    script.defer = true;
+    document.head.appendChild(script);
+  }
+
+  window.onRecaptchaSuccess = function(token) {
+    const forms = document.querySelectorAll('form');
+    forms.forEach(form => {
+      const input = document.createElement('input');
+      input.type = 'hidden';
+      input.name = 'g-recaptcha-response';
+      input.value = token;
+      form.appendChild(input);
+    });
+  };
+</script>
+
+{siteKey && (
+  <div 
+    className="g-recaptcha"
+    data-sitekey={siteKey}
+    data-size={size}
+    data-theme={theme}
+    data-callback={callback}
+  ></div>
+)}
