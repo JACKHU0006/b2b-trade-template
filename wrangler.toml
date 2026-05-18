@@ -3,4 +3,4 @@ name = "fabletech"
 compatibility_date = "2026-04-15"
 
 # Pages-specific configuration
-pages_build_output_dir = "dist/client"
+pages_build_output_dir = "dist"

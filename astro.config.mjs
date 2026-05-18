@@ -1,7 +1,6 @@
 import { defineConfig } from 'astro/config';
 import tailwindcss from '@tailwindcss/vite';
 import sitemap from '@astrojs/sitemap';
-import cloudflare from '@astrojs/cloudflare';
 
 export default defineConfig({
   site: 'https://fabletech.example.com',
@@ -17,9 +16,4 @@ export default defineConfig({
       prefixDefaultLocale: false,
     },
   },
-  adapter: cloudflare({
-    platformProxy: {
-      enabled: true,
-    },
-  }),
 });
