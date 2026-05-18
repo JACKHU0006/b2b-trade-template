@@ -1,0 +1,65 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+import { Calendar, ArrowRight } from '@lucide/astro';
+import { news, getNewsCategories } from '../data/news';
+
+const locale = 'en';
+const categories = getNewsCategories();
+---
+
+<MainLayout 
+  title="News & Events - MetalWorks" 
+  description="Stay updated with the latest news, events, and announcements from MetalWorks."
+  locale={locale}
+>
+  <section class="bg-primary text-white py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center">
+        <h1 class="text-4xl md:text-5xl font-bold mb-4">Latest News</h1>
+        <p class="text-lg text-gray-200">
+          Stay informed about our company, products, and industry news
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-wrap gap-2 mb-8">
+        <button class="px-4 py-2 bg-primary text-white rounded-full font-medium">All</button>
+        {categories.map((category) => (
+          <button key={category} class="px-4 py-2 bg-gray-100 text-gray-700 rounded-full font-medium hover:bg-gray-200 transition-colors">
+            {category}
+          </button>
+        ))}
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {news.map((item) => (
+          <article key={item.id} class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+            <div class="h-56 bg-gray-200 flex items-center justify-center">
+              <img src={item.image} alt={item.title[locale]} class="w-full h-full object-cover" />
+            </div>
+            <div class="p-6">
+              <div class="flex items-center justify-between mb-3">
+                <span class="inline-block px-3 py-1 bg-primary/10 text-primary text-sm font-medium rounded-full">
+                  {item.category}
+                </span>
+                <span class="flex items-center text-gray-500 text-sm">
+                  <Calendar class="h-4 w-4 mr-1" />
+                  {new Date(item.date).toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' })}
+                </span>
+              </div>
+              <h2 class="text-xl font-semibold mb-3">{item.title[locale]}</h2>
+              <p class="text-gray-600 mb-4">{item.summary[locale]}</p>
+              <a href={`/news/${item.id}`} class="inline-flex items-center text-secondary font-medium hover:underline">
+                Read Full Article
+                <ArrowRight class="ml-2 h-4 w-4" />
+              </a>
+            </div>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+</MainLayout>

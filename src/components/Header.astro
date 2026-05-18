@@ -1,0 +1,180 @@
+---
+import { Menu, X, Globe, User, Search } from '@lucide/astro';
+
+interface HeaderProps {
+  locale: string;
+}
+
+const { locale } = Astro.props;
+
+const navItems = {
+  en: [
+    { href: '/', label: 'Home' },
+    { href: '/about', label: 'About' },
+    { href: '/products', label: 'Products' },
+    { href: '/news', label: 'News' },
+    { href: '/factory', label: 'Factory' },
+    { href: '/service', label: 'Service' },
+    { href: '/faq', label: 'FAQ' },
+    { href: '/contact', label: 'Contact' },
+  ],
+  de: [
+    { href: '/de/', label: 'Startseite' },
+    { href: '/de/about', label: 'Über uns' },
+    { href: '/de/products', label: 'Produkte' },
+    { href: '/de/news', label: 'Nachrichten' },
+    { href: '/de/factory', label: 'Fabrik' },
+    { href: '/de/service', label: 'Dienstleistung' },
+    { href: '/de/faq', label: 'FAQ' },
+    { href: '/de/contact', label: 'Kontakt' },
+  ],
+  fr: [
+    { href: '/fr/', label: 'Accueil' },
+    { href: '/fr/about', label: 'À propos' },
+    { href: '/fr/products', label: 'Produits' },
+    { href: '/fr/news', label: 'Nouvelles' },
+    { href: '/fr/factory', label: 'Usine' },
+    { href: '/fr/service', label: 'Service' },
+    { href: '/fr/faq', label: 'FAQ' },
+    { href: '/fr/contact', label: 'Contact' },
+  ],
+  es: [
+    { href: '/es/', label: 'Inicio' },
+    { href: '/es/about', label: 'Sobre nosotros' },
+    { href: '/es/products', label: 'Productos' },
+    { href: '/es/news', label: 'Noticias' },
+    { href: '/es/factory', label: 'Fábrica' },
+    { href: '/es/service', label: 'Servicio' },
+    { href: '/es/faq', label: 'FAQ' },
+    { href: '/es/contact', label: 'Contacto' },
+  ],
+  ar: [
+    { href: '/ar/', label: 'الرئيسية' },
+    { href: '/ar/about', label: 'عن الشركة' },
+    { href: '/ar/products', label: 'المنتجات' },
+    { href: '/ar/news', label: 'الأخبار' },
+    { href: '/ar/factory', label: 'المصنع' },
+    { href: '/ar/service', label: 'الخدمات' },
+    { href: '/ar/faq', label: 'أسئلة شائعة' },
+    { href: '/ar/contact', label: 'اتصل بنا' },
+  ],
+};
+
+const locales = [
+  { code: 'en', label: 'English', flag: '🇬🇧' },
+  { code: 'de', label: 'Deutsch', flag: '🇩🇪' },
+  { code: 'fr', label: 'Français', flag: '🇫🇷' },
+  { code: 'es', label: 'Español', flag: '🇪🇸' },
+  { code: 'ar', label: 'العربية', flag: '🇸🇦' },
+];
+---
+
+<header class="bg-white shadow-sm sticky top-0 z-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-16">
+      <div class="flex items-center">
+        <a href={locale === 'en' ? '/' : `/${locale}/`} class="flex-shrink-0 flex items-center">
+          <div class="h-8 w-8 bg-primary rounded-full flex items-center justify-center">
+            <span class="text-white font-bold text-lg">M</span>
+          </div>
+          <span class="ml-2 text-xl font-bold text-gray-900">MetalWorks</span>
+        </a>
+      </div>
+
+      <nav class="hidden md:flex items-center space-x-1">
+        {navItems[locale as keyof typeof navItems].map((item) => (
+          <a
+            key={item.href}
+            href={item.href}
+            class="px-3 py-2 text-sm font-medium text-gray-700 hover:text-primary hover:bg-gray-50 rounded-md transition-colors"
+          >
+            {item.label}
+          </a>
+        ))}
+      </nav>
+
+      <div class="flex items-center space-x-4">
+        <div class="relative">
+          <button
+            id="locale-button"
+            class="flex items-center space-x-1 px-3 py-2 rounded-md text-gray-700 hover:text-primary hover:bg-gray-50 transition-colors"
+          >
+            <Globe class="h-4 w-4" />
+            <span class="text-sm font-medium">
+              {locales.find(l => l.code === locale)?.flag} {locales.find(l => l.code === locale)?.label}
+            </span>
+          </button>
+          <div id="locale-dropdown" class="absolute right-0 mt-2 w-48 bg-white rounded-lg shadow-lg py-1 z-50 hidden">
+            {locales.map((loc) => (
+              <a
+                key={loc.code}
+                href={loc.code === 'en' ? '/' : `/${loc.code}/`}
+                class={`flex items-center space-x-2 px-4 py-2 text-sm hover:bg-gray-50 ${locale === loc.code ? 'text-primary font-medium' : 'text-gray-700'}`}
+              >
+                <span>{loc.flag}</span>
+                <span>{loc.label}</span>
+              </a>
+            ))}
+          </div>
+        </div>
+
+        <button class="p-2 text-gray-700 hover:text-primary hover:bg-gray-50 rounded-md transition-colors">
+          <Search class="h-5 w-5" />
+        </button>
+
+        <button class="p-2 text-gray-700 hover:text-primary hover:bg-gray-50 rounded-md transition-colors">
+          <User class="h-5 w-5" />
+        </button>
+
+        <button
+          id="mobile-menu-button"
+          class="md:hidden p-2 text-gray-700 hover:text-primary hover:bg-gray-50 rounded-md transition-colors"
+        >
+          <Menu class="h-6 w-6" />
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div id="mobile-menu" class="md:hidden bg-white border-t hidden">
+    <div class="px-2 pt-2 pb-3 space-y-1">
+      {navItems[locale as keyof typeof navItems].map((item) => (
+        <a
+          key={item.href}
+          href={item.href}
+          class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 rounded-md"
+        >
+          {item.label}
+        </a>
+      ))}
+    </div>
+  </div>
+</header>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const localeButton = document.getElementById('locale-button');
+    const localeDropdown = document.getElementById('locale-dropdown');
+    
+    localeButton?.addEventListener('click', () => {
+      localeDropdown?.classList.toggle('hidden');
+    });
+
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+    
+    mobileMenuButton?.addEventListener('click', () => {
+      mobileMenu?.classList.toggle('hidden');
+      const icon = mobileMenuButton.querySelector('svg');
+      if (icon) {
+        icon.classList.toggle('rotate-90');
+      }
+    });
+
+    document.addEventListener('click', (e) => {
+      if (!localeButton?.contains(e.target as Node)) {
+        localeDropdown?.classList.add('hidden');
+      }
+    });
+  });
+</script>

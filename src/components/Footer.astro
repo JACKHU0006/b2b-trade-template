@@ -1,0 +1,342 @@
+---
+import { MapPin, Phone, Mail, Clock, Link2, MessageCircle, Send, Play } from '@lucide/astro';
+
+interface FooterProps {
+  locale: string;
+}
+
+const { locale } = Astro.props;
+
+const footerLinks = {
+  en: {
+    company: {
+      title: 'Company',
+      links: [
+        { href: '/about', label: 'About Us' },
+        { href: '/factory', label: 'Our Factory' },
+        { href: '/news', label: 'News & Events' },
+        { href: '/service', label: 'Services' },
+      ],
+    },
+    products: {
+      title: 'Products',
+      links: [
+        { href: '/products', label: 'All Products' },
+        { href: '/products?category=steel', label: 'Steel Products' },
+        { href: '/products?category=aluminum', label: 'Aluminum' },
+        { href: '/products?category=copper', label: 'Copper' },
+      ],
+    },
+    support: {
+      title: 'Support',
+      links: [
+        { href: '/faq', label: 'FAQ' },
+        { href: '/contact', label: 'Contact Us' },
+        { href: '/service', label: 'Technical Support' },
+        { href: '/sitemap', label: 'Sitemap' },
+      ],
+    },
+    legal: {
+      title: 'Legal',
+      links: [
+        { href: '/privacy', label: 'Privacy Policy' },
+        { href: '/terms', label: 'Terms of Service' },
+        { href: '/cookies', label: 'Cookie Policy' },
+      ],
+    },
+  },
+  de: {
+    company: {
+      title: 'Unternehmen',
+      links: [
+        { href: '/de/about', label: 'Über uns' },
+        { href: '/de/factory', label: 'Unsere Fabrik' },
+        { href: '/de/news', label: 'Nachrichten & Events' },
+        { href: '/de/service', label: 'Dienstleistungen' },
+      ],
+    },
+    products: {
+      title: 'Produkte',
+      links: [
+        { href: '/de/products', label: 'Alle Produkte' },
+        { href: '/de/products?category=steel', label: 'Stahlprodukte' },
+        { href: '/de/products?category=aluminum', label: 'Aluminium' },
+        { href: '/de/products?category=copper', label: 'Kupfer' },
+      ],
+    },
+    support: {
+      title: 'Support',
+      links: [
+        { href: '/de/faq', label: 'FAQ' },
+        { href: '/de/contact', label: 'Kontakt' },
+        { href: '/de/service', label: 'Technischer Support' },
+        { href: '/de/sitemap', label: 'Sitemap' },
+      ],
+    },
+    legal: {
+      title: 'Rechtlich',
+      links: [
+        { href: '/de/privacy', label: 'Datenschutz' },
+        { href: '/de/terms', label: 'AGB' },
+        { href: '/de/cookies', label: 'Cookie-Richtlinie' },
+      ],
+    },
+  },
+  fr: {
+    company: {
+      title: 'Entreprise',
+      links: [
+        { href: '/fr/about', label: 'À propos' },
+        { href: '/fr/factory', label: 'Notre usine' },
+        { href: '/fr/news', label: 'Nouvelles & événements' },
+        { href: '/fr/service', label: 'Services' },
+      ],
+    },
+    products: {
+      title: 'Produits',
+      links: [
+        { href: '/fr/products', label: 'Tous les produits' },
+        { href: '/fr/products?category=steel', label: 'Produits en acier' },
+        { href: '/fr/products?category=aluminum', label: 'Aluminium' },
+        { href: '/fr/products?category=copper', label: 'Cuivre' },
+      ],
+    },
+    support: {
+      title: 'Support',
+      links: [
+        { href: '/fr/faq', label: 'FAQ' },
+        { href: '/fr/contact', label: 'Contact' },
+        { href: '/fr/service', label: 'Support technique' },
+        { href: '/fr/sitemap', label: 'Plan du site' },
+      ],
+    },
+    legal: {
+      title: 'Légal',
+      links: [
+        { href: '/fr/privacy', label: 'Politique de confidentialité' },
+        { href: '/fr/terms', label: 'Conditions d\'utilisation' },
+        { href: '/fr/cookies', label: 'Politique de cookies' },
+      ],
+    },
+  },
+  es: {
+    company: {
+      title: 'Compañía',
+      links: [
+        { href: '/es/about', label: 'Sobre nosotros' },
+        { href: '/es/factory', label: 'Nuestra fábrica' },
+        { href: '/es/news', label: 'Noticias & eventos' },
+        { href: '/es/service', label: 'Servicios' },
+      ],
+    },
+    products: {
+      title: 'Productos',
+      links: [
+        { href: '/es/products', label: 'Todos los productos' },
+        { href: '/es/products?category=steel', label: 'Productos de acero' },
+        { href: '/es/products?category=aluminum', label: 'Aluminio' },
+        { href: '/es/products?category=copper', label: 'Cobre' },
+      ],
+    },
+    support: {
+      title: 'Soporte',
+      links: [
+        { href: '/es/faq', label: 'FAQ' },
+        { href: '/es/contact', label: 'Contacto' },
+        { href: '/es/service', label: 'Soporte técnico' },
+        { href: '/es/sitemap', label: 'Mapa del sitio' },
+      ],
+    },
+    legal: {
+      title: 'Legal',
+      links: [
+        { href: '/es/privacy', label: 'Política de privacidad' },
+        { href: '/es/terms', label: 'Términos de servicio' },
+        { href: '/es/cookies', label: 'Política de cookies' },
+      ],
+    },
+  },
+  ar: {
+    company: {
+      title: 'الشركة',
+      links: [
+        { href: '/ar/about', label: 'عن الشركة' },
+        { href: '/ar/factory', label: 'مصنعنا' },
+        { href: '/ar/news', label: 'الأخبار والمناسبات' },
+        { href: '/ar/service', label: 'الخدمات' },
+      ],
+    },
+    products: {
+      title: 'المنتجات',
+      links: [
+        { href: '/ar/products', label: 'جميع المنتجات' },
+        { href: '/ar/products?category=steel', label: 'منتجات الفولاذ' },
+        { href: '/ar/products?category=aluminum', label: 'الألومنيوم' },
+        { href: '/ar/products?category=copper', label: 'النحاس' },
+      ],
+    },
+    support: {
+      title: 'الدعم',
+      links: [
+        { href: '/ar/faq', label: 'أسئلة شائعة' },
+        { href: '/ar/contact', label: 'اتصل بنا' },
+        { href: '/ar/service', label: 'الدعم الفني' },
+        { href: '/ar/sitemap', label: 'خريطة الموقع' },
+      ],
+    },
+    legal: {
+      title: 'قانوني',
+      links: [
+        { href: '/ar/privacy', label: 'سياسة الخصوصية' },
+        { href: '/ar/terms', label: 'شروط الخدمة' },
+        { href: '/ar/cookies', label: 'سياسة الكوكيز' },
+      ],
+    },
+  },
+};
+
+const contactInfo = {
+  en: {
+    address: '123 Industrial Road, Shanghai, China',
+    phone: '+86 21 1234 5678',
+    email: 'contact@metalworks.com',
+    hours: 'Mon-Fri: 8:00 - 18:00',
+  },
+  de: {
+    address: '123 Industrial Road, Shanghai, China',
+    phone: '+86 21 1234 5678',
+    email: 'contact@metalworks.com',
+    hours: 'Mo-Fr: 8:00 - 18:00',
+  },
+  fr: {
+    address: '123 Industrial Road, Shanghai, Chine',
+    phone: '+86 21 1234 5678',
+    email: 'contact@metalworks.com',
+    hours: 'Lun-Ven: 8:00 - 18:00',
+  },
+  es: {
+    address: '123 Industrial Road, Shanghái, China',
+    phone: '+86 21 1234 5678',
+    email: 'contact@metalworks.com',
+    hours: 'Lun-Vie: 8:00 - 18:00',
+  },
+  ar: {
+    address: '123 شارع الصناعي، شنغهاي، الصين',
+    phone: '+86 21 1234 5678',
+    email: 'contact@metalworks.com',
+    hours: 'الإثنين إلى الجمعة: 8:00 - 18:00',
+  },
+};
+---
+
+<footer class="bg-gray-900 text-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+      <div class="lg:col-span-2">
+        <div class="flex items-center mb-4">
+          <div class="h-10 w-10 bg-primary rounded-full flex items-center justify-center">
+            <span class="text-white font-bold text-xl">M</span>
+          </div>
+          <span class="ml-3 text-2xl font-bold">MetalWorks</span>
+        </div>
+        <p class="text-gray-400 mb-6 max-w-sm">
+          {locale === 'en' && 'Leading manufacturer of industrial metal products. We provide high-quality steel, aluminum, copper, and titanium solutions worldwide.'}
+          {locale === 'de' && 'Führender Hersteller von industriellen Metallprodukten. Wir liefern weltweit hochwertige Lösungen aus Stahl, Aluminium, Kupfer und Titan.'}
+          {locale === 'fr' && 'Fabricant leader de produits métalliques industriels. Nous fournissons des solutions de haute qualité en acier, aluminium, cuivre et titane dans le monde entier.'}
+          {locale === 'es' && 'Fabricante líder de productos metálicos industriales. Proporcionamos soluciones de alta calidad en acero, aluminio, cobre y titanio en todo el mundo.'}
+          {locale === 'ar' && 'المنتج الرائد للمنتجات المعدنية الصناعية. نقدم حلول عالية الجودة من الفولاذ والألومنيوم والنحاس والتيتانيوم في جميع أنحاء العالم.'}
+        </p>
+        <div class="space-y-3">
+          <div class="flex items-center text-gray-400">
+            <MapPin class="h-5 w-5 mr-3 text-primary" />
+            <span>{contactInfo[locale as keyof typeof contactInfo].address}</span>
+          </div>
+          <div class="flex items-center text-gray-400">
+            <Phone class="h-5 w-5 mr-3 text-primary" />
+            <span>{contactInfo[locale as keyof typeof contactInfo].phone}</span>
+          </div>
+          <div class="flex items-center text-gray-400">
+            <Mail class="h-5 w-5 mr-3 text-primary" />
+            <span>{contactInfo[locale as keyof typeof contactInfo].email}</span>
+          </div>
+          <div class="flex items-center text-gray-400">
+            <Clock class="h-5 w-5 mr-3 text-primary" />
+            <span>{contactInfo[locale as keyof typeof contactInfo].hours}</span>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <h3 class="text-lg font-semibold mb-4">{footerLinks[locale as keyof typeof footerLinks].company.title}</h3>
+        <ul class="space-y-2">
+          {footerLinks[locale as keyof typeof footerLinks].company.links.map((link) => (
+            <li key={link.href}>
+              <a href={link.href} class="text-gray-400 hover:text-white transition-colors">
+                {link.label}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <div>
+        <h3 class="text-lg font-semibold mb-4">{footerLinks[locale as keyof typeof footerLinks].products.title}</h3>
+        <ul class="space-y-2">
+          {footerLinks[locale as keyof typeof footerLinks].products.links.map((link) => (
+            <li key={link.href}>
+              <a href={link.href} class="text-gray-400 hover:text-white transition-colors">
+                {link.label}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <div>
+        <h3 class="text-lg font-semibold mb-4">{footerLinks[locale as keyof typeof footerLinks].support.title}</h3>
+        <ul class="space-y-2">
+          {footerLinks[locale as keyof typeof footerLinks].support.links.map((link) => (
+            <li key={link.href}>
+              <a href={link.href} class="text-gray-400 hover:text-white transition-colors">
+                {link.label}
+              </a>
+            </li>
+          ))}
+        </ul>
+        <div class="flex space-x-4 mt-6">
+          <a href="#" class="text-gray-400 hover:text-white transition-colors">
+            <Link2 class="h-5 w-5" />
+          </a>
+          <a href="#" class="text-gray-400 hover:text-white transition-colors">
+            <MessageCircle class="h-5 w-5" />
+          </a>
+          <a href="#" class="text-gray-400 hover:text-white transition-colors">
+            <Send class="h-5 w-5" />
+          </a>
+          <a href="#" class="text-gray-400 hover:text-white transition-colors">
+            <Play class="h-5 w-5" />
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="border-t border-gray-800 mt-8 pt-8">
+      <div class="flex flex-col md:flex-row justify-between items-center">
+        <p class="text-gray-400 text-sm">
+          {locale === 'en' && '2024 MetalWorks. All rights reserved.'}
+          {locale === 'de' && '2024 MetalWorks. Alle Rechte vorbehalten.'}
+          {locale === 'fr' && '2024 MetalWorks. Tous droits réservés.'}
+          {locale === 'es' && '2024 MetalWorks. Todos los derechos reservados.'}
+          {locale === 'ar' && '2024 MetalWorks. جميع الحقوق محفوظة.'}
+        </p>
+        <div class="flex space-x-6 mt-4 md:mt-0">
+          {footerLinks[locale as keyof typeof footerLinks].legal.links.map((link) => (
+            <a key={link.href} href={link.href} class="text-gray-400 hover:text-white text-sm transition-colors">
+              {link.label}
+            </a>
+          ))}
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>

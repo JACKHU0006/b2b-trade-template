@@ -1,0 +1,154 @@
+---
+import { MessageCircle, Send, X } from '@lucide/astro';
+---
+
+<div id="ai-chat-container" class="fixed bottom-6 right-6 z-50">
+  <button
+    id="chat-toggle"
+    class="w-14 h-14 bg-primary hover:bg-primary-dark text-white rounded-full shadow-lg flex items-center justify-center transition-all hover:scale-110"
+  >
+    <MessageCircle class="h-6 w-6" />
+  </button>
+
+  <div id="chat-window" class="hidden absolute bottom-20 right-0 w-96 bg-white rounded-xl shadow-2xl overflow-hidden">
+    <div class="bg-primary text-white px-4 py-3 flex items-center justify-between">
+      <div class="flex items-center">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2">
+          <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+        </svg>
+        <span class="font-semibold">AI Assistant</span>
+      </div>
+      <button id="chat-close" class="text-gray-200 hover:text-white">
+        <X class="h-5 w-5" />
+      </button>
+    </div>
+
+    <div id="chat-messages" class="h-64 overflow-y-auto p-4 space-y-3">
+      <div class="flex items-start">
+        <div class="bg-primary/10 rounded-full p-2 mr-3">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+          </svg>
+        </div>
+        <div class="bg-gray-100 rounded-lg rounded-tl-none px-4 py-2">
+          <p class="text-sm text-gray-700">Hello! I'm your AI assistant. How can I help you today?</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="p-4 border-t">
+      <div class="flex items-center gap-2">
+        <input
+          id="chat-input"
+          type="text"
+          placeholder="Type your message..."
+          class="flex-1 px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+        />
+        <button
+          id="chat-send"
+          class="bg-primary hover:bg-primary-dark text-white px-4 py-2 rounded-lg transition-colors"
+        >
+          <Send class="h-5 w-5" />
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var chatToggle = document.getElementById('chat-toggle');
+    var chatWindow = document.getElementById('chat-window');
+    var chatClose = document.getElementById('chat-close');
+    var chatInput = document.getElementById('chat-input');
+    var chatSend = document.getElementById('chat-send');
+    var chatMessages = document.getElementById('chat-messages');
+
+    if (chatToggle) {
+      chatToggle.addEventListener('click', function() {
+        if (chatWindow) {
+          chatWindow.classList.toggle('hidden');
+        }
+      });
+    }
+
+    if (chatClose) {
+      chatClose.addEventListener('click', function() {
+        if (chatWindow) {
+          chatWindow.classList.add('hidden');
+        }
+      });
+    }
+
+    function handleSend() {
+      var message = chatInput.value.trim();
+      if (!message) return;
+
+      addMessage(message, 'user');
+      chatInput.value = '';
+
+      setTimeout(function() {
+        var responses = [
+          'Thank you for your message! Our team will get back to you within 24 hours.',
+          'I understand your query. Let me provide you with more information.',
+          'Great question! I can help you with that. Please visit our Products page for detailed information.',
+          'For custom orders, please contact our sales team via the Contact page.',
+          'Our minimum order quantity varies by product. Please check the specific product page for details.'
+        ];
+        var response = responses[Math.floor(Math.random() * responses.length)];
+        addMessage(response, 'bot');
+      }, 1000);
+    }
+
+    if (chatSend) {
+      chatSend.addEventListener('click', handleSend);
+    }
+
+    if (chatInput) {
+      chatInput.addEventListener('keypress', function(e) {
+        if (e.key === 'Enter') {
+          handleSend();
+        }
+      });
+    }
+
+    function addMessage(text, sender) {
+      var messageDiv = document.createElement('div');
+      messageDiv.className = 'flex items-start ' + (sender === 'user' ? 'flex-row-reverse' : '');
+
+      var iconDiv = document.createElement('div');
+      iconDiv.className = (sender === 'user' ? 'bg-secondary/10' : 'bg-primary/10') + ' rounded-full p-2 ' + (sender === 'user' ? 'ml-3' : 'mr-3');
+
+      var icon = document.createElement('svg');
+      icon.setAttribute('xmlns', 'http://www.w3.org/2000/svg');
+      icon.setAttribute('width', '16');
+      icon.setAttribute('height', '16');
+      icon.setAttribute('viewBox', '0 0 24 24');
+      icon.setAttribute('fill', 'none');
+      icon.setAttribute('stroke', 'currentColor');
+      icon.setAttribute('stroke-width', '2');
+      icon.setAttribute('stroke-linecap', 'round');
+      icon.setAttribute('stroke-linejoin', 'round');
+      icon.className = 'h-4 w-4 ' + (sender === 'user' ? 'text-secondary' : 'text-primary');
+
+      if (sender === 'user') {
+        icon.innerHTML = '<path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/>';
+      } else {
+        icon.innerHTML = '<path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>';
+      }
+
+      iconDiv.appendChild(icon);
+
+      var contentDiv = document.createElement('div');
+      contentDiv.className = (sender === 'user' ? 'bg-secondary text-white' : 'bg-gray-100') + ' rounded-lg ' + (sender === 'user' ? 'rounded-tr-none' : 'rounded-tl-none') + ' px-4 py-2 max-w-[70%]';
+
+      var textNode = document.createTextNode(text);
+      contentDiv.appendChild(textNode);
+
+      messageDiv.appendChild(iconDiv);
+      messageDiv.appendChild(contentDiv);
+      chatMessages.appendChild(messageDiv);
+      chatMessages.scrollTop = chatMessages.scrollHeight;
+    }
+  });
+</script>

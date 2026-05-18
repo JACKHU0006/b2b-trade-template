@@ -1,0 +1,155 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+import { Award, Globe, TrendingUp, Users, Target, History } from '@lucide/astro';
+
+const locale = 'en';
+---
+
+<MainLayout 
+  title="About MetalWorks - Industrial Metal Products Manufacturer" 
+  description="Learn about our company, our mission, and our commitment to quality and innovation in the metal industry."
+  locale={locale}
+>
+  <section class="bg-primary text-white py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center">
+        <h1 class="text-4xl md:text-5xl font-bold mb-4">About MetalWorks</h1>
+        <p class="text-lg text-gray-200">
+          Leading the metal industry with quality, innovation, and exceptional service
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <h2 class="text-3xl font-bold mb-6">Our Story</h2>
+          <p class="text-gray-600 mb-4">
+            Founded in 1999, MetalWorks has grown from a small manufacturing workshop into a global leader in industrial metal products. With over 25 years of experience, we have established ourselves as a trusted supplier to businesses worldwide.
+          </p>
+          <p class="text-gray-600 mb-4">
+            Our commitment to quality, innovation, and customer satisfaction has been the driving force behind our success. We continuously invest in state-of-the-art technology and skilled personnel to ensure we meet and exceed our customers' expectations.
+          </p>
+          <p class="text-gray-600">
+            Today, we serve over 500 clients in more than 50 countries, providing high-quality steel, aluminum, copper, and titanium products for various industries including construction, manufacturing, aerospace, and automotive.
+          </p>
+        </div>
+        <div class="bg-gray-100 rounded-xl p-8">
+          <div class="text-center">
+            <div class="text-6xl font-bold text-primary mb-2">25+</div>
+            <div class="text-gray-600 mb-6">Years of Excellence</div>
+            <div class="grid grid-cols-3 gap-4">
+              <div>
+                <div class="text-3xl font-bold text-primary">50+</div>
+                <div class="text-sm text-gray-600">Countries</div>
+              </div>
+              <div>
+                <div class="text-3xl font-bold text-primary">500+</div>
+                <div class="text-sm text-gray-600">Clients</div>
+              </div>
+              <div>
+                <div class="text-3xl font-bold text-primary">10K+</div>
+                <div class="text-sm text-gray-600">Products</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold mb-4">Our Values</h2>
+        <p class="text-gray-600">The principles that guide everything we do</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div class="bg-white rounded-xl p-6 shadow-lg">
+          <div class="bg-primary/10 rounded-full p-4 mb-4 w-16">
+            <Award class="h-8 w-8 text-primary" />
+          </div>
+          <h3 class="text-xl font-semibold mb-2">Quality First</h3>
+          <p class="text-gray-600">We never compromise on quality. Every product undergoes rigorous testing to ensure it meets the highest standards.</p>
+        </div>
+        <div class="bg-white rounded-xl p-6 shadow-lg">
+          <div class="bg-secondary/10 rounded-full p-4 mb-4 w-16">
+            <Target class="h-8 w-8 text-secondary" />
+          </div>
+          <h3 class="text-xl font-semibold mb-2">Customer Focus</h3>
+          <p class="text-gray-600">Our customers are at the center of everything we do. We strive to exceed their expectations every day.</p>
+        </div>
+        <div class="bg-white rounded-xl p-6 shadow-lg">
+          <div class="bg-success/10 rounded-full p-4 mb-4 w-16">
+            <TrendingUp class="h-8 w-8 text-success" />
+          </div>
+          <h3 class="text-xl font-semibold mb-2">Innovation</h3>
+          <p class="text-gray-600">We embrace innovation and continuously improve our processes to stay ahead of the competition.</p>
+        </div>
+        <div class="bg-white rounded-xl p-6 shadow-lg">
+          <div class="bg-accent/10 rounded-full p-4 mb-4 w-16">
+            <Users class="h-8 w-8 text-accent" />
+          </div>
+          <h3 class="text-xl font-semibold mb-2">Teamwork</h3>
+          <p class="text-gray-600">Our dedicated team works together to deliver the best results for our customers and each other.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold mb-4">Our Mission & Vision</h2>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div class="bg-primary rounded-xl p-8 text-white">
+          <div class="flex items-center mb-4">
+            <Target class="h-8 w-8 mr-4" />
+            <h3 class="text-2xl font-semibold">Mission</h3>
+          </div>
+          <p class="text-gray-200">
+            To provide high-quality metal products and exceptional service that exceed our customers' expectations, while maintaining the highest standards of integrity and sustainability.
+          </p>
+        </div>
+        <div class="bg-secondary rounded-xl p-8 text-white">
+          <div class="flex items-center mb-4">
+            <Globe class="h-8 w-8 mr-4" />
+            <h3 class="text-2xl font-semibold">Vision</h3>
+          </div>
+          <p class="text-gray-200">
+            To be the world's most trusted supplier of industrial metal products, recognized for innovation, quality, and customer service excellence.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold mb-4">Our Certifications</h2>
+        <p class="text-gray-600">Recognized for quality and excellence</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="bg-white rounded-xl p-8 shadow-lg text-center">
+          <div class="text-6xl mb-4">🏆</div>
+          <h3 class="text-xl font-semibold mb-2">ISO 9001:2015</h3>
+          <p class="text-gray-600">Quality Management System</p>
+        </div>
+        <div class="bg-white rounded-xl p-8 shadow-lg text-center">
+          <div class="text-6xl mb-4">🌍</div>
+          <h3 class="text-xl font-semibold mb-2">CE Certified</h3>
+          <p class="text-gray-600">European Conformity</p>
+        </div>
+        <div class="bg-white rounded-xl p-8 shadow-lg text-center">
+          <div class="text-6xl mb-4">⭐</div>
+          <h3 class="text-xl font-semibold mb-2">SGS Approved</h3>
+          <p class="text-gray-600">Inspection & Certification</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</MainLayout>

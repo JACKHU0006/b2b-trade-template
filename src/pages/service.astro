@@ -1,0 +1,130 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+import { Wrench, Truck, FileText, Phone, Clock, Headphones } from '@lucide/astro';
+
+const locale = 'en';
+
+const services = [
+  {
+    icon: Wrench,
+    title: 'Custom Manufacturing',
+    description: 'We offer custom manufacturing services to meet your specific requirements. Our team works closely with you to understand your needs and deliver tailored solutions.',
+    features: ['Custom designs', 'Precision engineering', 'Quality materials']
+  },
+  {
+    icon: Truck,
+    title: 'Global Logistics',
+    description: 'Our logistics team ensures timely delivery to any destination worldwide. We work with trusted shipping partners to ensure your order arrives safely and on time.',
+    features: ['Global delivery', 'Fast shipping', 'Trackable shipments']
+  },
+  {
+    icon: FileText,
+    title: 'Technical Documentation',
+    description: 'We provide comprehensive technical documentation for all our products, including specifications, certifications, and usage guidelines.',
+    features: ['Detailed specs', 'Certification docs', 'Usage guides']
+  },
+  {
+    icon: Phone,
+    title: 'Technical Support',
+    description: 'Our technical support team is available 24/7 to assist with any questions or issues you may have regarding our products.',
+    features: ['24/7 support', 'Expert advice', 'Quick response']
+  },
+];
+---
+
+<MainLayout 
+  title="Our Services - MetalWorks" 
+  description="Comprehensive services to support your business needs, from custom manufacturing to technical support."
+  locale={locale}
+>
+  <section class="bg-primary text-white py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center">
+        <h1 class="text-4xl md:text-5xl font-bold mb-4">Our Services</h1>
+        <p class="text-lg text-gray-200">
+          Comprehensive support for your business needs
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        {services.map((service) => (
+          <div key={service.title} class="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow">
+            <div class="flex items-start">
+              <div class="bg-primary/10 rounded-full p-4 mr-6">
+                <service.icon class="h-8 w-8 text-primary" />
+              </div>
+              <div>
+                <h2 class="text-2xl font-semibold mb-3">{service.title}</h2>
+                <p class="text-gray-600 mb-4">{service.description}</p>
+                <ul class="space-y-2">
+                  {service.features.map((feature) => (
+                    <li key={feature} class="flex items-center text-gray-600">
+                      <span class="w-2 h-2 bg-primary rounded-full mr-2"></span>
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold mb-4">Why Choose Our Services</h2>
+        <p class="text-gray-600">We are committed to providing exceptional service and support</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="bg-white rounded-xl p-8 shadow-lg text-center">
+          <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+            <Clock class="h-8 w-8 text-primary" />
+          </div>
+          <h3 class="text-xl font-semibold mb-2">Fast Response</h3>
+          <p class="text-gray-600">We respond to inquiries within 24 hours, ensuring you get the information you need quickly.</p>
+        </div>
+        <div class="bg-white rounded-xl p-8 shadow-lg text-center">
+          <div class="w-16 h-16 bg-secondary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+            <Headphones class="h-8 w-8 text-secondary" />
+          </div>
+          <h3 class="text-xl font-semibold mb-2">Dedicated Support</h3>
+          <p class="text-gray-600">Our dedicated support team is available around the clock to assist with any questions or issues.</p>
+        </div>
+        <div class="bg-white rounded-xl p-8 shadow-lg text-center">
+          <div class="w-16 h-16 bg-success/10 rounded-full flex items-center justify-center mx-auto mb-4">
+            <FileText class="h-8 w-8 text-success" />
+          </div>
+          <h3 class="text-xl font-semibold mb-2">Documentation</h3>
+          <p class="text-gray-600">Comprehensive documentation and guides to help you make informed decisions.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 bg-primary text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center">
+        <h2 class="text-3xl font-bold mb-4">Need Assistance?</h2>
+        <p class="text-gray-200 mb-8 max-w-2xl mx-auto">
+          Our team is ready to help with any questions or requirements you may have. Contact us today!
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="/contact" class="inline-flex items-center justify-center px-8 py-4 bg-white text-primary font-semibold rounded-lg hover:bg-gray-100 transition-colors">
+            Contact Us
+          </a>
+          <a href="tel:+862112345678" class="inline-flex items-center justify-center px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white/10 transition-colors">
+            <Phone class="mr-2 h-5 w-5" />
+            +86 21 1234 5678
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</MainLayout>

@@ -1,0 +1,78 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+
+const locale = 'en';
+
+const siteMap = [
+  {
+    title: 'Main Pages',
+    links: [
+      { href: '/', label: 'Home' },
+      { href: '/about', label: 'About Us' },
+      { href: '/products', label: 'Products' },
+      { href: '/news', label: 'News & Events' },
+      { href: '/factory', label: 'Our Factory' },
+      { href: '/service', label: 'Services' },
+      { href: '/faq', label: 'FAQ' },
+      { href: '/contact', label: 'Contact' },
+    ],
+  },
+  {
+    title: 'Product Categories',
+    links: [
+      { href: '/products?category=Steel Products', label: 'Steel Products' },
+      { href: '/products?category=Valves', label: 'Valves' },
+      { href: '/products?category=Aluminum', label: 'Aluminum' },
+      { href: '/products?category=Copper', label: 'Copper' },
+      { href: '/products?category=Brass', label: 'Brass' },
+      { href: '/products?category=Titanium', label: 'Titanium' },
+    ],
+  },
+  {
+    title: 'Legal',
+    links: [
+      { href: '/privacy', label: 'Privacy Policy' },
+      { href: '/terms', label: 'Terms of Service' },
+      { href: '/cookies', label: 'Cookie Policy' },
+    ],
+  },
+];
+---
+
+<MainLayout 
+  title="Sitemap - MetalWorks" 
+  description="Site map showing all pages and sections of our website."
+  locale={locale}
+>
+  <section class="bg-primary text-white py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center">
+        <h1 class="text-4xl md:text-5xl font-bold mb-4">Site Map</h1>
+        <p class="text-lg text-gray-200">
+          Navigate through our website structure
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+        {siteMap.map((section) => (
+          <div key={section.title}>
+            <h2 class="text-xl font-bold mb-6 text-gray-900">{section.title}</h2>
+            <ul class="space-y-3">
+              {section.links.map((link) => (
+                <li key={link.label}>
+                  <a href={link.href} class="text-gray-600 hover:text-primary transition-colors">
+                    {link.label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+</MainLayout>

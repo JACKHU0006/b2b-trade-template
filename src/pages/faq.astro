@@ -1,0 +1,123 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+import { ChevronDown, HelpCircle } from '@lucide/astro';
+
+const locale = 'en';
+
+const faqs = [
+  {
+    question: 'What is your minimum order quantity?',
+    answer: 'Our minimum order quantity varies depending on the product. For most standard products, the MOQ is 100 pieces. For custom orders, please contact our sales team for specific requirements.'
+  },
+  {
+    question: 'Do you offer custom manufacturing?',
+    answer: 'Yes, we offer custom manufacturing services. Our engineering team can work with you to design and produce custom metal products according to your specifications. Please contact us with your requirements.'
+  },
+  {
+    question: 'What is your delivery time?',
+    answer: 'Delivery time depends on the product and quantity. Standard products typically ship within 7-14 days. Custom orders may take 2-4 weeks depending on complexity. We will provide a specific delivery date when you place your order.'
+  },
+  {
+    question: 'What payment methods do you accept?',
+    answer: 'We accept T/T (Telegraphic Transfer), L/C (Letter of Credit), PayPal, and major credit cards. For large orders, we may require a 30% deposit upfront with the balance due before shipment.'
+  },
+  {
+    question: 'Do you provide samples?',
+    answer: 'Yes, we can provide samples for most products. Sample costs and shipping fees apply. Please contact our sales team to request a sample.'
+  },
+  {
+    question: 'What certifications do your products have?',
+    answer: 'All our products are ISO 9001:2015 certified. Depending on the product, we also provide CE, SGS, and other relevant certifications. Certifications are available upon request.'
+  },
+  {
+    question: 'What is your return policy?',
+    answer: 'We stand behind the quality of our products. If you receive defective or incorrect items, please contact us within 7 days of delivery. We will arrange for a replacement or refund.'
+  },
+  {
+    question: 'Do you ship internationally?',
+    answer: 'Yes, we ship to over 50 countries worldwide. We work with major shipping carriers to ensure safe and timely delivery. Shipping costs depend on the destination and order weight.'
+  },
+];
+---
+
+<MainLayout 
+  title="FAQ - MetalWorks" 
+  description="Frequently asked questions about our products, services, and ordering process."
+  locale={locale}
+>
+  <section class="bg-primary text-white py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center">
+        <h1 class="text-4xl md:text-5xl font-bold mb-4">Frequently Asked Questions</h1>
+        <p class="text-lg text-gray-200">
+          Find answers to common questions about our products and services
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="space-y-4">
+        {faqs.map((faq, index) => (
+          <div key={index} class="bg-white rounded-xl shadow-lg overflow-hidden">
+            <button
+              onClick={() => toggleFaq(index)}
+              class="w-full px-6 py-5 flex items-center justify-between text-left hover:bg-gray-50 transition-colors"
+            >
+              <div class="flex items-center">
+                <HelpCircle class="h-5 w-5 text-primary mr-3" />
+                <span class="font-semibold text-gray-900">{faq.question}</span>
+              </div>
+              <ChevronDown 
+                id={`chevron-${index}`}
+                class="h-5 w-5 text-gray-500 transition-transform" 
+              />
+            </button>
+            <div 
+              id={`answer-${index}`}
+              class="overflow-hidden transition-all duration-300 max-h-0"
+            >
+              <div class="px-6 pb-5 text-gray-600 pl-14">
+                {faq.answer}
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <div class="mt-12 text-center">
+        <p class="text-gray-600 mb-4">Didn't find your answer?</p>
+        <a href="/contact" class="inline-flex items-center text-primary font-semibold hover:underline">
+          Contact our support team
+        </a>
+      </div>
+    </div>
+  </section>
+</MainLayout>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const firstChevron = document.getElementById('chevron-0');
+    const firstAnswer = document.getElementById('answer-0');
+    if (firstChevron && firstAnswer) {
+      firstChevron.style.transform = 'rotate(180deg)';
+      firstAnswer.style.maxHeight = '96px';
+    }
+  });
+
+  function toggleFaq(index) {
+    const chevron = document.getElementById(`chevron-${index}`);
+    const answer = document.getElementById(`answer-${index}`);
+    
+    if (chevron && answer) {
+      if (answer.style.maxHeight === '96px') {
+        chevron.style.transform = 'rotate(0deg)';
+        answer.style.maxHeight = '0';
+      } else {
+        chevron.style.transform = 'rotate(180deg)';
+        answer.style.maxHeight = '96px';
+      }
+    }
+  }
+</script>

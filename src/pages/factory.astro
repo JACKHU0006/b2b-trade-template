@@ -1,0 +1,140 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+import { Factory, Truck, Warehouse, Cpu, Users, Award } from '@lucide/astro';
+
+const locale = 'en';
+
+const facilities = [
+  {
+    icon: Factory,
+    title: 'Production Facility',
+    description: 'Our state-of-the-art production facility spans over 50,000 square meters with advanced manufacturing equipment.',
+    stats: '50,000 m²'
+  },
+  {
+    icon: Warehouse,
+    title: 'Warehouse',
+    description: 'Modern warehouse facilities with automated inventory management and climate control systems.',
+    stats: '20,000 m²'
+  },
+  {
+    icon: Truck,
+    title: 'Logistics Center',
+    description: 'Efficient logistics center ensuring timely delivery to customers worldwide.',
+    stats: 'Global Delivery'
+  },
+  {
+    icon: Cpu,
+    title: 'Quality Control',
+    description: 'Advanced quality control lab with cutting-edge testing equipment and skilled technicians.',
+    stats: 'ISO Certified'
+  },
+];
+---
+
+<MainLayout 
+  title="Our Factory - MetalWorks" 
+  description="Explore our modern manufacturing facility and see how we produce high-quality metal products."
+  locale={locale}
+>
+  <section class="bg-primary text-white py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center">
+        <h1 class="text-4xl md:text-5xl font-bold mb-4">Our Factory</h1>
+        <p class="text-lg text-gray-200">
+          Modern manufacturing facility with state-of-the-art equipment
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <h2 class="text-3xl font-bold mb-6">World-Class Manufacturing</h2>
+          <p class="text-gray-600 mb-4">
+            Our factory is equipped with the latest technology and machinery to produce high-quality metal products. 
+            With over 25 years of experience, we have perfected our manufacturing processes to ensure precision 
+            and efficiency.
+          </p>
+          <p class="text-gray-600 mb-6">
+            We employ a team of highly skilled engineers and technicians who are dedicated to maintaining the 
+            highest standards of quality. Our facility operates 24/7 to meet the demands of our global customers.
+          </p>
+          <div class="grid grid-cols-3 gap-4">
+            <div class="text-center">
+              <div class="text-3xl font-bold text-primary mb-1">50K</div>
+              <div class="text-sm text-gray-600">m² Facility</div>
+            </div>
+            <div class="text-center">
+              <div class="text-3xl font-bold text-primary mb-1">200+</div>
+              <div class="text-sm text-gray-600">Employees</div>
+            </div>
+            <div class="text-center">
+              <div class="text-3xl font-bold text-primary mb-1">24/7</div>
+              <div class="text-sm text-gray-600">Operation</div>
+            </div>
+          </div>
+        </div>
+        <div class="bg-gray-100 rounded-xl p-8">
+          <img src="/images/factory/main.jpg" alt="MetalWorks Factory" class="w-full h-64 object-cover rounded-lg mb-4" />
+          <p class="text-gray-600 text-sm text-center">Our main production facility in Shanghai, China</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold mb-4">Our Facilities</h2>
+        <p class="text-gray-600">Explore our comprehensive manufacturing infrastructure</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        {facilities.map((facility) => (
+          <div key={facility.title} class="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow">
+            <div class="bg-primary/10 rounded-full p-4 mb-4 w-16">
+              <facility.icon class="h-8 w-8 text-primary" />
+            </div>
+            <h3 class="text-xl font-semibold mb-2">{facility.title}</h3>
+            <p class="text-gray-600 text-sm mb-3">{facility.description}</p>
+            <div class="text-primary font-semibold">{facility.stats}</div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold mb-4">Our Team</h2>
+        <p class="text-gray-600">Dedicated professionals committed to excellence</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="bg-white rounded-xl p-8 shadow-lg text-center">
+          <div class="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+            <Users class="h-10 w-10 text-primary" />
+          </div>
+          <h3 class="text-xl font-semibold mb-2">Skilled Workforce</h3>
+          <p class="text-gray-600">Over 200 skilled workers and engineers dedicated to quality production.</p>
+        </div>
+        <div class="bg-white rounded-xl p-8 shadow-lg text-center">
+          <div class="w-20 h-20 bg-secondary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+            <Award class="h-10 w-10 text-secondary" />
+          </div>
+          <h3 class="text-xl font-semibold mb-2">Continuous Training</h3>
+          <p class="text-gray-600">Regular training programs to ensure our team stays updated with latest technologies.</p>
+        </div>
+        <div class="bg-white rounded-xl p-8 shadow-lg text-center">
+          <div class="w-20 h-20 bg-success/10 rounded-full flex items-center justify-center mx-auto mb-4">
+            <Factory class="h-10 w-10 text-success" />
+          </div>
+          <h3 class="text-xl font-semibold mb-2">Safety First</h3>
+          <p class="text-gray-600">Stringent safety protocols to ensure a safe working environment for all employees.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</MainLayout>
