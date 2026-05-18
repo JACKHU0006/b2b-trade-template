@@ -19,6 +19,9 @@ jobs:
 
       - run: npm ci
 
+      - name: Create .env file from example
+        run: cp .env.example .env
+
       - name: Build Project
         run: npm run build
 
