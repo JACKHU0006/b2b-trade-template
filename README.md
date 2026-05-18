@@ -48,7 +48,8 @@ npm run build
 2. Connect to Cloudflare Pages
 3. Configure build settings:
    - Build command: `npm run build`
-   - Build output directory: `dist/client`
+   - Build output directory: `dist`
+4. GitHub Actions will automatically deploy!
 
 ## 📧 Contact
 
