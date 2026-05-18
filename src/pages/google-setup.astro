@@ -1,0 +1,197 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+---
+
+<MainLayout title="Google Services Setup Guide - FableTech Group" description="Step-by-step guide to configure Google Analytics, reCAPTCHA, OAuth, and Search Console" locale="en">
+  <div class="bg-gray-50 py-16">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h1 class="text-4xl font-bold text-gray-900 mb-8">Google Services Setup Guide</h1>
+      
+      <div class="bg-white rounded-lg shadow-md p-8 mb-8">
+        <h2 class="text-2xl font-bold text-gray-900 mb-4 flex items-center">
+          <span class="bg-red-100 text-red-600 p-2 rounded-lg mr-3">1</span>
+          Google Analytics 4 (GA4)
+        </h2>
+        <p class="text-gray-600 mb-4">Track website traffic, user behavior, and conversions.</p>
+        
+        <div class="bg-gray-50 rounded-lg p-4 mb-4">
+          <h3 class="font-semibold mb-2">Step 1: Create GA4 Property</h3>
+          <ol class="list-decimal list-inside space-y-2 text-gray-600">
+            <li>Go to <a href="https://analytics.google.com" class="text-primary hover:underline">Google Analytics</a></li>
+            <li>Click "Admin" → "Create Property"</li>
+            <li>Select "GA4" and follow the setup wizard</li>
+            <li>Copy your Measurement ID (e.g., G-XXXXXXXXXX)</li>
+          </ol>
+        </div>
+        
+        <div class="bg-gray-50 rounded-lg p-4 mb-4">
+          <h3 class="font-semibold mb-2">Step 2: Configure Environment Variable</h3>
+          <p class="text-gray-600 mb-2">Add to your <code class="bg-gray-200 px-2 py-1 rounded">.env</code> file:</p>
+          <pre class="bg-gray-800 text-green-400 p-4 rounded-lg overflow-x-auto">PUBLIC_GA_ID=G-XXXXXXXXXX</pre>
+        </div>
+        
+        <div class="bg-blue-50 border-l-4 border-blue-500 p-4">
+          <p class="text-blue-800">
+            <strong>Auto-enabled:</strong> GA4 tracking code is automatically loaded on all pages when configured.
+          </p>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-lg shadow-md p-8 mb-8">
+        <h2 class="text-2xl font-bold text-gray-900 mb-4 flex items-center">
+          <span class="bg-green-100 text-green-600 p-2 rounded-lg mr-3">2</span>
+          Google reCAPTCHA v3
+        </h2>
+        <p class="text-gray-600 mb-4">Protect forms from spam and bot submissions.</p>
+        
+        <div class="bg-gray-50 rounded-lg p-4 mb-4">
+          <h3 class="font-semibold mb-2">Step 1: Register reCAPTCHA Site</h3>
+          <ol class="list-decimal list-inside space-y-2 text-gray-600">
+            <li>Visit <a href="https://www.google.com/recaptcha/admin" class="text-primary hover:underline">Google reCAPTCHA Admin</a></li>
+            <li>Click "+" to register a new site</li>
+            <li>Select reCAPTCHA v3</li>
+            <li>Add your domain(s)</li>
+            <li>Copy the Site Key and Secret Key</li>
+          </ol>
+        </div>
+        
+        <div class="bg-gray-50 rounded-lg p-4 mb-4">
+          <h3 class="font-semibold mb-2">Step 2: Configure Environment Variables</h3>
+          <pre class="bg-gray-800 text-green-400 p-4 rounded-lg overflow-x-auto">PUBLIC_RECAPTCHA_SITE_KEY=your-site-key
+RECAPTCHA_SECRET_KEY=your-secret-key</pre>
+        </div>
+        
+        <div class="bg-blue-50 border-l-4 border-blue-500 p-4">
+          <p class="text-blue-800">
+            <strong>Auto-enabled:</strong> reCAPTCHA protection is automatically applied to contact forms.
+          </p>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-lg shadow-md p-8 mb-8">
+        <h2 class="text-2xl font-bold text-gray-900 mb-4 flex items-center">
+          <span class="bg-blue-100 text-blue-600 p-2 rounded-lg mr-3">3</span>
+          Google OAuth (Supabase)
+        </h2>
+        <p class="text-gray-600 mb-4">Allow users to sign in with their Google account.</p>
+        
+        <div class="bg-gray-50 rounded-lg p-4 mb-4">
+          <h3 class="font-semibold mb-2">Step 1: Create Google OAuth Credentials</h3>
+          <ol class="list-decimal list-inside space-y-2 text-gray-600">
+            <li>Go to <a href="https://console.cloud.google.com/apis/credentials" class="text-primary hover:underline">Google Cloud Console</a></li>
+            <li>Create a new project or select existing</li>
+            <li>Navigate to "Credentials" → "Create Credentials" → "OAuth client ID"</li>
+            <li>Set Application type to "Web application"</li>
+            <li>Add authorized redirect URI: <code class="bg-gray-200 px-2 py-1 rounded">https://your-project.supabase.co/auth/v1/callback</code></li>
+            <li>Copy Client ID and Client Secret</li>
+          </ol>
+        </div>
+        
+        <div class="bg-gray-50 rounded-lg p-4 mb-4">
+          <h3 class="font-semibold mb-2">Step 2: Configure Supabase</h3>
+          <ol class="list-decimal list-inside space-y-2 text-gray-600">
+            <li>Go to <a href="https://supabase.com/dashboard" class="text-primary hover:underline">Supabase Dashboard</a></li>
+            <li>Navigate to Authentication → Providers</li>
+            <li>Enable Google provider</li>
+            <li>Enter your Client ID and Client Secret</li>
+          </ol>
+        </div>
+        
+        <div class="bg-blue-50 border-l-4 border-blue-500 p-4">
+          <p class="text-blue-800">
+            <strong>Result:</strong> "Continue with Google" button will appear on the login page.
+          </p>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-lg shadow-md p-8 mb-8">
+        <h2 class="text-2xl font-bold text-gray-900 mb-4 flex items-center">
+          <span class="bg-purple-100 text-purple-600 p-2 rounded-lg mr-3">4</span>
+          Google Search Console
+        </h2>
+        <p class="text-gray-600 mb-4">Verify ownership and monitor search performance.</p>
+        
+        <div class="bg-gray-50 rounded-lg p-4 mb-4">
+          <h3 class="font-semibold mb-2">Step 1: Add Property</h3>
+          <ol class="list-decimal list-inside space-y-2 text-gray-600">
+            <li>Visit <a href="https://search.google.com/search-console" class="text-primary hover:underline">Google Search Console</a></li>
+            <li>Click "Add property"</li>
+            <li>Enter your website URL</li>
+            <li>Choose verification method</li>
+          </ol>
+        </div>
+        
+        <div class="bg-gray-50 rounded-lg p-4 mb-4">
+          <h3 class="font-semibold mb-2">Step 2: Verify with HTML File</h3>
+          <p class="text-gray-600 mb-2">We've pre-created the verification file. Just upload the provided file to Google Search Console:</p>
+          <pre class="bg-gray-800 text-green-400 p-4 rounded-lg">public/google-site-verification.html</pre>
+        </div>
+        
+        <div class="bg-gray-50 rounded-lg p-4 mb-4">
+          <h3 class="font-semibold mb-2">Step 3: Submit Sitemap</h3>
+          <p class="text-gray-600 mb-2">Submit your sitemap to Google:</p>
+          <pre class="bg-gray-800 text-green-400 p-4 rounded-lg">https://your-domain.com/sitemap-index.xml</pre>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-lg shadow-md p-8 mb-8">
+        <h2 class="text-2xl font-bold text-gray-900 mb-4 flex items-center">
+          <span class="bg-yellow-100 text-yellow-600 p-2 rounded-lg mr-3">5</span>
+          Google Tag Manager (GTM)
+        </h2>
+        <p class="text-gray-600 mb-4">Manage all marketing and tracking tags in one place.</p>
+        
+        <div class="bg-gray-50 rounded-lg p-4 mb-4">
+          <h3 class="font-semibold mb-2">Step 1: Create GTM Account</h3>
+          <ol class="list-decimal list-inside space-y-2 text-gray-600">
+            <li>Visit <a href="https://tagmanager.google.com" class="text-primary hover:underline">Google Tag Manager</a></li>
+            <li>Create a new account</li>
+            <li>Copy your GTM ID (e.g., GTM-XXXXXXX)</li>
+          </ol>
+        </div>
+        
+        <div class="bg-gray-50 rounded-lg p-4 mb-4">
+          <h3 class="font-semibold mb-2">Step 2: Configure Environment Variable</h3>
+          <pre class="bg-gray-800 text-green-400 p-4 rounded-lg overflow-x-auto">PUBLIC_GTM_ID=GTM-XXXXXXX</pre>
+        </div>
+      </div>
+
+      <div class="bg-primary text-white rounded-lg shadow-md p-8">
+        <h2 class="text-2xl font-bold mb-4">Quick Configuration Checklist</h2>
+        <div class="grid md:grid-cols-2 gap-4">
+          <div class="flex items-center">
+            <input type="checkbox" id="ga4" class="w-5 h-5 mr-3" />
+            <label for="ga4">Google Analytics 4 configured</label>
+          </div>
+          <div class="flex items-center">
+            <input type="checkbox" id="recaptcha" class="w-5 h-5 mr-3" />
+            <label for="recaptcha">reCAPTCHA v3 configured</label>
+          </div>
+          <div class="flex items-center">
+            <input type="checkbox" id="oauth" class="w-5 h-5 mr-3" />
+            <label for="oauth">Google OAuth enabled</label>
+          </div>
+          <div class="flex items-center">
+            <input type="checkbox" id="searchconsole" class="w-5 h-5 mr-3" />
+            <label for="searchconsole">Search Console verified</label>
+          </div>
+          <div class="flex items-center">
+            <input type="checkbox" id="gtm" class="w-5 h-5 mr-3" />
+            <label for="gtm">Google Tag Manager configured</label>
+          </div>
+          <div class="flex items-center">
+            <input type="checkbox" id="fbpixel" class="w-5 h-5 mr-3" />
+            <label for="fbpixel">Meta Pixel configured</label>
+          </div>
+        </div>
+        
+        <div class="mt-6 text-center">
+          <p class="text-sm opacity-80 mb-4">Need help? Contact our support team</p>
+          <a href="/contact" class="inline-block bg-white text-primary font-semibold px-6 py-3 rounded-lg hover:bg-gray-100 transition-colors">
+            Get Support
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</MainLayout>

@@ -1,0 +1,83 @@
+---
+interface GoogleRecaptchaProps {
+  siteKey?: string;
+  type?: 'image' | 'audio';
+  size?: 'compact' | 'normal' | 'invisible';
+  theme?: 'light' | 'dark';
+  badge?: 'bottomright' | 'bottomleft' | 'inline';
+}
+
+const { 
+  siteKey = import.meta.env.PUBLIC_RECAPTCHA_SITE_KEY || '',
+  type = 'image',
+  size = 'normal',
+  theme = 'light',
+  badge = 'bottomright'
+} = Astro.props;
+---
+
+<div id="recaptcha-container" class="g-recaptcha" data-sitekey={siteKey}></div>
+
+<script>
+  interface RecaptchaWindow extends Window {
+    grecaptcha?: {
+      render: (container: string | HTMLElement, options: any) => string;
+      execute: (widgetId: string) => Promise<string>;
+      reset: (widgetId?: string) => void;
+    };
+  }
+
+  const win = window as RecaptchaWindow;
+
+  if (!win.grecaptcha && !document.querySelector('script[src*="recaptcha"]')) {
+    const script = document.createElement('script');
+    script.src = 'https://www.google.com/recaptcha/api.js';
+    script.async = true;
+    script.defer = true;
+    document.head.appendChild(script);
+  }
+</script>
+
+<script>
+  interface RecaptchaCallbacks {
+    onSuccess?: (token: string) => void;
+    onError?: (error: any) => void;
+    onExpire?: () => void;
+  }
+
+  const callbacks: RecaptchaCallbacks = {};
+
+  window.recaptchaSuccess = function(token: string) {
+    const forms = document.querySelectorAll('form');
+    forms.forEach(form => {
+      let input = form.querySelector('input[name="g-recaptcha-response"]') as HTMLInputElement;
+      if (!input) {
+        input = document.createElement('input');
+        input.type = 'hidden';
+        input.name = 'g-recaptcha-response';
+        form.appendChild(input);
+      }
+      input.value = token;
+    });
+    
+    if (callbacks.onSuccess) {
+      callbacks.onSuccess(token);
+    }
+  };
+
+  window.recaptchaError = function() {
+    if (callbacks.onError) {
+      callbacks.onError('reCAPTCHA error');
+    }
+  };
+
+  window.recaptchaExpired = function() {
+    if (callbacks.onExpire) {
+      callbacks.onExpire();
+    }
+  };
+
+  window.setRecaptchaCallbacks = function(options: RecaptchaCallbacks) {
+    Object.assign(callbacks, options);
+  };
+</script>

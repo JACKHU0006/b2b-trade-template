@@ -6,6 +6,8 @@ import CookieBanner from '../components/CookieBanner.astro';
 import WhatsAppButton from '../components/WhatsAppButton.astro';
 import SEO from '../components/SEO.astro';
 import SchemaOrg from '../components/SchemaOrg.astro';
+import GoogleAnalytics from '../components/GoogleAnalytics.astro';
+import GoogleTagManager from '../components/GoogleTagManager.astro';
 import '../style.css';
 
 interface MainLayoutProps {
@@ -29,6 +31,8 @@ const {
 } = Astro.props;
 
 const defaultDescription = 'FableTech Group - Professional B2B industrial solutions provider with global reach. Quality manufacturing, competitive pricing, and reliable supply chain solutions.';
+const gaId = import.meta.env.PUBLIC_GA_ID;
+const gtmId = import.meta.env.PUBLIC_GTM_ID;
 ---
 
 <!DOCTYPE html>
@@ -49,6 +53,7 @@ const defaultDescription = 'FableTech Group - Professional B2B industrial soluti
     />
     
     <SchemaOrg />
+    <GoogleAnalytics measurementId={gaId} />
     
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -66,6 +71,7 @@ const defaultDescription = 'FableTech Group - Professional B2B industrial soluti
     <link rel="manifest" href="/manifest.webmanifest" />
   </head>
   <body class={locale === 'ar' ? 'rtl' : ''}>
+    <GoogleTagManager gtmId={gtmId} />
     <Header locale={locale} />
     <main><slot /></main>
     <Footer locale={locale} />

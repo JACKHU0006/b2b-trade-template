@@ -1,5 +1,6 @@
 ---
 import MainLayout from '../../layouts/MainLayout.astro';
+import GoogleOAuth from '../../components/GoogleOAuth.astro';
 import { supabase, signIn } from '../../lib/supabase';
 
 let error = '';
@@ -40,6 +41,19 @@ if (isAuthenticated) {
             {error}
           </div>
         )}
+
+        <div class="mb-6">
+          <GoogleOAuth />
+        </div>
+
+        <div class="relative mb-6">
+          <div class="absolute inset-0 flex items-center">
+            <div class="w-full border-t border-gray-200"></div>
+          </div>
+          <div class="relative flex justify-center text-sm">
+            <span class="px-4 bg-white text-gray-500">Or with email</span>
+          </div>
+        </div>
 
         <form method="POST" class="space-y-6">
           <div>
@@ -94,7 +108,7 @@ if (isAuthenticated) {
               <div class="w-full border-t border-gray-200"></div>
             </div>
             <div class="relative flex justify-center text-sm">
-              <span class="px-4 bg-white text-gray-500">Or</span>
+              <span class="px-4 bg-white text-gray-500">New to FableTech?</span>
             </div>
           </div>
 

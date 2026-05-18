@@ -1,0 +1,33 @@
+---
+interface GoogleTagManagerProps {
+  gtmId?: string;
+}
+
+const { 
+  gtmId = import.meta.env.PUBLIC_GTM_ID || '' 
+} = Astro.props;
+---
+
+{gtmId && (
+  <>
+    <script async src={`https://www.googletagmanager.com/gtm.js?id=${gtmId}`}></script>
+    <script define:vars={{ gtmId }}>
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({
+        'gtm.start': new Date().getTime(),
+        event: 'gtm.js'
+      });
+    </script>
+  </>
+)}
+
+{gtmId && (
+  <noscript>
+    <iframe 
+      src={`https://www.googletagmanager.com/ns.html?id=${gtmId}`}
+      height="0" 
+      width="0" 
+      style="display:none;visibility:hidden">
+    </iframe>
+  </noscript>
+)}
