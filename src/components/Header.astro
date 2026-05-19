@@ -118,13 +118,13 @@ const locales = [
           </div>
         </div>
 
-        <button class="p-2 text-gray-700 hover:text-primary hover:bg-gray-50 rounded-md transition-colors">
+        <button id="search-button" class="p-2 text-gray-700 hover:text-primary hover:bg-gray-50 rounded-md transition-colors">
           <Search class="h-5 w-5" />
         </button>
 
-        <button class="p-2 text-gray-700 hover:text-primary hover:bg-gray-50 rounded-md transition-colors">
+        <a href="/auth/login" class="p-2 text-gray-700 hover:text-primary hover:bg-gray-50 rounded-md transition-colors">
           <User class="h-5 w-5" />
-        </button>
+        </a>
 
         <button
           id="mobile-menu-button"
@@ -151,29 +151,93 @@ const locales = [
   </div>
 </header>
 
+<div id="search-modal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden flex items-start justify-center pt-20">
+  <div class="bg-white rounded-lg shadow-xl w-full max-w-2xl mx-4">
+    <div class="p-4">
+      <div class="flex items-center space-x-4">
+        <Search class="h-5 w-5 text-gray-400" />
+        <input 
+          type="text" 
+          id="search-input"
+          placeholder="Search products, news, pages..."
+          class="flex-1 text-lg outline-none"
+        />
+        <button id="close-search" class="text-gray-400 hover:text-gray-600">
+          <X class="h-5 w-5" />
+        </button>
+      </div>
+    </div>
+    <div id="search-results" class="border-t max-h-96 overflow-y-auto">
+      <div class="p-4 text-gray-500 text-center">Type to search...</div>
+    </div>
+  </div>
+</div>
+
 <script>
   document.addEventListener('DOMContentLoaded', () => {
     const localeButton = document.getElementById('locale-button');
     const localeDropdown = document.getElementById('locale-dropdown');
     
-    localeButton?.addEventListener('click', () => {
-      localeDropdown?.classList.toggle('hidden');
-    });
+    if (localeButton && localeDropdown) {
+      localeButton.addEventListener('click', (e) => {
+        e.stopPropagation();
+        localeDropdown.classList.toggle('hidden');
+      });
+    }
 
     const mobileMenuButton = document.getElementById('mobile-menu-button');
     const mobileMenu = document.getElementById('mobile-menu');
     
-    mobileMenuButton?.addEventListener('click', () => {
-      mobileMenu?.classList.toggle('hidden');
-      const icon = mobileMenuButton.querySelector('svg');
-      if (icon) {
-        icon.classList.toggle('rotate-90');
+    if (mobileMenuButton && mobileMenu) {
+      mobileMenuButton.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+        const icon = mobileMenuButton.querySelector('svg');
+        if (icon) {
+          icon.classList.toggle('rotate-90');
+        }
+      });
+    }
+
+    document.addEventListener('click', (e) => {
+      if (localeButton && localeDropdown && !localeButton.contains(e.target as Node)) {
+        localeDropdown.classList.add('hidden');
       }
     });
 
-    document.addEventListener('click', (e) => {
-      if (!localeButton?.contains(e.target as Node)) {
-        localeDropdown?.classList.add('hidden');
+    const searchButton = document.getElementById('search-button');
+    const searchModal = document.getElementById('search-modal');
+    const searchInput = document.getElementById('search-input') as HTMLInputElement;
+    const closeSearch = document.getElementById('close-search');
+
+    if (searchButton && searchModal) {
+      searchButton.addEventListener('click', () => {
+        searchModal.classList.remove('hidden');
+        searchInput?.focus();
+      });
+    }
+
+    if (closeSearch && searchModal) {
+      closeSearch.addEventListener('click', () => {
+        searchModal.classList.add('hidden');
+      });
+    }
+
+    if (searchModal) {
+      searchModal.addEventListener('click', (e) => {
+        if (e.target === searchModal) {
+          searchModal.classList.add('hidden');
+        }
+      });
+    }
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && searchModal) {
+        searchModal.classList.add('hidden');
+      }
+      if (e.key === '/' && e.target.tagName !== 'INPUT') {
+        e.preventDefault();
+        searchModal?.classList.remove('hidden');
+        searchInput?.focus();
       }
     });
   });
