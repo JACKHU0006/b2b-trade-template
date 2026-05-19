@@ -8,6 +8,6 @@
     </defs>
     <circle cx="64" cy="64" r="62" fill="url(#faviconGrad)" opacity="0.1"/>
     <circle cx="64" cy="64" r="58" stroke="url(#faviconGrad)" stroke-width="3" fill="none"/>
-    <text x="64" y="54" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="700" text-anchor="middle" fill="url(#faviconGrad)">Fable</text>
-    <text x="64" y="86" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="700" text-anchor="middle" fill="url(#faviconGrad)">Tech</text>
+    <text x="64" y="50" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="700" text-anchor="middle" fill="url(#faviconGrad)">Fable</text>
+    <text x="64" y="82" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="700" text-anchor="middle" fill="url(#faviconGrad)">Tech</text>
 </svg>
