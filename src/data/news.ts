@@ -197,6 +197,195 @@ export const news: News[] = [
     date: '2024-02-15',
     category: 'Customer Service',
     image: '/images/news/fabletech-support.jpg'
+  },
+  {
+    id: 'news-008',
+    title: {
+      en: 'New Export Market Expansion: Southeast Asia',
+      de: 'Neue Exportmarktexpansion: Südostasien',
+      fr: 'Nouvelle expansion du marché d\'exportation: Asie du Sud-Est',
+      es: 'Nueva expansión del mercado de exportación: Sudeste Asiático',
+      ar: 'توسيع جديد لسوق التصدير: جنوب شرق آسيا'
+    },
+    content: {
+      en: 'We are excited to announce our expansion into Southeast Asian markets. Starting this quarter, we will be establishing distribution partnerships in Vietnam, Thailand, Indonesia, and Malaysia. This strategic move allows us to better serve the rapidly growing industrial sector in the region with our high-quality metal products.',
+      de: 'Wir freuen uns, unsere Expansion in die südostasiatischen Märkte ankündigen zu können. Ab diesem Quartal werden wir Vertriebspartnerschaften in Vietnam, Thailand, Indonesien und Malaysia aufbauen. Dieser strategische Schritt ermöglicht es uns, das rasch wachsende Industriesektor in der Region besser mit unseren hochwertigen Metallprodukten zu bedienen.',
+      fr: 'Nous avons le plaisir d\'annoncer notre expansion sur les marchés d\'Asie du Sud-Est. À partir de ce trimestre, nous établirons des partenariats de distribution au Vietnam, en Thaïlande, en Indonésie et en Malaisie. Ce mouvement stratégique nous permet de mieux servir le secteur industriel en croissance rapide dans la région avec nos produits métalliques de haute qualité.',
+      es: 'Nos complace anunciar nuestra expansión a los mercados del sudeste asiático. A partir de este trimestre, estableceremos alianzas de distribución en Vietnam, Tailandia, Indonesia y Malasia. Este movimiento estratégico nos permite servir mejor al sector industrial en rápido crecimiento en la región con nuestros productos metálicos de alta calidad.',
+      ar: 'يسعدنا أن نعلن عن توسعنا في أسواق جنوب شرق آسيا. بدءً من هذا الربع، سنقوم بإنشاء شراكات توزيع في فيتنام وتايلاند وإندونيسيا وماليزيا. تتيح لنا هذه الخطوة الاستراتيجية خدمة القطاع الصناعي سريع النمو في المنطقة بشكل أفضل بمنتجاتنا المعدنية عالية الجودة.'
+    },
+    summary: {
+      en: 'Strategic expansion into Vietnam, Thailand, Indonesia, and Malaysia.',
+      de: 'Strategische Expansion nach Vietnam, Thailand, Indonesien und Malaysia.',
+      fr: 'Expansion stratégique au Vietnam, en Thaïlande, en Indonésie et en Malaisie.',
+      es: 'Expansión estratégica a Vietnam, Tailandia, Indonesia y Malasia.',
+      ar: 'توسع استراتيجي إلى فيتنام وتايلاند وإندونيسيا وماليزيا.'
+    },
+    date: '2024-02-20',
+    category: 'Partnership',
+    image: '/images/news/fabletech-southeast-asia.jpg'
+  },
+  {
+    id: 'news-009',
+    title: {
+      en: 'Digital Transformation: New ERP System Launch',
+      de: 'Digitale Transformation: Neues ERP-System gestartet',
+      fr: 'Transformation numérique: Lancement du nouveau système ERP',
+      es: 'Transformación digital: Lanzamiento del nuevo sistema ERP',
+      ar: 'التحول الرقمي: إطلاق نظام تخطيط موارد المؤسسات جديد'
+    },
+    content: {
+      en: 'Our company has successfully implemented a new enterprise resource planning (ERP) system to enhance operational efficiency and customer service. This digital transformation will streamline our production scheduling, inventory management, and order processing. Customers will benefit from improved tracking, faster response times, and real-time visibility into their orders.',
+      de: 'Unser Unternehmen hat erfolgreich ein neues Enterprise-Resource-Planning-System (ERP) implementiert, um die betriebliche Effizienz und den Kundenservice zu verbessern. Diese digitale Transformation wird unsere Produktionsplanung, Bestandsverwaltung und Auftragsabwicklung rationalisieren. Kunden werden von verbesserter Verfolgung, schnelleren Reaktionszeiten und Echtzeit-Einblicken in ihre Aufträge profitieren.',
+      fr: 'Notre entreprise a réussi à implémenter un nouveau système de planification des ressources d\'entreprise (ERP) pour améliorer l\'efficacité opérationnelle et le service client. Cette transformation numérique rationalisera notre planification de la production, la gestion des stocks et le traitement des commandes. Les clients bénéficieront d\'un meilleur suivi, de délais de réponse plus rapides et d\'une visibilité en temps réel sur leurs commandes.',
+      es: 'Nuestra empresa ha implementado con éxito un nuevo sistema de planificación de recursos empresariales (ERP) para mejorar la eficiencia operativa y el servicio al cliente. Esta transformación digital optimizará nuestra programación de producción, gestión de inventario y procesamiento de pedidos. Los clientes se beneficiarán de un mejor seguimiento, tiempos de respuesta más rápidos y visibilidad en tiempo real de sus pedidos.',
+      ar: 'نجحت شركتنا في تطبيق نظام جديد لتخطيط موارد المؤسسات (ERP) لتعزيز الكفاءة التشغيلية وخدمة العملاء. سيقوم هذا التحول الرقمي بتبسيط جدولة الإنتاج وإدارة المخزون ومعالجة الطلبات. سيستفيد العملاء من التتبع المحسن وأوقات الاستجابة الأسرع والرؤية في الوقت الحقيقي لطلباتهم.'
+    },
+    summary: {
+      en: 'New ERP system improves operational efficiency and customer service.',
+      de: 'Neues ERP-System verbessert betriebliche Effizienz und Kundenservice.',
+      fr: 'Nouveau système ERP améliore l\'efficacité opérationnelle et le service client.',
+      es: 'Nuevo sistema ERP mejora eficiencia operativa y servicio al cliente.',
+      ar: 'نظام ERP جديد يحسن الكفاءة التشغيلية وخدمة العملاء.'
+    },
+    date: '2024-02-25',
+    category: 'Technology',
+    image: '/images/news/fabletech-erp.jpg'
+  },
+  {
+    id: 'news-010',
+    title: {
+      en: 'Quality Excellence Award from Industry Association',
+      de: 'Qualitäts Excellence Award vom Branchenverband',
+      fr: 'Prix d\'Excellence en Qualité de l\'Association Industrielle',
+      es: 'Premio a la Excelencia en Calidad de la Asociación Industrial',
+      ar: 'جائزة التميز في الجودة من الجمعية الصناعية'
+    },
+    content: {
+      en: 'We are honored to receive the Quality Excellence Award from the China Metal Industry Association for the third consecutive year. This prestigious recognition reflects our unwavering commitment to quality, innovation, and customer satisfaction. Our quality management systems and continuous improvement initiatives have set new standards in the industry.',
+      de: 'Wir sind geehrt, den Quality Excellence Award des China Metal Industry Association zum dritten Mal in Folge zu erhalten. Diese renommierte Anerkennung spiegelt unser unerschütterliches Engagement für Qualität, Innovation und Kundenzufriedenheit wider. Unsere Qualitätsmanagementsysteme und kontinuierlichen Verbesserungsinitiativen haben neue Standards in der Branche gesetzt.',
+      fr: 'Nous sommes honorés de recevoir le Prix d\'Excellence en Qualité de l\'Association Chinoise de l\'Industrie Métallurgique pour la troisième année consécutive. Cette reconnaissance prestigieuse reflète notre engagement inébranlable envers la qualité, l\'innovation et la satisfaction client. Nos systèmes de gestion de la qualité et nos initiatives d\'amélioration continue ont établi de nouvelles normes dans l\'industrie.',
+      es: 'Nos sentimos honrados de recibir el Premio a la Excelencia en Calidad de la Asociación de la Industria Metalúrgica de China por tercer año consecutivo. Este reconocimiento prestigieux refleja nuestro compromiso inquebrantable con la calidad, la innovación y la satisfacción del cliente. Nuestros sistemas de gestión de calidad e iniciativas de mejora continua han establecido nuevos estándares en la industria.',
+      ar: 'نحن فخورون بقبول جائزة التميز في الجودة من جمعية صناعة المعادن الصينية للسنة الثالثة على التوالي. يعكس هذا التقدير المرموق التزامنا الثابت بالجودة والابتكار ورضا العملاء. لقد حددت أنظمة إدارة الجودة ومبادرات التحسين المستمر لدينا معايير جديدة في الصناعة.'
+    },
+    summary: {
+      en: 'Third consecutive year receiving quality excellence recognition.',
+      de: 'Drittes Jahr in Folge Auszeichnung für Qualitätsexzellenz.',
+      fr: 'Troisième année consécutive de reconnaissance d\'excellence en qualité.',
+      es: 'Tercer año consecutivo recibiendo reconocimiento de excelencia en calidad.',
+      ar: 'السنة الثالثة على التوالي للحصول على تقدير التميز في الجودة.'
+    },
+    date: '2024-03-01',
+    category: 'Recognition',
+    image: '/images/news/fabletech-quality-award.jpg'
+  },
+  {
+    id: 'news-011',
+    title: {
+      en: 'Sustainable Manufacturing: Carbon Neutral Initiative',
+      de: 'Nachhaltige Fertigung: CO2-Neutral-Initiative',
+      fr: 'Fabrication durable: Initiative Carbon Neutre',
+      es: 'Fabricación sostenible: Iniciativa Carbono Neutral',
+      ar: 'التصنيع المستدام: مبادرة الحياد الكربوني'
+    },
+    content: {
+      en: 'We have launched our Carbon Neutral Initiative, committing to achieve carbon neutrality by 2030. Our comprehensive sustainability strategy includes investing in renewable energy, improving energy efficiency, implementing circular economy practices, and offsetting remaining emissions through verified carbon credit programs. We believe sustainable manufacturing is not just responsibility—it is the future of our industry.',
+      de: 'Wir haben unsere CO2-Neutral-Initiative gestartet und verpflichten uns, bis 2030 CO2-Neutralität zu erreichen. Unsere umfassende Nachhaltigkeitsstrategie umfasst Investitionen in erneuerbare Energien, Verbesserung der Energieeffizienz, Umsetzung von Kreislaufwirtschaftspraktiken und Kompensation verbleibender Emissionen durch verifizierte CO2-Zertifikatsprogramme. Wir glauben, dass nachhaltige Fertigung nicht nur Verantwortung ist – es ist die Zukunft unserer Branche.',
+      fr: 'Nous avons lancé notre Initiative Carbone Neutre, nous engageant à atteindre la neutralité carbone d\'ici 2030. Notre stratégie de durabilité complète comprend des investissements dans les énergies renouvelables, l\'amélioration de l\'efficacité énergétique, la mise en œuvre de pratiques d\'économie circulaire et la compensation des émissions restantes par des programmes de crédits carbone vérifiés. Nous croyons que la fabrication durable n\'est pas seulement une responsabilité – c\'est l\'avenir de notre industrie.',
+      es: 'Hemos lanzado nuestra Iniciativa Carbono Neutral, comprometiéndonos a lograr la neutralidad de carbono para 2030. Nuestra estrategia integral de sostenibilidad incluye invertir en energías renovables, mejorar la eficiencia energética, implementar prácticas de economía circular y compensar las emisiones restantes a través de programas verificados de créditos de carbono. Creemos que la fabricación sostenible no es solo responsabilidad — es el futuro de nuestra industria.',
+      ar: 'أطلقنا مبادرتنا للحياد الكربوني، والتزمنا بتحقيق الحياد الكربوني بحلول عام 2030. تتضمن استراتيجيتنا الشاملة للاستدامة الاستثمار في الطاقة المتجددة وتحسين كفاءة الطاقة وتنفيذ ممارسات الاقتصاد الدائري وتعويض الانبعاثات المتبقية من خلال برامج الائتمان الكربوني الموثقة. نؤمن بأن التصنيع المستدام ليس مجرد مسؤولية – إنه مستقبل صناعتنا.'
+    },
+    summary: {
+      en: 'Committed to achieving carbon neutrality by 2030.',
+      de: 'Verpflichtung zur CO2-Neutralität bis 2030.',
+      fr: 'Engagement à atteindre la neutralité carbone d\'ici 2030.',
+      es: 'Compromiso de lograr neutralidad de carbono para 2030.',
+      ar: 'الالتزام بتحقيق الحياد الكربوني بحلول عام 2030.'
+    },
+    date: '2024-03-05',
+    category: 'New Products',
+    image: '/images/news/fabletech-carbon-neutral.jpg'
+  },
+  {
+    id: 'news-012',
+    title: {
+      en: 'Employee Training Program: Skills Development',
+      de: 'Mitarbeiterschulungsprogramm: Kompetenzentwicklung',
+      fr: 'Programme de formation des employés: Développement des compétences',
+      es: 'Programa de capacitación de empleados: Desarrollo de habilidades',
+      ar: 'برنامج تدريب الموظفين: تطوير المهارات'
+    },
+    content: {
+      en: 'We are investing heavily in our workforce with a comprehensive skills development program. This year, over 200 employees will participate in advanced technical training, professional development courses, and safety certification programs. Our investment in human capital ensures that our team stays at the forefront of industry best practices and maintains our competitive edge.',
+      de: 'Wir investieren stark in unsere Belegschaft mit einem umfassenden Kompetenzentwicklungsprogramm. In diesem Jahr werden über 200 Mitarbeiter an technischen Schulungen, beruflichen Weiterbildungslehrgängen und Sicherheitszertifizierungsprogrammen teilnehmen. Unsere Investition in Humankapital stellt sicher, dass unser Team an der Spitze der Branchen-Best Practices bleibt und unseren Wettbewerbsvorteil behält.',
+      fr: 'Nous investissons massivement dans notre main-d\'œuvre avec un programme complet de développement des compétences. Cette année, plus de 200 employés participeront à des formations techniques avancées, des cours de développement professionnel et des programmes de certification de sécurité. Notre investissement dans le capital humain garantit que notre équipe reste à la pointe des meilleures pratiques de l\'industrie et maintient notre avantage concurrentiel.',
+      es: 'Estamos invirtiendo fuertemente en nuestra fuerza laboral con un programa integral de desarrollo de habilidades. Este año, más de 200 empleados participarán en capacitación técnica avanzada, cursos de desarrollo profesional y programas de certificación de seguridad. Nuestra inversión en capital humano asegura que nuestro equipo se mantenga a la vanguardia de las mejores prácticas de la industria y mantenga nuestra ventaja competitiva.',
+      ar: 'نحن نستثمر بكثافة في قوتنا العاملة من خلال برنامج شامل لتطوير المهارات. هذا العام، سيشارك أكثر من 200 موظف في التدريب التقني المتقدم ودورات التطوير المهني وبرامج شهادة السلامة. يضمن استثمارنا في رأس المال البشري أن فريقنا يبقى في طليعة أفضل الممارسات الصناعية ويحافظ على ميزتنا التنافسية.'
+    },
+    summary: {
+      en: '200+ employees enrolled in advanced training programs this year.',
+      de: 'Über 200 Mitarbeiter in diesem Jahr in Schulungsprogrammen eingeschrieben.',
+      fr: 'Plus de 200 employés inscrits à des programmes de formation avancés cette année.',
+      es: 'Más de 200 empleados inscritos en programas de capacitación avanzados este año.',
+      ar: 'أكثر من 200 موظف مسجلون في برامج التدريب المتقدم هذا العام.'
+    },
+    date: '2024-03-10',
+    category: 'Company News',
+    image: '/images/news/fabletech-training.jpg'
+  },
+  {
+    id: 'news-013',
+    title: {
+      en: 'Enhanced Technical Documentation Portal',
+      de: 'Verbessertes technisches Dokumentationsportal',
+      fr: 'Portail de documentation technique amélioré',
+      es: 'Portal de documentación técnica mejorado',
+      ar: 'بوابة الوثائق التقنية المحسنة'
+    },
+    content: {
+      en: 'We have launched a new technical documentation portal providing customers with easy access to product specifications, material data sheets, installation guides, and CAD drawings. The portal features advanced search capabilities, multilingual support, and regularly updated content. Customers can now download all necessary documentation instantly from our website.',
+      de: 'Wir haben ein neues technisches Dokumentationsportal gestartet, das Kunden einfachen Zugang zu Produktspezifikationen, Materialdatenblättern, Installationsanleitungen und CAD-Zeichnungen bietet. Das Portal verfügt über erweiterte Suchfunktionen, mehrsprachige Unterstützung und regelmäßig aktualisierte Inhalte. Kunden können jetzt alle erforderlichen Dokumentationen sofort von unserer Website herunterladen.',
+      fr: 'Nous avons lancé un nouveau portail de documentation technique offrant aux clients un accès facile aux spécifications des produits, fiches de données matériaux, guides d\'installation et dessins CAO. Le portail dispose de capacités de recherche avancées, d\'un support multilingue et de contenus régulièrement mis à jour. Les clients peuvent désormais télécharger instantanément toute la documentation nécessaire depuis notre site Web.',
+      es: 'Hemos lanzado un nuevo portal de documentación técnica que proporciona a los clientes fácil acceso a especificaciones de productos, hojas de datos de materiales, guías de instalación y dibujos CAD. El portal cuenta con capacidades de búsqueda avanzadas, soporte multilingüe y contenido actualizado regularmente. Los clientes ahora pueden descargar toda la documentación necesaria instantáneamente desde nuestro sitio web.',
+      ar: 'أطلقنا بوابة جديدة للوثائق التقنية توفر للعملاء وصولاً سهلاً إلى مواصفات المنتجات وأوراق بيانات المواد وأدلة التثبيت ورسومات CAD. تتميز البوابة بقدرات بحث متقدمة ودعم متعدد اللغات ومحتوى محدث بانتظام. يمكن للعملاء الآن تحميل جميع الوثائق اللازمة فورًا من موقعنا على الويب.'
+    },
+    summary: {
+      en: 'New portal provides instant access to technical documentation.',
+      de: 'Neues Portal für sofortigen Zugang zu technischer Dokumentation.',
+      fr: 'Nouveau portail pour accès instantané à la documentation technique.',
+      es: 'Nuevo portal proporciona acceso instantáneo a documentación técnica.',
+      ar: 'بوابة جديدة توفر وصولاً فوريًا إلى الوثائق التقنية.'
+    },
+    date: '2024-03-15',
+    category: 'Customer Service',
+    image: '/images/news/fabletech-portal.jpg'
+  },
+  {
+    id: 'news-014',
+    title: {
+      en: 'International Trade Show: Hannover Messe 2024',
+      de: 'Internationale Fachmesse: Hannover Messe 2024',
+      fr: 'Salon international: Hannover Messe 2024',
+      es: 'Feria internacional: Hannover Messe 2024',
+      ar: 'معرض تجاري دولي: هانوفر ميسي 2024'
+    },
+    content: {
+      en: 'We are proud to participate in Hannover Messe 2024, the world\'s leading industrial trade fair. Visit our booth to discover our latest innovations in metal products, discuss custom solutions with our engineering team, and explore partnership opportunities. We will be showcasing our new sustainable product line and advanced manufacturing capabilities.',
+      de: 'Wir sind stolz, an der Hannover Messe 2024 teilzunehmen, der weltweit führenden Industriemesse. Besuchen Sie unseren Stand, um unsere neuesten Innovationen bei Metallprodukten zu entdecken, mit unserem Ingenieurteam kundenspezifische Lösungen zu besprechen und Partnerschaftsmöglichkeiten zu erkunden. Wir präsentieren unsere neue nachhaltige Produktlinie und fortschrittliche Fertigungskapazitäten.',
+      fr: 'Nous sommes impatients de participer à la Hannover Messe 2024, le premier salon industriel mondial. Visitez notre stand pour découvrir nos dernières innovations en produits métalliques, discuter de solutions personnalisées avec notre équipe d\'ingénierie et explorer les opportunités de partenariat. Nous présenterons notre nouvelle ligne de produits durables et nos capacités de fabrication avancées.',
+      es: 'Nos orgullece participar en Hannover Messe 2024, la feria industrial líder mundial. Visite nuestro stand para descubrir nuestras últimas innovaciones en productos metálicos, discutir soluciones personalizadas con nuestro equipo de ingeniería y explorar oportunidades de asociación. Presentaremos nuestra nueva línea de productos sostenibles y capacidades de fabricación avanzadas.',
+      ar: 'نحن فخورون بالمشاركة في هانوفر ميسي 2024، المعرض الصناعي الرائد عالمياً. قم بزيارة جناحنا لاكتشاف أحدث ابتكاراتنا في المنتجات المعدنية، ومناقشة الحلول المخصصة مع فريق الهندسة لدينا، واستكشاف فرص الشراكة. سنعرض خط منتجاتنا الجديد المستدام وقدرات التصنيع المتقدمة.'
+    },
+    summary: {
+      en: 'Join us at the world\'s leading industrial trade fair.',
+      de: 'Besuchen Sie uns auf der weltweit führenden Industriemesse.',
+      fr: 'Rejoignez-nous au premier salon industriel mondial.',
+      es: 'Visítenos en la feria industrial líder mundial.',
+      ar: 'انضم إلينا في المعرض الصناعي الرائد عالمياً.'
+    },
+    date: '2024-03-20',
+    category: 'Company News',
+    image: '/images/news/fabletech-hannover.jpg'
   }
 ];
 
