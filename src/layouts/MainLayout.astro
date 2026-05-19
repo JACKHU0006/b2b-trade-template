@@ -3,6 +3,7 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import AIChat from '../components/AIChat.astro';
 import TawkChat from '../components/TawkChat.astro';
+import BackToTop from '../components/BackToTop.astro';
 import CookieBanner from '../components/CookieBanner.astro';
 import ContactButtons from '../components/ContactButtons.astro';
 import SEO from '../components/SEO.astro';
@@ -78,6 +79,7 @@ const gtmId = import.meta.env.PUBLIC_GTM_ID;
     <Footer locale={locale} />
     <AIChat />
     <TawkChat />
+    <BackToTop />
     <CookieBanner locale={locale} />
     <ContactButtons />
   </body>
