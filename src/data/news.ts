@@ -34,7 +34,7 @@ export const news: News[] = [
     },
     date: '2024-01-15',
     category: 'Company News',
-    image: '/images/news/factory.jpg'
+    image: '/images/news/fabletech-factory.jpg'
   },
   {
     id: 'news-002',
@@ -61,7 +61,7 @@ export const news: News[] = [
     },
     date: '2024-01-10',
     category: 'Certification',
-    image: '/images/news/certification.jpg'
+    image: '/images/news/fabletech-certification.jpg'
   },
   {
     id: 'news-003',
@@ -88,7 +88,7 @@ export const news: News[] = [
     },
     date: '2024-01-05',
     category: 'New Products',
-    image: '/images/news/sustainable.jpg'
+    image: '/images/news/fabletech-sustainable-steel.jpg'
   }
 ];
 

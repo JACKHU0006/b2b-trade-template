@@ -45,7 +45,7 @@ const product = getProductById(Astro.params.id as string);
                   Login required
                 </div>
               )}
-              <img src={product.images[0]} alt={product.name[locale]} class="w-full h-full object-cover" />
+              <img src={product.images[0]} alt={`${product.name[locale]} - FableTechGroup Industrial ${product.category}`} class="w-full h-full object-cover" />
             </div>
           </div>
 

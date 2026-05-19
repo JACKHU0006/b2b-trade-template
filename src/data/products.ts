@@ -28,7 +28,7 @@ export const products: Product[] = [
     },
     price: 125.00,
     category: 'Steel Products',
-    images: ['/images/products/steel-pipe.jpg'],
+    images: ['/images/products/fabletech-steel-pipe.jpg'],
     specs: {
       material: 'Carbon Steel',
       diameter: '50mm',
@@ -55,7 +55,7 @@ export const products: Product[] = [
     },
     price: 285.00,
     category: 'Valves',
-    images: ['/images/products/valve.jpg'],
+    images: ['/images/products/fabletech-stainless-steel-valve.jpg'],
     specs: {
       material: '316 Stainless Steel',
       pressure: 'PN40',
@@ -82,7 +82,7 @@ export const products: Product[] = [
     },
     price: 89.00,
     category: 'Aluminum',
-    images: ['/images/products/aluminum-profile.jpg'],
+    images: ['/images/products/fabletech-aluminum-profile.jpg'],
     specs: {
       material: '6063 T5',
       width: '80mm',
@@ -109,7 +109,7 @@ export const products: Product[] = [
     },
     price: 45.00,
     category: 'Copper',
-    images: ['/images/products/copper-wire.jpg'],
+    images: ['/images/products/fabletech-copper-wire.jpg'],
     specs: {
       material: 'Pure Copper',
       gauge: '14 AWG',
@@ -136,7 +136,7 @@ export const products: Product[] = [
     },
     price: 165.00,
     category: 'Brass',
-    images: ['/images/products/brass-fitting.jpg'],
+    images: ['/images/products/fabletech-brass-fitting.jpg'],
     specs: {
       material: 'C360 Brass',
       thread: 'NPT 1/2"',
@@ -163,7 +163,7 @@ export const products: Product[] = [
     },
     price: 850.00,
     category: 'Titanium',
-    images: ['/images/products/titanium-sheet.jpg'],
+    images: ['/images/products/fabletech-titanium-sheet.jpg'],
     specs: {
       material: 'Grade 2',
       thickness: '2mm',

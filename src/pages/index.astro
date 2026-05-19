@@ -138,7 +138,7 @@ const localizedNews = news.slice(0, 3);
         {localizedProducts.map((product) => (
           <div key={product.id} class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
             <div class="h-48 bg-gray-200 flex items-center justify-center">
-              <img src={product.images[0]} alt={product.name[locale]} class="w-full h-full object-cover" />
+              <img src={product.images[0]} alt={`${product.name[locale]} - FableTech Group Industrial Metal Products`} class="w-full h-full object-cover" />
             </div>
             <div class="p-6">
               <h3 class="text-lg font-semibold mb-2">{product.name[locale]}</h3>
