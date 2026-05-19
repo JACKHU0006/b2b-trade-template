@@ -113,14 +113,14 @@ const locales = [
           </button>
           <div id="locale-dropdown" class="absolute right-0 mt-2 w-48 bg-white rounded-lg shadow-lg py-1 z-50 hidden">
             {locales.map((loc) => (
-              <a
+              <button
                 key={loc.code}
-                href="/"
-                class={`flex items-center space-x-2 px-4 py-2 text-sm hover:bg-gray-50 ${locale === loc.code ? 'text-primary font-medium' : 'text-gray-700'}`}
+                onclick={`switchLanguage('${loc.code}')`}
+                class={`w-full flex items-center space-x-2 px-4 py-2 text-sm hover:bg-gray-50 ${locale === loc.code ? 'text-primary font-medium' : 'text-gray-700'}`}
               >
                 <span>{loc.flag}</span>
                 <span>{loc.label}</span>
-              </a>
+              </button>
             ))}
           </div>
         </div>
@@ -240,6 +240,20 @@ const locales = [
         '</div>' +
       '</a>';
     }).join('');
+  }
+
+  function switchLanguage(lang) {
+    const currentPath = window.location.pathname;
+    const pathParts = currentPath.split('/').filter(p => p);
+    
+    if (pathParts.length > 0 && ['en', 'de', 'fr', 'es', 'ar'].includes(pathParts[0])) {
+      pathParts[0] = lang;
+    } else {
+      pathParts.unshift(lang);
+    }
+    
+    const newPath = '/' + pathParts.join('/');
+    window.location.href = newPath || '/';
   }
 
   document.addEventListener('DOMContentLoaded', function() {

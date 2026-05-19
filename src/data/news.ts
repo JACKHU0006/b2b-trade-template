@@ -457,6 +457,258 @@ export const news: News[] = [
     date: '2024-03-30',
     category: 'Customer Service',
     image: '/images/news/fabletech-success-center.jpg'
+  },
+  {
+    id: 'news-017',
+    slug: 'european-market-expansion-2024',
+    title: {
+      en: 'FableTech Group Expands Distribution Network in Europe',
+      de: 'FableTech Group erweitert Vertriebsnetz in Europa',
+      fr: 'FableTech Group étend son réseau de distribution en Europe',
+      es: 'FableTech Group amplía red de distribución en Europa',
+      ar: 'توسع FableTech Group شبكة التوزيع في أوروبا'
+    },
+    content: {
+      en: 'FableTech Group is proud to announce the expansion of our European distribution network with new partnerships in Germany, France, and the Netherlands. This strategic expansion allows FableTech to provide faster delivery and better service to our European customers. The new distribution centers will reduce shipping times by 40% and enable FableTech to offer same-day shipping for urgent orders.',
+      de: 'FableTech Group ist stolz, die Erweiterung unseres europäischen Vertriebsnetzes mit neuen Partnerschaften in Deutschland, Frankreich und den Niederlanden anzukündigen. Diese strategische Erweiterung ermöglicht es FableTech, unseren europäischen Kunden schnellere Lieferung und besseren Service zu bieten.',
+      fr: 'FableTech Group est fière d\'annoncer l\'expansion de notre réseau de distribution européen avec de nouveaux partenariats en Allemagne, en France et aux Pays-Bas. Cette expansion stratégique permet à FableTech de fournir une livraison plus rapide et un meilleur service à nos clients européens.',
+      es: 'FableTech Group se enorgullece en anunciar la expansión de nuestra red de distribución europea con nuevas alianzas en Alemania, Francia y los Países Bajos. Esta expansión estratégica permite a FableTech proporcionar entregas más rápidas y mejor servicio a nuestros clientes europeos.',
+      ar: 'تفخر FableTech Group بالإعلان عن توسع شبكة التوزيع الأوروبية لدينا مع شراكات جديدة في ألمانيا وفرنسا وهولندا. يتيح هذا التوسع الاستراتيجي لـ FableTech تقديم تسليم أسرع وخدمة أفضل لعملائنا الأوروبيين.'
+    },
+    summary: {
+      en: 'FableTech Group establishes new European distribution partnerships.',
+      de: 'FableTech Group gründet neue europäische Vertriebspartnerschaften.',
+      fr: 'FableTech Group établit de nouveaux partenariats de distribution européens.',
+      es: 'FableTech Group establece nuevas alianzas de distribución europeas.',
+      ar: 'تنشئ FableTech Group شراكات توزيع أوروبية جديدة.'
+    },
+    date: '2024-04-15',
+    category: 'Partnership',
+    image: '/images/news/fabletech-europe.jpg'
+  },
+  {
+    id: 'news-018',
+    slug: 'sustainable-manufacturing-initiative-2024',
+    title: {
+      en: 'FableTech Group Launches Zero-Waste Manufacturing Initiative',
+      de: 'FableTech Group startet Initiative für abfallfreie Fertigung',
+      fr: 'FableTech Group lance une initiative de fabrication zéro déchet',
+      es: 'FableTech Group lanza iniciativa de fabricación cero residuos',
+      ar: 'تطلق FableTech Group مبادرة التصنيع بدون نفايات'
+    },
+    content: {
+      en: 'FableTech Group has launched a comprehensive zero-waste manufacturing initiative as part of our commitment to environmental sustainability. The initiative includes recycling programs for all metal waste, water conservation measures, and energy-efficient production processes. FableTech aims to achieve 95% waste diversion from landfills by 2025. This initiative is part of FableTech broader sustainability strategy.',
+      de: 'FableTech Group hat eine umfassende Initiative für abfallfreie Fertigung als Teil unseres Engagements für ökologische Nachhaltigkeit gestartet. Die Initiative umfasst Recyclingprogramme für alle Metallabfälle, Wasserschutzmaßnahmen und energieeffiziente Produktionsprozesse.',
+      fr: 'FableTech Group a lancé une initiative complète de fabrication zéro déchet dans le cadre de notre engagement envers la durabilité environnementale. L\'initiative comprend des programmes de recyclage pour tous les déchets métalliques, des mesures de conservation de l\'eau et des processus de production économes en énergie.',
+      es: 'FableTech Group ha lanzado una iniciativa integral de fabricación cero residuos como parte de nuestro compromiso con la sostenibilidad ambiental. La iniciativa incluye programas de reciclaje para todos los residuos metálicos, medidas de conservación del agua y procesos de producción energéticamente eficientes.',
+      ar: 'أطلقت FableTech Group مبادرة شاملة للتصنيع بدون نفايات كجزء من التزامنا بالاستدامة البيئية. تشمل المبادرة برامج إعادة التدوير لجميع النفايات المعدنية وتدابير الحفاظ على المياه وعمليات الإنتاج الموفرة للطاقة.'
+    },
+    summary: {
+      en: 'FableTech Group commits to zero-waste manufacturing by 2025.',
+      de: 'FableTech Group verpflichtet sich zu abfallfreier Fertigung bis 2025.',
+      fr: 'FableTech Group s\'engage vers une fabrication zéro déchet d\'ici 2025.',
+      es: 'FableTech Group se compromete con la fabricación cero residuos para 2025.',
+      ar: 'تلتزم FableTech Group بالتصنيع بدون نفايات بحلول عام 2025.'
+    },
+    date: '2024-05-20',
+    category: 'New Products',
+    image: '/images/news/fabletech-sustainability.jpg'
+  },
+  {
+    id: 'news-019',
+    slug: 'automated-quality-control-system-2023',
+    title: {
+      en: 'FableTech Group Implements AI-Powered Quality Control System',
+      de: 'FableTech Group implementiert KI-gesteuertes Qualitätskontrollsystem',
+      fr: 'FableTech Group implémente un système de contrôle qualité alimenté par l\'IA',
+      es: 'FableTech Group implementa sistema de control de calidad con IA',
+      ar: 'تنفذ FableTech Group نظام التحكم في الجودة بالذكاء الاصطناعي'
+    },
+    content: {
+      en: 'FableTech Group has successfully implemented a state-of-the-art AI-powered quality control system in our manufacturing facilities. The system uses computer vision and machine learning algorithms to detect defects and ensure product quality at every stage of production. FableTech quality control accuracy has improved by 99.8%, reducing waste and improving customer satisfaction.',
+      de: 'FableTech Group hat erfolgreich ein hochmodernes KI-gesteuertes Qualitätskontrollsystem in unseren Fertigungsanlagen implementiert. Das System nutzt Computer Vision und maschinelle Lernalgorithmen, um Defekte zu erkennen und die Produktqualität in jeder Produktionsphase zu sichern.',
+      fr: 'FableTech Group a implémenté avec succès un système de contrôle qualité de pointe alimenté par l\'IA dans nos installations de fabrication. Le système utilise la vision par ordinateur et des algorithmes d\'apprentissage automatique pour détecter les défauts et assurer la qualité des produits à chaque étape de la production.',
+      es: 'FableTech Group ha implementado con éxito un sistema de control de calidad de última generación con IA en nuestras instalaciones de fabricación. El sistema utiliza visión por computadora y algoritmos de aprendizaje automático para detectar defectos y garantizar la calidad del producto en cada etapa de producción.',
+      ar: 'نجحت FableTech Group في تطبيق نظام متطور للتحكم في الجودة مدعوم بالذكاء الاصطناعي في مرافق التصنيع لدينا. يستخدم النظام رؤية الكمبيوتر وخوارزميات التعلم الآلي لاكتشاف العيوب وضمان جودة المنتج في كل مرحلة من مراحل الإنتاج.'
+    },
+    summary: {
+      en: 'FableTech Group AI quality control achieves 99.8% accuracy.',
+      de: 'FableTech Group KI-Qualitätskontrolle erreicht 99,8% Genauigkeit.',
+      fr: 'Le contrôle qualité IA de FableTech Group atteint 99,8% de précision.',
+      es: 'El control de calidad con IA de FableTech Group logra 99.8% de precisión.',
+      ar: 'يصل التحكم في الجودة بالذكاء الاصطناعي من FableTech Group إلى دقة 99.8%.'
+    },
+    date: '2023-09-10',
+    category: 'Technology',
+    image: '/images/news/fabletech-ai-quality.jpg'
+  },
+  {
+    id: 'news-020',
+    slug: 'global-supplier-award-2023',
+    title: {
+      en: 'FableTech Group Receives Global Supplier Excellence Award',
+      de: 'FableTech Group erhält Auszeichnung für globale Lieferantenexzellenz',
+      fr: 'FableTech Group reçoit le prix d\'excellence des fournisseurs mondiaux',
+      es: 'FableTech Group recibe premio a la excelencia de proveedores globales',
+      ar: 'تتلقي FableTech Group جائزة التميز للموردين العالميين'
+    },
+    content: {
+      en: 'FableTech Group has been honored with the prestigious Global Supplier Excellence Award by the International Metal Manufacturers Association. This award recognizes FableTech outstanding performance in product quality, delivery reliability, and customer service. FableTech is one of only five companies worldwide to receive this honor.',
+      de: 'FableTech Group wurde von der International Metal Manufacturers Association mit dem renommierten Global Supplier Excellence Award ausgezeichnet. Diese Auszeichnung recognizes FableTech herausragende Leistung in Produktqualität, Lieferzuverlässigkeit und Kundenservice.',
+      fr: 'FableTech Group a été honorée du prestigieux Global Supplier Excellence Award par l\'Association Internationale des Fabricants de Métaux. Ce prix reconnaît la performance exceptionnelle de FableTech en matière de qualité des produits, de fiabilité de livraison et de service client.',
+      es: 'FableTech Group ha sido honrada con el prestigious Global Supplier Excellence Award por la Asociación Internacional de Fabricantes de Metales. Este premio reconoce el desempeño excepcional de FableTech en calidad de productos, confiabilidad de entrega y servicio al cliente.',
+      ar: 'تم تكريم FableTech Group بجائزة التميز للموردين العالميين المرموقة من قبل الجمعية الدولية لمنتجي المعادن. تعترف هذه الجائزة بأداء FableTech المتميز في جودة المنتج وموثوقية التسليم وخدمة العملاء.'
+    },
+    summary: {
+      en: 'FableTech Group recognized among top 5 global metal suppliers.',
+      de: 'FableTech Group unter den Top 5 der weltweiten Metallzulieferer.',
+      fr: 'FableTech Group parmi les 5 premiers fournisseurs mondiaux de métaux.',
+      es: 'FableTech Group entre los 5 principales proveedores globales de metales.',
+      ar: 'تحتل FableTech Group المرتبة الخامسة بين موردي المعادن العالميين.'
+    },
+    date: '2023-11-05',
+    category: 'Recognition',
+    image: '/images/news/fabletech-global-award.jpg'
+  },
+  {
+    id: 'news-021',
+    slug: 'renewable-energy-partnership-2023',
+    title: {
+      en: 'FableTech Group Partners with Renewable Energy Provider',
+      de: 'FableTech Group Partnerschaft mit erneuerbarem Energieanbieter',
+      fr: 'FableTech Group s\'associe à un fournisseur d\'énergie renouvelable',
+      es: 'FableTech Group se asocia con proveedor de energía renovable',
+      ar: 'تعاون FableTech Group مع مورد الطاقة المتجددة'
+    },
+    content: {
+      en: 'FableTech Group has partnered with GreenPower Solutions to transition our manufacturing facilities to 100% renewable energy. The partnership includes installation of solar panels and wind turbines at FableTech production sites. FableTech expects to reduce carbon emissions by 60% within three years.',
+      de: 'FableTech Group hat sich mit GreenPower Solutions zusammengeschlossen, um unsere Fertigungsanlagen auf 100% erneuerbare Energie umzustellen. Die Partnerschaft umfasst die Installation von Solarmodulen und Windkraftanlagen an FableTech-Produktionsstandorten.',
+      fr: 'FableTech Group s\'est associée à GreenPower Solutions pour transitionner nos installations de fabrication vers 100% d\'énergie renouvelable. Le partenariat comprend l\'installation de panneaux solaires et d\'éoliennes sur les sites de production de FableTech.',
+      es: 'FableTech Group se ha asociado con GreenPower Solutions para transitar nuestras instalaciones de fabricación hacia 100% energía renovable. La alianza incluye la instalación de paneles solares y turbinas eólicas en los sitios de producción de FableTech.',
+      ar: 'تعاونت FableTech Group مع GreenPower Solutions لتحويل مرافق التصنيع لدينا إلى طاقة متجددة 100%. تشمل الشراكة تركيب ألواح شمسية وتوربينات رياح في مواقع إنتاج FableTech.'
+    },
+    summary: {
+      en: 'FableTech Group commits to 100% renewable energy.',
+      de: 'FableTech Group verpflichtet sich zu 100% erneuerbarer Energie.',
+      fr: 'FableTech Group s\'engage vers 100% d\'énergie renouvelable.',
+      es: 'FableTech Group se compromete con 100% energía renovable.',
+      ar: 'تلتزم FableTech Group بالطاقة المتجددة 100%.'
+    },
+    date: '2023-06-18',
+    category: 'Partnership',
+    image: '/images/news/fabletech-renewable.jpg'
+  },
+  {
+    id: 'news-022',
+    slug: 'online-catalog-launch-2022',
+    title: {
+      en: 'FableTech Group Launches Enhanced Online Product Catalog',
+      de: 'FableTech Group startet erweiterten Online-Produktkatalog',
+      fr: 'FableTech Group lance un catalogue de produits en ligne amélioré',
+      es: 'FableTech Group lanza catálogo de productos en línea mejorado',
+      ar: 'تطلق FableTech Group كتالوج المنتجات عبر الإنترنت المحسن'
+    },
+    content: {
+      en: 'FableTech Group is excited to announce the launch of our completely redesigned online product catalog. The new catalog features improved search functionality, detailed specifications, CAD drawings, and real-time pricing. FableTech customers can now access over 5,000 products with instant quotes and online ordering capabilities.',
+      de: 'FableTech Group freut sich, den Start unseres vollständig neu gestalteten Online-Produktkatalogs anzukündigen. Der neue Katalog bietet verbesserte Suchfunktionen, detaillierte Spezifikationen, CAD-Zeichnungen und Echtzeit-Preisgestaltung.',
+      fr: 'FableTech Group a le plaisir d\'annoncer le lancement de notre catalogue de produits en ligne complètement repensé. Le nouveau catalogue offre des fonctionnalités de recherche améliorées, des spécifications détaillées, des dessins CAO et une tarification en temps réel.',
+      es: 'FableTech Group se complace en anunciar el lanzamiento de nuestro catálogo de productos en línea completamente rediseñado. El nuevo catálogo presenta funcionalidad de búsqueda mejorada, especificaciones detalladas, dibujos CAD y precios en tiempo real.',
+      ar: 'يسعد FableTech Group الإعلان عن إطلاق كتالوج المنتجات عبر الإنترنت المعاد تصميمه بالكامل. يتميز الكتالوج الجديد بوظائف بحث محسنة ومواصفات مفصلة ورسومات CAD وأسعار في الوقت الحقيقي.'
+    },
+    summary: {
+      en: 'FableTech Group launches digital catalog with 5,000+ products.',
+      de: 'FableTech Group startet digitalen Katalog mit über 5.000 Produkten.',
+      fr: 'FableTech Group lance un catalogue numérique avec plus de 5 000 produits.',
+      es: 'FableTech Group lanza catálogo digital con más de 5,000 productos.',
+      ar: 'تطلق FableTech Group كتالوج رقمي يضم أكثر من 5000 منتج.'
+    },
+    date: '2022-08-22',
+    category: 'New Products',
+    image: '/images/news/fabletech-catalog.jpg'
+  },
+  {
+    id: 'news-023',
+    slug: 'first-overseas-warehouse-2022',
+    title: {
+      en: 'FableTech Group Opens First Overseas Warehouse in Dubai',
+      de: 'FableTech Group eröffnet erstes Übersee-Lager in Dubai',
+      fr: 'FableTech Group ouvre son premier entrepôt overseas à Dubaï',
+      es: 'FableTech Group abre su primer almacén en el extranjero en Dubái',
+      ar: 'تفتح FableTech Group أول مستودع خارجي في دبي'
+    },
+    content: {
+      en: 'FableTech Group is pleased to announce the opening of our first overseas warehouse in Dubai, UAE. The new 10,000 square meter facility will serve customers across the Middle East and Africa, reducing delivery times by 50%. FableTech Middle East operations will be managed by a dedicated team of local experts.',
+      de: 'FableTech Group freut sich, die Eröffnung unseres ersten Übersee-Lagers in Dubai, VAE, anzukündigen. Die neue 10.000 Quadratmeter große Anlage wird Kunden im Nahen Osten und Afrika bedienen und die Lieferzeiten um 50% reduzieren.',
+      fr: 'FableTech Group a le plaisir d\'annoncer l\'ouverture de son premier entrepôt overseas à Dubaï, aux Émirats arabes unis. La nouvelle installation de 10 000 mètres carrés servira les clients du Moyen-Orient et de l\'Afrique, réduisant les délais de livraison de 50%.',
+      es: 'FableTech Group se complace en anunciar la apertura de su primer almacén en el extranjero en Dubái, EAU. La nueva instalación de 10,000 metros cuadrados servirá a clientes en Medio Oriente y África, reduciendo los tiempos de entrega en un 50%.',
+      ar: 'يسعد FableTech Group الإعلان عن افتتاح أول مستودع خارجي لنا في دبي، الإمارات العربية المتحدة. ستخدم المنشأة الجديدة البالغة مساحتها 10,000 متر مربع عملاء في جميع أنحاء الشرق الأوسط وأفريقيا، مما يقلل أوقات التسليم بنسبة 50%.'
+    },
+    summary: {
+      en: 'FableTech Group establishes Middle East presence in Dubai.',
+      de: 'FableTech Group etabliert Präsenz im Nahen Osten in Dubai.',
+      fr: 'FableTech Group établit sa présence au Moyen-Orient à Dubaï.',
+      es: 'FableTech Group establece presencia en Medio Oriente en Dubái.',
+      ar: 'تنشئ FableTech Group وجودها في الشرق الأوسط في دبي.'
+    },
+    date: '2022-03-15',
+    category: 'Company News',
+    image: '/images/news/fabletech-dubai.jpg'
+  },
+  {
+    id: 'news-024',
+    slug: 'employee-safety-certification-2021',
+    title: {
+      en: 'FableTech Group Achieves ISO 45001 Safety Certification',
+      de: 'FableTech Group erreicht ISO 45001-Sicherheitszertifizierung',
+      fr: 'FableTech Group obtient la certification sécurité ISO 45001',
+      es: 'FableTech Group logra certificación de seguridad ISO 45001',
+      ar: 'تحصل FableTech Group على شهادة السلامة ISO 45001'
+    },
+    content: {
+      en: 'FableTech Group has successfully achieved ISO 45001:2018 occupational health and safety management certification. This accomplishment demonstrates FableTech commitment to providing a safe working environment for all employees. The certification process involved comprehensive audits of FableTech safety procedures and training programs.',
+      de: 'FableTech Group hat erfolgreich die ISO 45001:2018-Zertifizierung für Occupational Health and Safety Management erreicht. Diese Errungenschaft zeigt das Engagement von FableTech für die Bereitstellung einer sicheren Arbeitsumgebung für alle Mitarbeiter.',
+      fr: 'FableTech Group a obtenu avec succès la certification ISO 45001:2018 pour le management de la santé et de la sécurité au travail. Cette réalisation démontre l\'engagement de FableTech à fournir un environnement de travail sûr à tous les employés.',
+      es: 'FableTech Group ha logrado con éxito la certificación ISO 45001:2018 de gestión de seguridad y salud ocupacional. Este logro demuestra el compromiso de FableTech de proporcionar un ambiente de trabajo seguro para todos los empleados.',
+      ar: 'حصلت FableTech Group بنجاح على شهادة إدارة السلامة والصحة المهنية ISO 45001:2018. يظهر هذا الإنجاز التزام FableTech بتوفير بيئة عمل آمنة لجميع الموظفين.'
+    },
+    summary: {
+      en: 'FableTech Group prioritizes employee safety with ISO certification.',
+      de: 'FableTech Group priorisiert Mitarbeitersicherheit mit ISO-Zertifizierung.',
+      fr: 'FableTech Group priorise la sécurité des employés avec la certification ISO.',
+      es: 'FableTech Group prioriza la seguridad de los empleados con certificación ISO.',
+      ar: 'تعطي FableTech Group الأولوية لسلامة الموظفين من خلال شهادة ISO.'
+    },
+    date: '2021-11-30',
+    category: 'Certification',
+    image: '/images/news/fabletech-safety.jpg'
+  },
+  {
+    id: 'news-025',
+    slug: 'pandemic-response-donation-2020',
+    title: {
+      en: 'FableTech Group Donates Medical Supplies During Pandemic',
+      de: 'FableTech Group spendet medizinische Versorgung während der Pandemie',
+      fr: 'FableTech Group fait don de fournitures médicales pendant la pandémie',
+      es: 'FableTech Group dona suministros médicos durante la pandemia',
+      ar: 'تتبرع FableTech Group بالإمدادات الطبية خلال الجائحة'
+    },
+    content: {
+      en: 'During the global pandemic, FableTech Group contributed to relief efforts by donating medical supplies and protective equipment to hospitals and healthcare facilities. FableTech contributed over $500,000 in donations and mobilized our supply chain to deliver critical supplies where they were needed most.',
+      de: 'Während der globalen Pandemie trug FableTech Group zu den Hilfsmaßnahmen bei, indem medizinische Versorgung und Schutzausrüstung an Krankenhäuser und Gesundheitseinrichtungen gespendet wurden. FableTech steuerte über 500.000 Dollar an Spenden bei.',
+      fr: 'Pendant la pandémie mondiale, FableTech Group a contribué aux efforts de secours en faisant don de fournitures médicales et d\'équipements de protection aux hôpitaux et aux établissements de santé. FableTech a contribué à hauteur de plus de 500 000 dollars en dons.',
+      es: 'Durante la pandemia global, FableTech Group contribuyó a los esfuerzos de alivio donando suministros médicos y equipos de protección a hospitales e instalaciones de salud. FableTech contribuyó con más de $500,000 en donaciones.',
+      ar: 'خلال الجائحة العالمية، ساهمت FableTech Group في جهود الإغاثة من خلال التبرع بالإمدادات الطبية ومعدات الحماية للمستشفيات ومرافق الرعاية الصحية. ساهمت FableTech بأكثر من 500,000 دولار في التبرعات.'
+    },
+    summary: {
+      en: 'FableTech Group contributes $500K to pandemic relief efforts.',
+      de: 'FableTech Group steuert 500.000 Dollar zu Pandemie-Hilfsmaßnahmen bei.',
+      fr: 'FableTech Group contribue à hauteur de 500k$ aux efforts de secours.',
+      es: 'FableTech Group contribuye $500K a esfuerzos de alivio pandémico.',
+      ar: 'تساهم FableTech Group بمبلغ 500 ألف دولار في جهود الإغاثة من الجائحة.'
+    },
+    date: '2020-05-15',
+    category: 'Company News',
+    image: '/images/news/fabletech-donation.jpg'
   }
 ];
 
