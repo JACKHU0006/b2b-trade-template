@@ -19,44 +19,44 @@ const navItems = {
     { href: '/contact', label: 'Contact' },
   ],
   de: [
-    { href: '/de/', label: 'Startseite' },
-    { href: '/de/about', label: 'Über uns' },
-    { href: '/de/products', label: 'Produkte' },
-    { href: '/de/news', label: 'Nachrichten' },
-    { href: '/de/factory', label: 'Fabrik' },
-    { href: '/de/service', label: 'Dienstleistung' },
-    { href: '/de/faq', label: 'FAQ' },
-    { href: '/de/contact', label: 'Kontakt' },
+    { href: '/', label: 'Startseite' },
+    { href: '/about', label: 'Über uns' },
+    { href: '/products', label: 'Produkte' },
+    { href: '/news', label: 'Nachrichten' },
+    { href: '/factory', label: 'Fabrik' },
+    { href: '/service', label: 'Dienstleistung' },
+    { href: '/faq', label: 'FAQ' },
+    { href: '/contact', label: 'Kontakt' },
   ],
   fr: [
-    { href: '/fr/', label: 'Accueil' },
-    { href: '/fr/about', label: 'À propos' },
-    { href: '/fr/products', label: 'Produits' },
-    { href: '/fr/news', label: 'Nouvelles' },
-    { href: '/fr/factory', label: 'Usine' },
-    { href: '/fr/service', label: 'Service' },
-    { href: '/fr/faq', label: 'FAQ' },
-    { href: '/fr/contact', label: 'Contact' },
+    { href: '/', label: 'Accueil' },
+    { href: '/about', label: 'À propos' },
+    { href: '/products', label: 'Produits' },
+    { href: '/news', label: 'Nouvelles' },
+    { href: '/factory', label: 'Usine' },
+    { href: '/service', label: 'Service' },
+    { href: '/faq', label: 'FAQ' },
+    { href: '/contact', label: 'Contact' },
   ],
   es: [
-    { href: '/es/', label: 'Inicio' },
-    { href: '/es/about', label: 'Sobre nosotros' },
-    { href: '/es/products', label: 'Productos' },
-    { href: '/es/news', label: 'Noticias' },
-    { href: '/es/factory', label: 'Fábrica' },
-    { href: '/es/service', label: 'Servicio' },
-    { href: '/es/faq', label: 'FAQ' },
-    { href: '/es/contact', label: 'Contacto' },
+    { href: '/', label: 'Inicio' },
+    { href: '/about', label: 'Sobre nosotros' },
+    { href: '/products', label: 'Productos' },
+    { href: '/news', label: 'Noticias' },
+    { href: '/factory', label: 'Fábrica' },
+    { href: '/service', label: 'Servicio' },
+    { href: '/faq', label: 'FAQ' },
+    { href: '/contact', label: 'Contacto' },
   ],
   ar: [
-    { href: '/ar/', label: 'الرئيسية' },
-    { href: '/ar/about', label: 'عن الشركة' },
-    { href: '/ar/products', label: 'المنتجات' },
-    { href: '/ar/news', label: 'الأخبار' },
-    { href: '/ar/factory', label: 'المصنع' },
-    { href: '/ar/service', label: 'الخدمات' },
-    { href: '/ar/faq', label: 'أسئلة شائعة' },
-    { href: '/ar/contact', label: 'اتصل بنا' },
+    { href: '/', label: 'الرئيسية' },
+    { href: '/about', label: 'عن الشركة' },
+    { href: '/products', label: 'المنتجات' },
+    { href: '/news', label: 'الأخبار' },
+    { href: '/factory', label: 'المصنع' },
+    { href: '/service', label: 'الخدمات' },
+    { href: '/faq', label: 'أسئلة شائعة' },
+    { href: '/contact', label: 'اتصل بنا' },
   ],
 };
 
@@ -72,14 +72,14 @@ const locales = [
 <header class="bg-white shadow-sm sticky top-0 z-50">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex items-center justify-between h-16">
-      <div class="flex items-center">
-        <a href={locale === 'en' ? '/' : `/${locale}/`} class="flex-shrink-0 flex items-center">
-          <div class="h-8 w-8 bg-primary rounded-full flex items-center justify-center">
-            <span class="text-white font-bold text-lg">F</span>
-          </div>
-          <span class="ml-2 text-xl font-bold text-gray-900">FableTech</span>
-        </a>
-      </div>
+        <div class="flex items-center">
+          <a href="/" class="flex-shrink-0 flex items-center">
+            <div class="h-8 w-8 bg-primary rounded-full flex items-center justify-center">
+              <span class="text-white font-bold text-lg">F</span>
+            </div>
+            <span class="ml-2 text-xl font-bold text-gray-900">FableTech</span>
+          </a>
+        </div>
 
       <nav class="hidden md:flex items-center space-x-1">
         {navItems[locale as keyof typeof navItems].map((item) => (
@@ -108,7 +108,7 @@ const locales = [
             {locales.map((loc) => (
               <a
                 key={loc.code}
-                href={loc.code === 'en' ? '/' : `/${loc.code}/`}
+                href="/"
                 class={`flex items-center space-x-2 px-4 py-2 text-sm hover:bg-gray-50 ${locale === loc.code ? 'text-primary font-medium' : 'text-gray-700'}`}
               >
                 <span>{loc.flag}</span>
