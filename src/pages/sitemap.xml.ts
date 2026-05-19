@@ -1,5 +1,5 @@
 import type { APIRoute } from 'astro';
-import { getNews } from '../data/news';
+import { getNews, getNewsCategories } from '../data/news';
 
 const SITE_URL = 'https://www.fabletech.cc.cd';
 
@@ -28,7 +28,10 @@ export const GET: APIRoute = () => {
   const news = getNews();
   const newsPages = news.map(n => `/news/${n.slug}`);
 
-  const allPages = [...staticPages, ...newsPages];
+  const categories = getNewsCategories();
+  const categoryPages = categories.map(c => `/news/${c.toLowerCase().replace(/\s+/g, '-')}`);
+
+  const allPages = [...staticPages, ...categoryPages, ...newsPages];
 
   const xml = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">

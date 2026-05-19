@@ -1,7 +1,7 @@
 ---
 import MainLayout from '../layouts/MainLayout.astro';
 import Breadcrumbs from '../components/Breadcrumbs.astro';
-import { Factory, Truck, Warehouse, Cpu, Users, Award } from '@lucide/astro';
+import { Factory, Truck, Warehouse, Cpu, Users, Award, Cog, Shield, Zap, Globe, CheckCircle2 } from '@lucide/astro';
 
 const locale = 'en';
 
@@ -9,26 +9,79 @@ const facilities = [
   {
     icon: Factory,
     title: 'Production Facility',
-    description: 'Our state-of-the-art production facility spans over 50,000 square meters with advanced manufacturing equipment.',
-    stats: '50,000 m²'
+    description: 'FableTech advanced production facility spans over 50,000 square meters with state-of-the-art manufacturing equipment and automated production lines.',
+    stats: '50,000 m²',
+    details: ['CNC Machining', 'Welding Systems', 'Assembly Lines']
   },
   {
     icon: Warehouse,
-    title: 'Warehouse',
-    description: 'Modern warehouse facilities with automated inventory management and climate control systems.',
-    stats: '20,000 m²'
+    title: 'Modern Warehouse',
+    description: 'FableTech warehouse facilities feature automated inventory management, climate control, and optimized storage solutions for metal products.',
+    stats: '20,000 m²',
+    details: ['Climate Control', 'Automated Storage', 'Quality Storage']
   },
   {
     icon: Truck,
     title: 'Logistics Center',
-    description: 'Efficient logistics center ensuring timely delivery to customers worldwide.',
-    stats: 'Global Delivery'
+    description: 'FableTech efficient logistics center ensures timely delivery to customers worldwide with real-time tracking and global shipping partnerships.',
+    stats: 'Global Delivery',
+    details: ['60+ Countries', 'Express Shipping', 'Real-time Tracking']
   },
   {
     icon: Cpu,
-    title: 'Quality Control',
-    description: 'Advanced quality control lab with cutting-edge testing equipment and skilled technicians.',
-    stats: 'ISO Certified'
+    title: 'Quality Control Lab',
+    description: 'FableTech advanced quality control laboratory with cutting-edge testing equipment and skilled technicians ensuring ISO compliance.',
+    stats: 'ISO 9001:2015',
+    details: ['Material Testing', 'Dimensional Inspection', 'Quality Certification']
+  },
+];
+
+const certifications = [
+  { name: 'ISO 9001:2015', description: 'Quality Management System', icon: Shield },
+  { name: 'CE Marking', description: 'European Compliance', icon: CheckCircle2 },
+  { name: 'SGS Certified', description: 'Third-Party Verification', icon: Award },
+  { name: 'RoHS Compliant', description: 'Environmental Standards', icon: Globe },
+];
+
+const capabilities = [
+  {
+    icon: Cog,
+    title: 'Advanced Manufacturing',
+    description: 'FableTech utilizes cutting-edge CNC machines, robotic welding systems, and automated assembly lines to deliver precision-engineered metal products with consistent quality and efficiency.'
+  },
+  {
+    icon: Zap,
+    title: 'Rapid Production',
+    description: 'FableTech streamlined production processes enable fast turnaround times without compromising quality, supporting both prototype development and large-scale volume production.'
+  },
+  {
+    icon: Shield,
+    title: 'Quality Assurance',
+    description: 'FableTech implements rigorous quality control at every stage, from incoming material inspection to final product testing, ensuring all products meet exact specifications.'
+  },
+  {
+    icon: Globe,
+    title: 'Global Compliance',
+    description: 'FableTech products comply with international standards including CE, RoHS, and REACH, making them suitable for markets worldwide.'
+  },
+];
+
+const faqs = [
+  {
+    question: 'What is the production capacity of FableTech factory?',
+    answer: 'FableTech factory spans 50,000 square meters with automated production lines capable of producing over 10,000 tons of metal products monthly. Our facility operates 24/7 with three shifts to meet global demand.'
+  },
+  {
+    question: 'How does FableTech ensure product quality?',
+    answer: 'FableTech implements comprehensive quality control including ISO 9001:2015 certified processes, automated inspection systems, material verification, and final product testing. Every product undergoes multiple quality checks before shipment.'
+  },
+  {
+    question: 'What types of metal products can FableTech manufacture?',
+    answer: 'FableTech specializes in manufacturing steel products (carbon, alloy, stainless), aluminum products, copper and brass, titanium components, and industrial valves. We handle custom fabrication and precision machining projects of any scale.'
+  },
+  {
+    question: 'Does FableTech offer custom manufacturing services?',
+    answer: 'Yes! FableTech provides comprehensive custom manufacturing including design assistance, material selection, prototyping, and full-scale production. Our engineering team works closely with customers to deliver tailored solutions.'
   },
 ];
 
@@ -38,8 +91,8 @@ const breadcrumbItems = [
 ---
 
 <MainLayout 
-  title="Our Factory - FableTech Group" 
-  description="Explore our modern manufacturing facility and see how we produce high-quality metal products."
+  title="Manufacturing Factory & Production Facility - FableTech Group" 
+  description="Explore FableTech Group's world-class manufacturing facility: 50,000m² production area, ISO 9001:2015 certified, advanced CNC machining, robotic welding, and automated quality control. B2B metal products manufacturer serving 60+ countries."
   locale={locale}
 >
   <Breadcrumbs items={breadcrumbItems} locale={locale} />
@@ -62,9 +115,9 @@ const breadcrumbItems = [
             <text x="40" y="50" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="700" text-anchor="middle" dominant-baseline="central" fill="url(#factoryLogoGrad)">Tech</text>
           </svg>
         </div>
-        <h1 class="text-4xl md:text-5xl font-bold mb-4">Our Factory</h1>
-        <p class="text-lg text-gray-200">
-          Modern manufacturing facility with state-of-the-art equipment
+        <h1 class="text-4xl md:text-5xl font-bold mb-4">FableTech Manufacturing Facility</h1>
+        <p class="text-lg text-gray-200 max-w-3xl mx-auto">
+          World-class industrial metal manufacturing with ISO 9001:2015 certification, advanced automation, and sustainable production practices
         </p>
       </div>
     </div>
@@ -74,34 +127,34 @@ const breadcrumbItems = [
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
         <div>
-          <h2 class="text-3xl font-bold mb-6">World-Class Manufacturing</h2>
+          <h2 class="text-3xl font-bold mb-6">Advanced Manufacturing Capabilities</h2>
           <p class="text-gray-600 mb-4">
-            Our factory is equipped with the latest technology and machinery to produce high-quality metal products. 
-            With over 25 years of experience, we have perfected our manufacturing processes to ensure precision 
-            and efficiency.
+            FableTech Group operates a state-of-the-art manufacturing facility located in Shanghai, China. Our 50,000 square meter production complex houses advanced equipment including CNC machining centers, robotic welding systems, and automated assembly lines.
+          </p>
+          <p class="text-gray-600 mb-4">
+            With over 25 years of experience, FableTech has perfected manufacturing processes that ensure precision, consistency, and efficiency. Our dedicated team of 200+ skilled engineers and technicians maintains the highest standards of quality in every product we manufacture.
           </p>
           <p class="text-gray-600 mb-6">
-            We employ a team of highly skilled engineers and technicians who are dedicated to maintaining the 
-            highest standards of quality. Our facility operates 24/7 to meet the demands of our global customers.
+            FableTech factory operates 24/7 to meet the demands of our global customer base, serving clients in over 60 countries with timely delivery and exceptional product quality.
           </p>
           <div class="grid grid-cols-3 gap-4">
-            <div class="text-center">
+            <div class="text-center p-4 bg-primary/5 rounded-lg">
               <div class="text-3xl font-bold text-primary mb-1">50K</div>
-              <div class="text-sm text-gray-600">m² Facility</div>
+              <div class="text-sm text-gray-600">m² Production Area</div>
             </div>
-            <div class="text-center">
+            <div class="text-center p-4 bg-primary/5 rounded-lg">
               <div class="text-3xl font-bold text-primary mb-1">200+</div>
-              <div class="text-sm text-gray-600">Employees</div>
+              <div class="text-sm text-gray-600">Skilled Workers</div>
             </div>
-            <div class="text-center">
+            <div class="text-center p-4 bg-primary/5 rounded-lg">
               <div class="text-3xl font-bold text-primary mb-1">24/7</div>
-              <div class="text-sm text-gray-600">Operation</div>
+              <div class="text-sm text-gray-600">Production Operation</div>
             </div>
           </div>
         </div>
         <div class="bg-gray-100 rounded-xl p-8">
-          <img src="/images/factory/fabletech-factory-main.jpg" alt="FableTech Group Manufacturing Facility - Industrial Metal Products Factory" class="w-full h-64 object-cover rounded-lg mb-4" />
-          <p class="text-gray-600 text-sm text-center">Our main production facility in Shanghai, China</p>
+          <img src="/images/factory/fabletech-factory-main.jpg" alt="FableTech Group Manufacturing Facility - Industrial Metal Products Factory in Shanghai, China" class="w-full h-64 object-cover rounded-lg mb-4" />
+          <p class="text-gray-600 text-sm text-center">FableTech main production facility - Shanghai, China</p>
         </div>
       </div>
     </div>
@@ -110,8 +163,8 @@ const breadcrumbItems = [
   <section class="py-16 bg-gray-50">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-12">
-        <h2 class="text-3xl font-bold mb-4">Our Facilities</h2>
-        <p class="text-gray-600">Explore our comprehensive manufacturing infrastructure</p>
+        <h2 class="text-3xl font-bold mb-4">FableTech Manufacturing Infrastructure</h2>
+        <p class="text-gray-600">Explore our comprehensive facilities designed for industrial metal production</p>
       </div>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
         {facilities.map((facility) => (
@@ -120,8 +173,16 @@ const breadcrumbItems = [
               <facility.icon class="h-8 w-8 text-primary" />
             </div>
             <h3 class="text-xl font-semibold mb-2">{facility.title}</h3>
-            <p class="text-gray-600 text-sm mb-3">{facility.description}</p>
-            <div class="text-primary font-semibold">{facility.stats}</div>
+            <p class="text-gray-600 text-sm mb-4">{facility.description}</p>
+            <div class="text-primary font-semibold mb-3">{facility.stats}</div>
+            <ul class="space-y-1">
+              {facility.details.map((detail) => (
+                <li key={detail} class="flex items-center text-sm text-gray-600">
+                  <CheckCircle2 class="w-4 h-4 mr-2 text-primary" />
+                  {detail}
+                </li>
+              ))}
+            </ul>
           </div>
         ))}
       </div>
@@ -131,8 +192,52 @@ const breadcrumbItems = [
   <section class="py-16">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-12">
-        <h2 class="text-3xl font-bold mb-4">Our Team</h2>
-        <p class="text-gray-600">Dedicated professionals committed to excellence</p>
+        <h2 class="text-3xl font-bold mb-4">Manufacturing Excellence</h2>
+        <p class="text-gray-600">What sets FableTech apart in metal product manufacturing</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        {capabilities.map((cap) => (
+          <div key={cap.title} class="bg-white rounded-xl p-8 shadow-lg">
+            <div class="flex items-start gap-4">
+              <div class="bg-primary/10 rounded-full p-3 flex-shrink-0">
+                <cap.icon class="h-6 w-6 text-primary" />
+              </div>
+              <div>
+                <h3 class="text-xl font-semibold mb-2">{cap.title}</h3>
+                <p class="text-gray-600">{cap.description}</p>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold mb-4">Certifications & Compliance</h2>
+        <p class="text-gray-600">FableTech maintains rigorous international standards and certifications</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        {certifications.map((cert) => (
+          <div key={cert.name} class="bg-white rounded-xl p-6 shadow-lg text-center hover:shadow-xl transition-shadow">
+            <div class="bg-success/10 rounded-full p-4 mb-4 w-16 mx-auto">
+              <cert.icon class="h-8 w-8 text-success" />
+            </div>
+            <h3 class="text-lg font-semibold mb-1">{cert.name}</h3>
+            <p class="text-gray-600 text-sm">{cert.description}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold mb-4">Dedicated Team</h2>
+        <p class="text-gray-600">FableTech professionals committed to manufacturing excellence</p>
       </div>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
         <div class="bg-white rounded-xl p-8 shadow-lg text-center">
@@ -140,23 +245,109 @@ const breadcrumbItems = [
             <Users class="h-10 w-10 text-primary" />
           </div>
           <h3 class="text-xl font-semibold mb-2">Skilled Workforce</h3>
-          <p class="text-gray-600">Over 200 skilled workers and engineers dedicated to quality production.</p>
+          <p class="text-gray-600">FableTech employs over 200 skilled workers and engineers dedicated to precision metal production and quality assurance.</p>
         </div>
         <div class="bg-white rounded-xl p-8 shadow-lg text-center">
           <div class="w-20 h-20 bg-secondary/10 rounded-full flex items-center justify-center mx-auto mb-4">
             <Award class="h-10 w-10 text-secondary" />
           </div>
           <h3 class="text-xl font-semibold mb-2">Continuous Training</h3>
-          <p class="text-gray-600">Regular training programs to ensure our team stays updated with latest technologies.</p>
+          <p class="text-gray-600">FableTech invests in regular training programs ensuring our team stays updated with latest manufacturing technologies.</p>
         </div>
         <div class="bg-white rounded-xl p-8 shadow-lg text-center">
           <div class="w-20 h-20 bg-success/10 rounded-full flex items-center justify-center mx-auto mb-4">
-            <Factory class="h-10 w-10 text-success" />
+            <Shield class="h-10 w-10 text-success" />
           </div>
           <h3 class="text-xl font-semibold mb-2">Safety First</h3>
-          <p class="text-gray-600">Stringent safety protocols to ensure a safe working environment for all employees.</p>
+          <p class="text-gray-600">FableTech maintains stringent safety protocols ensuring a safe working environment for all employees.</p>
         </div>
       </div>
     </div>
   </section>
+
+  <section class="py-16">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold mb-4">Factory FAQ</h2>
+        <p class="text-gray-600">Common questions about FableTech manufacturing capabilities</p>
+      </div>
+      <div class="bg-white rounded-xl shadow-lg">
+        {faqs.map((faq, index) => (
+          <div key={index} class="border-b border-gray-200 last:border-b-0">
+            <button 
+              id={`faq-btn-${index}`}
+              class="w-full px-6 py-5 flex items-center justify-between text-left hover:bg-gray-50 transition-colors"
+            >
+              <span class="font-semibold text-gray-900">{faq.question}</span>
+              <div class="w-6 h-6 relative">
+                <svg id={`faq-chevron-${index}`} class="h-6 w-6 text-gray-500 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                </svg>
+              </div>
+            </button>
+            <div id={`faq-answer-${index}`} class="overflow-hidden transition-all duration-300 max-h-0">
+              <div class="px-6 pb-5 pt-3 text-gray-600">
+                {faq.answer}
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+  </section>
+
+  <section class="py-16 bg-primary text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center">
+        <h2 class="text-3xl font-bold mb-4">Schedule a Factory Tour</h2>
+        <p class="text-gray-200 mb-8 max-w-2xl mx-auto">
+          Experience FableTech manufacturing capabilities firsthand. Contact us to arrange a virtual or in-person tour of our facility.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="/contact" class="inline-flex items-center justify-center px-8 py-4 bg-white text-primary font-semibold rounded-lg hover:bg-gray-100 transition-colors">
+            Contact FableTech
+          </a>
+          <a href="tel:+8613812345678" class="inline-flex items-center justify-center px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white/10 transition-colors">
+            <Factory class="mr-2 h-5 w-5" />
+            +86 138 1234 5678
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script is:inline>
+    document.addEventListener('DOMContentLoaded', () => {
+      const faqButtons = document.querySelectorAll('[id^="faq-btn-"]');
+      const faqCount = faqButtons.length;
+      
+      for (let i = 0; i < faqCount; i++) {
+        const btn = document.getElementById(`faq-btn-${i}`);
+        if (btn) {
+          btn.addEventListener('click', () => toggleFaq(i));
+        }
+      }
+      
+      const firstChevron = document.getElementById('faq-chevron-0');
+      const firstAnswer = document.getElementById('faq-answer-0');
+      if (firstChevron && firstAnswer) {
+        firstChevron.style.transform = 'rotate(180deg)';
+        firstAnswer.style.maxHeight = '500px';
+      }
+    });
+
+    function toggleFaq(index) {
+      const chevron = document.getElementById(`faq-chevron-${index}`);
+      const answer = document.getElementById(`faq-answer-${index}`);
+      
+      if (chevron && answer) {
+        if (answer.style.maxHeight === '500px') {
+          chevron.style.transform = 'rotate(0deg)';
+          answer.style.maxHeight = '0';
+        } else {
+          chevron.style.transform = 'rotate(180deg)';
+          answer.style.maxHeight = '500px';
+        }
+      }
+    }
+  </script>
 </MainLayout>

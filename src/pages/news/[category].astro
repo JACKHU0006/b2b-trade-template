@@ -1,27 +1,35 @@
 ---
-import MainLayout from '../layouts/MainLayout.astro';
-import Breadcrumbs from '../components/Breadcrumbs.astro';
-import InquiryForm from '../components/InquiryForm.astro';
+import MainLayout from '../../layouts/MainLayout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import InquiryForm from '../../components/InquiryForm.astro';
 import { Calendar, ArrowRight, Filter } from '@lucide/astro';
-import { news, getNewsCategories } from '../data/news';
+import { news, getNewsCategories } from '../../data/news';
+
+export async function getStaticPaths() {
+  const categories = getNewsCategories();
+  return categories.map((category) => ({
+    params: { category: category.toLowerCase().replace(/\s+/g, '-') },
+    props: { category },
+  }));
+}
 
 const locale = 'en';
+const { category } = Astro.props;
 const categories = getNewsCategories();
 
-const selectedCategory = Astro.url.searchParams.get('category') || 'all';
-const filteredNews = selectedCategory === 'all' 
-  ? news 
-  : news.filter(n => n.category === selectedCategory);
+const filteredNews = news.filter(n => n.category === category);
 
 const breadcrumbItems = [
   { name: 'News', href: '/news' },
-  ...(selectedCategory !== 'all' ? [{ name: selectedCategory, href: `/news?category=${selectedCategory}` }] : [])
+  { name: category, href: `/news/${category.toLowerCase().replace(/\s+/g, '-')}` }
 ];
+
+const pageTitle = category === 'all' ? 'Latest News & Events' : category;
 ---
 
 <MainLayout 
-  title="News & Events - FableTech Group" 
-  description="Stay updated with the latest news, events, and announcements from FableTech Group."
+  title={`${category} News - FableTech Group`} 
+  description={`Latest ${category} news and updates from FableTech Group. ${category} related articles, announcements, and industry insights.`}
   locale={locale}
 >
   <Breadcrumbs items={breadcrumbItems} locale={locale} />
@@ -44,13 +52,9 @@ const breadcrumbItems = [
             <text x="40" y="50" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="700" text-anchor="middle" dominant-baseline="central" fill="url(#newsPageLogoGrad)">Tech</text>
           </svg>
         </div>
-        <h1 class="text-4xl md:text-5xl font-bold mb-4">
-          {selectedCategory === 'all' ? 'Latest News & Events' : selectedCategory}
-        </h1>
+        <h1 class="text-4xl md:text-5xl font-bold mb-4">{pageTitle}</h1>
         <p class="text-lg text-gray-200">
-          {selectedCategory === 'all' 
-            ? 'Stay informed about our company, products, and industry news' 
-            : `Browse all news in the ${selectedCategory} category`}
+          Browse all FableTech news in the {category} category
         </p>
       </div>
     </div>
@@ -65,24 +69,24 @@ const breadcrumbItems = [
           <a 
             href="/news" 
             class={`px-4 py-2 rounded-full font-medium transition-colors ${
-              selectedCategory === 'all' 
+              'all' === 'all' 
                 ? 'bg-primary text-white' 
                 : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
             }`}
           >
             All News
           </a>
-          {categories.map((category) => (
+          {categories.map((cat) => (
             <a 
-              key={category} 
-              href={`/news/${category.toLowerCase().replace(/\s+/g, '-')}`}
+              key={cat} 
+              href={`/news/${cat.toLowerCase().replace(/\s+/g, '-')}`}
               class={`px-4 py-2 rounded-full font-medium transition-colors ${
-                selectedCategory === category 
+                cat === category 
                   ? 'bg-primary text-white' 
                   : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
               }`}
             >
-              {category}
+              {cat}
             </a>
           ))}
         </div>
@@ -92,7 +96,7 @@ const breadcrumbItems = [
         <div class="text-center py-16">
           <div class="text-6xl mb-4">📰</div>
           <h3 class="text-2xl font-semibold text-gray-900 mb-2">No News Found</h3>
-          <p class="text-gray-600 mb-6">There are no articles in this category yet.</p>
+          <p class="text-gray-600 mb-6">There are no articles in the {category} category yet.</p>
           <a href="/news" class="inline-flex items-center px-6 py-3 bg-primary text-white rounded-lg font-medium hover:bg-primary/90 transition-colors">
             View All News
             <ArrowRight class="ml-2 h-5 w-5" />
@@ -104,7 +108,7 @@ const breadcrumbItems = [
             <p class="text-gray-600">
               Showing <span class="font-semibold text-gray-900">{filteredNews.length}</span> 
               {filteredNews.length === 1 ? 'article' : 'articles'}
-              {selectedCategory !== 'all' && ` in ${selectedCategory}`}
+              in {category}
             </p>
           </div>
 
@@ -155,7 +159,7 @@ const breadcrumbItems = [
         <div class="text-center max-w-3xl mx-auto">
           <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Stay Connected</h2>
           <p class="text-lg text-gray-600 mb-8">
-            Follow us on social media for the latest updates, industry insights, and behind-the-scenes content.
+            Follow FableTech Group on social media for the latest updates, industry insights, and behind-the-scenes content.
           </p>
           <div class="flex flex-wrap justify-center gap-4">
             <a href="#" class="inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-lg font-medium hover:bg-blue-700 transition-colors">
@@ -178,6 +182,6 @@ const breadcrumbItems = [
 
   <InquiryForm 
     title="Subscribe to Our Newsletter"
-    subtitle="Stay updated with the latest industry news, product releases, and company announcements"
+    subtitle="Stay updated with the latest FableTech Group industry news, product releases, and company announcements"
   />
 </MainLayout>
