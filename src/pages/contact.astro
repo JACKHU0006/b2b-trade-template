@@ -2,14 +2,18 @@
 import MainLayout from '../layouts/MainLayout.astro';
 import Breadcrumbs from '../components/Breadcrumbs.astro';
 import ReCAPTCHA from '../components/ReCAPTCHA.astro';
-import { MapPin, Phone, Mail, Clock, Send, CheckCircle } from '@lucide/astro';
+import { MapPin, Phone, Mail, Clock, Send, CheckCircle, MessageCircle } from '@lucide/astro';
 
 const locale = 'en';
 
+const PHONE_NUMBER = '+86 138 1234 5678';
+const PHONE_TEL = '+8613812345678';
+
 const contactInfo = [
   { icon: MapPin, label: 'Address', value: '123 Industrial Road, Shanghai, China' },
-  { icon: Phone, label: 'Phone', value: '+86 21 1234 5678' },
-  { icon: Mail, label: 'Email', value: 'contact@fabletech.com' },
+  { icon: Phone, label: 'Phone', value: PHONE_NUMBER, link: `tel:${PHONE_TEL}` },
+  { icon: MessageCircle, label: 'WhatsApp', value: PHONE_NUMBER, link: `https://wa.me/${PHONE_TEL}` },
+  { icon: Mail, label: 'Email', value: 'contact@fabletech.com', link: 'mailto:contact@fabletech.com' },
   { icon: Clock, label: 'Hours', value: 'Mon-Fri: 8:00 - 18:00' },
 ];
 
@@ -20,7 +24,7 @@ const breadcrumbItems = [
 
 <MainLayout 
   title="Contact Us - FableTech Group" 
-  description="Get in touch with our team for inquiries, quotes, or support."
+  description="Get in touch with FableTech team for inquiries, quotes, or support. Contact FableTech via phone, WhatsApp, email, or form."
   locale={locale}
 >
   <Breadcrumbs items={breadcrumbItems} locale={locale} />
@@ -43,9 +47,9 @@ const breadcrumbItems = [
             <text x="40" y="50" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="700" text-anchor="middle" dominant-baseline="central" fill="url(#contactLogoGrad)">Tech</text>
           </svg>
         </div>
-        <h1 class="text-4xl md:text-5xl font-bold mb-4">Contact Us</h1>
+        <h1 class="text-4xl md:text-5xl font-bold mb-4">Contact FableTech</h1>
         <p class="text-lg text-gray-200">
-          Get in touch with our team for inquiries, quotes, or support
+          Get in touch with FableTech team for inquiries, quotes, or support
         </p>
       </div>
     </div>
@@ -55,7 +59,7 @@ const breadcrumbItems = [
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
         <div>
-          <h2 class="text-2xl font-bold mb-8">Get in Touch</h2>
+          <h2 class="text-2xl font-bold mb-8">Get in Touch with FableTech</h2>
           <div class="space-y-6">
             {contactInfo.map((item) => (
               <div key={item.label} class="flex items-start">
@@ -64,15 +68,31 @@ const breadcrumbItems = [
                 </div>
                 <div>
                   <div class="font-semibold text-gray-900">{item.label}</div>
-                  <div class="text-gray-600">{item.value}</div>
+                  {item.link ? (
+                    <a href={item.link} class="text-gray-600 hover:text-primary transition-colors">
+                      {item.value}
+                    </a>
+                  ) : (
+                    <div class="text-gray-600">{item.value}</div>
+                  )}
                 </div>
               </div>
             ))}
           </div>
+          
+          <div class="mt-12 p-6 bg-gray-50 rounded-xl">
+            <h3 class="font-semibold text-gray-900 mb-3">Why Choose FableTech?</h3>
+            <ul class="space-y-2 text-gray-600">
+              <li class="flex items-center"><CheckCircle class="h-4 w-4 text-primary mr-2"/> 24/7 customer support</li>
+              <li class="flex items-center"><CheckCircle class="h-4 w-4 text-primary mr-2"/> Fast response times</li>
+              <li class="flex items-center"><CheckCircle class="h-4 w-4 text-primary mr-2"/> Expert technical assistance</li>
+              <li class="flex items-center"><CheckCircle class="h-4 w-4 text-primary mr-2"/> 60+ countries served</li>
+            </ul>
+          </div>
         </div>
 
         <div>
-          <h2 class="text-2xl font-bold mb-8">Send us a Message</h2>
+          <h2 class="text-2xl font-bold mb-8">Send a Message to FableTech</h2>
           <div id="form-container">
             <form id="contact-form" class="space-y-4" method="POST">
               <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -108,12 +128,12 @@ const breadcrumbItems = [
                   />
                 </div>
                 <div>
-                  <label class="block text-sm font-medium text-gray-700 mb-1">Phone</label>
+                  <label class="block text-sm font-medium text-gray-700 mb-1">Phone / WhatsApp</label>
                   <input
                     type="tel"
                     name="phone"
                     class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
-                    placeholder="+1 234 567 890"
+                    placeholder={PHONE_NUMBER}
                   />
                 </div>
               </div>
@@ -124,7 +144,7 @@ const breadcrumbItems = [
                   required
                   rows={5}
                   class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary resize-none"
-                  placeholder="How can we help you?"
+                  placeholder="How can FableTech help you?"
                 ></textarea>
               </div>
               <div class="g-recaptcha-container">
@@ -135,14 +155,14 @@ const breadcrumbItems = [
                 class="w-full flex items-center justify-center px-8 py-4 bg-primary hover:bg-primary-dark text-white font-semibold rounded-lg transition-colors"
               >
                 <Send class="mr-2 h-5 w-5" />
-                Send Message
+                Send Message to FableTech
               </button>
             </form>
           </div>
           <div id="success-message" class="bg-green-50 border border-green-200 rounded-xl p-8 text-center hidden">
             <CheckCircle class="h-12 w-12 text-green-600 mx-auto mb-4" />
-            <h3 class="text-xl font-semibold text-green-600 mb-2">Message Sent!</h3>
-            <p class="text-gray-600">Thank you for your inquiry. We will get back to you within 24 hours.</p>
+            <h3 class="text-xl font-semibold text-green-600 mb-2">Message Sent to FableTech!</h3>
+            <p class="text-gray-600">Thank you for your inquiry. FableTech will get back to you within 24 hours.</p>
           </div>
         </div>
       </div>

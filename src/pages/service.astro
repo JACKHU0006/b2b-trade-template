@@ -1,7 +1,7 @@
 ---
 import MainLayout from '../layouts/MainLayout.astro';
 import Breadcrumbs from '../components/Breadcrumbs.astro';
-import { Wrench, Truck, FileText, Phone, Clock, Headphones } from '@lucide/astro';
+import { Wrench, Truck, FileText, Phone, Clock, Headphones, Shield, Award, Zap, Globe, Box, Users, CheckCircle2 } from '@lucide/astro';
 
 const locale = 'en';
 
@@ -9,37 +9,159 @@ const services = [
   {
     icon: Wrench,
     title: 'Custom Manufacturing',
-    description: 'We offer custom manufacturing services to meet your specific requirements. Our team works closely with you to understand your needs and deliver tailored solutions.',
-    features: ['Custom designs', 'Precision engineering', 'Quality materials']
+    description: 'FableTech Group offers comprehensive custom manufacturing services to meet your specific requirements. Our experienced engineering team works closely with you to understand your needs and deliver tailored metal solutions with precision and quality.',
+    features: ['Custom designed products', 'Precision CNC machining', 'Advanced quality control', 'Rapid prototyping', 'Material selection guidance', 'Volume production capability'],
+    category: 'Manufacturing',
+    keyword: 'custom metal manufacturing'
   },
   {
     icon: Truck,
-    title: 'Global Logistics',
-    description: 'Our logistics team ensures timely delivery to any destination worldwide. We work with trusted shipping partners to ensure your order arrives safely and on time.',
-    features: ['Global delivery', 'Fast shipping', 'Trackable shipments']
+    title: 'Global Logistics & Shipping',
+    description: 'FableTech Group ensures reliable, timely delivery to any destination worldwide. We work with trusted shipping partners to guarantee your order arrives safely and on time, with real-time tracking and comprehensive logistics management.',
+    features: ['Global door-to-door delivery', 'Express shipping options', 'Real-time shipment tracking', 'Customs clearance support', 'Multiple carrier options', 'Secure packaging'],
+    category: 'Logistics',
+    keyword: 'international metal shipping'
   },
   {
     icon: FileText,
     title: 'Technical Documentation',
-    description: 'We provide comprehensive technical documentation for all our products, including specifications, certifications, and usage guidelines.',
-    features: ['Detailed specs', 'Certification docs', 'Usage guides']
+    description: 'FableTech Group provides comprehensive technical documentation for all our products, including detailed specifications, certifications, installation guides, and material data sheets to support your engineering and procurement processes.',
+    features: ['Detailed product specifications', 'Material certification documents', 'CAD drawings available', 'Installation guidelines', 'Safety data sheets', 'Compliance documentation'],
+    category: 'Documentation',
+    keyword: 'technical specifications'
   },
   {
     icon: Phone,
-    title: 'Technical Support',
-    description: 'Our technical support team is available 24/7 to assist with any questions or issues you may have regarding our products.',
-    features: ['24/7 support', 'Expert advice', 'Quick response']
+    title: '24/7 Technical Support',
+    description: 'FableTech Group technical support team is available around the clock to assist with any questions or issues you may have regarding our products. Our experts provide guidance, troubleshooting, and solutions for all your needs.',
+    features: ['24/7 availability', 'Multilingual support', 'Expert technical advice', 'Quick response times', 'Problem resolution', 'Product usage guidance'],
+    category: 'Support',
+    keyword: 'technical support'
+  },
+  {
+    icon: Shield,
+    title: 'Quality Assurance',
+    description: 'FableTech Group maintains rigorous quality standards throughout our manufacturing process. Every product undergoes comprehensive inspection and testing to ensure it meets our specifications and your expectations.',
+    features: ['ISO 9001:2015 certified', 'Comprehensive testing', 'Material verification', 'Process audit', 'Continuous improvement', 'Quality documentation'],
+    category: 'Quality',
+    keyword: 'quality assurance'
+  },
+  {
+    icon: Award,
+    title: 'Product Certification',
+    description: 'FableTech Group helps you navigate certification requirements and provides necessary documentation for various standards including CE, ISO, RoHS, and industry-specific certifications for your market compliance.',
+    features: ['CE marking support', 'ISO certification', 'RoHS compliance', 'Customs documentation', 'Material certifications', 'Regulatory guidance'],
+    category: 'Certification',
+    keyword: 'product certification'
+  },
+  {
+    icon: Zap,
+    title: 'Rapid Prototyping',
+    description: 'FableTech Group offers fast prototype development to accelerate your product development cycle. Our rapid prototyping service allows you to test designs quickly before committing to full-scale production.',
+    features: ['Fast turnaround', 'Multiple materials', 'Precision manufacturing', 'Design refinement', 'Cost-effective testing', 'Design validation'],
+    category: 'Prototyping',
+    keyword: 'rapid prototyping'
+  },
+  {
+    icon: Globe,
+    title: 'Global Sourcing',
+    description: 'FableTech Group provides strategic global sourcing solutions. We leverage our extensive supplier network to source high-quality materials and components at competitive prices while maintaining strict quality standards.',
+    features: ['Verified suppliers', 'Cost optimization', 'Quality verification', 'Supply chain management', 'Alternative sourcing', 'Risk mitigation'],
+    category: 'Sourcing',
+    keyword: 'global sourcing'
+  },
+  {
+    icon: Box,
+    title: 'Inventory Management',
+    description: 'FableTech Group offers inventory management solutions to help you optimize stock levels, reduce lead times, and ensure timely availability of critical components while minimizing holding costs.',
+    features: ['Inventory optimization', 'Just-in-time delivery', 'Safety stock management', 'Forecast planning', 'Stock monitoring', 'Supply chain visibility'],
+    category: 'Inventory',
+    keyword: 'inventory management'
+  },
+  {
+    icon: Users,
+    title: 'Engineering Consulting',
+    description: 'FableTech Group engineering consultants provide expert guidance on material selection, design optimization, manufacturing processes, and cost reduction strategies for your projects.',
+    features: ['Design optimization', 'Material selection', 'Cost analysis', 'Process improvement', 'Feasibility studies', 'Technical audits'],
+    category: 'Consulting',
+    keyword: 'engineering consulting'
+  },
+];
+
+const whyChooseUs = [
+  {
+    icon: Clock,
+    title: 'Fast Response Time',
+    description: 'FableTech Group responds to all inquiries within 24 hours, ensuring you get the information and support you need quickly and efficiently.',
+    color: 'bg-primary',
+  },
+  {
+    icon: Headphones,
+    title: 'Dedicated Support Team',
+    description: 'Our dedicated FableTech Group support team is available around the clock to assist with any questions, issues, or requirements you may have.',
+    color: 'bg-secondary',
+  },
+  {
+    icon: FileText,
+    title: 'Comprehensive Documentation',
+    description: 'FableTech Group provides detailed documentation and guides to help you make informed decisions and get the most from our products and services.',
+    color: 'bg-success',
+  },
+  {
+    icon: Award,
+    title: 'Industry Recognition',
+    description: 'FableTech Group is recognized for excellence in manufacturing and service, with certifications and awards that validate our commitment to quality.',
+    color: 'bg-warning',
+  },
+  {
+    icon: Shield,
+    title: 'Quality Guaranteed',
+    description: 'Every FableTech Group product undergoes rigorous quality checks and comes with our full quality guarantee and comprehensive warranty.',
+    color: 'bg-danger',
+  },
+  {
+    icon: Globe,
+    title: 'Global Reach',
+    description: 'FableTech Group serves customers in over 60 countries worldwide with reliable logistics and local market expertise.',
+    color: 'bg-info',
   },
 ];
 
 const breadcrumbItems = [
   { name: 'Services', href: '/service' }
 ];
+
+const faqs = [
+  {
+    question: 'What services does FableTech Group offer?',
+    answer: 'FableTech Group offers comprehensive services including custom manufacturing, global logistics, technical documentation, 24/7 technical support, quality assurance, product certification, rapid prototyping, global sourcing, inventory management, and engineering consulting. Our end-to-end solutions are designed to support businesses of all sizes.'
+  },
+  {
+    question: 'How quickly can FableTech Group deliver custom products?',
+    answer: 'FableTech Group offers flexible delivery timelines based on your requirements. Standard products typically ship within 7-14 business days, while custom manufacturing may take 2-6 weeks depending on complexity. Rush production options are also available for urgent orders.'
+  },
+  {
+    question: 'Does FableTech Group provide technical support after purchase?',
+    answer: 'Absolutely! FableTech Group provides comprehensive post-purchase technical support 24/7. Our team of experts can assist with installation, troubleshooting, usage questions, and product optimization. We are committed to ensuring your success with our products.'
+  },
+  {
+    question: 'Can FableTech Group help with certifications and compliance?',
+    answer: 'Yes! FableTech Group provides full support for certifications including CE marking, ISO compliance, RoHS documentation, and industry-specific standards. We can supply all necessary documentation to help you meet regulatory requirements in your market.'
+  },
+  {
+    question: 'What quality standards does FableTech Group follow?',
+    answer: 'FableTech Group operates under strict ISO 9001:2015 quality management standards. Every product undergoes rigorous inspection at multiple stages of manufacturing. Our quality processes include material verification, dimensional checks, functional testing, and final inspection.'
+  },
+  {
+    question: 'Does FableTech Group offer custom product development?',
+    answer: 'Yes! FableTech Group specializes in custom product development. Our engineering team can work with your designs or develop new solutions from scratch, providing prototyping, testing, and full-scale production capabilities to bring your vision to life.'
+  }
+];
 ---
 
 <MainLayout 
-  title="Our Services - FableTech Group" 
-  description="Comprehensive services to support your business needs, from custom manufacturing to technical support."
+  title="Metal Manufacturing & Global Services - FableTech Group" 
+  description="FableTech Group provides comprehensive metal manufacturing services: custom fabrication, global logistics, technical support, quality assurance, and engineering consulting. ISO 9001 certified, serving 60+ countries."
   locale={locale}
 >
   <Breadcrumbs items={breadcrumbItems} locale={locale} />
@@ -47,9 +169,12 @@ const breadcrumbItems = [
   <section class="bg-primary text-white py-16">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center">
-        <h1 class="text-4xl md:text-5xl font-bold mb-4">Our Services</h1>
-        <p class="text-lg text-gray-200">
-          Comprehensive support for your business needs
+        <div class="inline-block bg-white/10 rounded-full px-4 py-2 mb-4">
+          <span class="text-sm font-semibold">FableTech Group Services</span>
+        </div>
+        <h1 class="text-4xl md:text-5xl font-bold mb-4">Comprehensive Services from FableTech</h1>
+        <p class="text-lg text-gray-200 max-w-3xl mx-auto">
+          FableTech Group provides end-to-end metal manufacturing solutions, from custom production to global logistics and ongoing technical support. Partner with FableTech for quality, reliability, and service excellence.
         </p>
       </div>
     </div>
@@ -57,20 +182,29 @@ const breadcrumbItems = [
 
   <section class="py-16">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold mb-4">Our Professional Services</h2>
+        <p class="text-gray-600 max-w-3xl mx-auto">
+          FableTech Group offers a complete range of services to support your business needs. Explore how we can help you succeed with our comprehensive service offerings.
+        </p>
+      </div>
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
         {services.map((service) => (
-          <div key={service.title} class="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow">
+          <div key={service.title} class="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow group">
             <div class="flex items-start">
-              <div class="bg-primary/10 rounded-full p-4 mr-6">
+              <div class="bg-primary/10 rounded-full p-4 mr-6 flex-shrink-0">
                 <service.icon class="h-8 w-8 text-primary" />
               </div>
-              <div>
-                <h2 class="text-2xl font-semibold mb-3">{service.title}</h2>
+              <div class="flex-1">
+                <div class="flex items-center justify-between mb-2">
+                  <h2 class="text-2xl font-semibold">{service.title}</h2>
+                  <span class="text-xs font-medium text-primary bg-primary/10 px-2 py-1 rounded-full">{service.category}</span>
+                </div>
                 <p class="text-gray-600 mb-4">{service.description}</p>
                 <ul class="space-y-2">
                   {service.features.map((feature) => (
                     <li key={feature} class="flex items-center text-gray-600">
-                      <span class="w-2 h-2 bg-primary rounded-full mr-2"></span>
+                      <CheckCircle2 class="w-5 h-5 text-primary mr-2 flex-shrink-0" />
                       {feature}
                     </li>
                   ))}
@@ -86,52 +220,114 @@ const breadcrumbItems = [
   <section class="py-16 bg-gray-50">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-12">
-        <h2 class="text-3xl font-bold mb-4">Why Choose Our Services</h2>
-        <p class="text-gray-600">We are committed to providing exceptional service and support</p>
+        <h2 class="text-3xl font-bold mb-4">Why Choose FableTech Group</h2>
+        <p class="text-gray-600 max-w-3xl mx-auto">
+          Discover what sets FableTech Group apart and why businesses worldwide trust us as their preferred metal manufacturing and service partner.
+        </p>
       </div>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <div class="bg-white rounded-xl p-8 shadow-lg text-center">
-          <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-            <Clock class="h-8 w-8 text-primary" />
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {whyChooseUs.map((item) => (
+          <div key={item.title} class="bg-white rounded-xl p-8 shadow-lg text-center hover:shadow-xl transition-shadow">
+            <div class={`w-16 h-16 ${item.color}/10 rounded-full flex items-center justify-center mx-auto mb-4`}>
+              <item.icon class="h-8 w-8 text-primary" />
+            </div>
+            <h3 class="text-xl font-semibold mb-2">{item.title}</h3>
+            <p class="text-gray-600">{item.description}</p>
           </div>
-          <h3 class="text-xl font-semibold mb-2">Fast Response</h3>
-          <p class="text-gray-600">We respond to inquiries within 24 hours, ensuring you get the information you need quickly.</p>
-        </div>
-        <div class="bg-white rounded-xl p-8 shadow-lg text-center">
-          <div class="w-16 h-16 bg-secondary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-            <Headphones class="h-8 w-8 text-secondary" />
-          </div>
-          <h3 class="text-xl font-semibold mb-2">Dedicated Support</h3>
-          <p class="text-gray-600">Our dedicated support team is available around the clock to assist with any questions or issues.</p>
-        </div>
-        <div class="bg-white rounded-xl p-8 shadow-lg text-center">
-          <div class="w-16 h-16 bg-success/10 rounded-full flex items-center justify-center mx-auto mb-4">
-            <FileText class="h-8 w-8 text-success" />
-          </div>
-          <h3 class="text-xl font-semibold mb-2">Documentation</h3>
-          <p class="text-gray-600">Comprehensive documentation and guides to help you make informed decisions.</p>
-        </div>
+        ))}
       </div>
     </div>
+  </section>
+
+  <section class="py-16">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold mb-4">Service FAQ</h2>
+        <p class="text-gray-600">Get answers to common questions about FableTech Group services</p>
+      </div>
+      <div class="bg-white rounded-xl shadow-lg">
+        {faqs.map((faq, index) => (
+          <div key={index} class="border-b border-gray-200 last:border-b-0">
+            <button 
+              id={`faq-btn-${index}`}
+              class="w-full px-6 py-5 flex items-center justify-between text-left hover:bg-gray-50 transition-colors"
+              onclick={`toggleFaq(${index})`}
+            >
+              <span class="font-semibold text-gray-900">{faq.question}</span>
+              <div class="w-6 h-6 relative">
+                <svg id={`faq-chevron-${index}`} class="h-6 w-6 text-gray-500 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                </svg>
+              </div>
+            </button>
+            <div id={`faq-answer-${index}`} class="overflow-hidden transition-all duration-300 max-h-0">
+              <div class="px-6 pb-5 pt-3 text-gray-600">
+                {faq.answer}
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
   </section>
 
   <section class="py-16 bg-primary text-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center">
-        <h2 class="text-3xl font-bold mb-4">Need Assistance?</h2>
+        <h2 class="text-3xl font-bold mb-4">Ready to Get Started?</h2>
         <p class="text-gray-200 mb-8 max-w-2xl mx-auto">
-          Our team is ready to help with any questions or requirements you may have. Contact us today!
+          Experience the FableTech Group difference. Contact us today to discuss how we can help you achieve your manufacturing, logistics, and service goals.
         </p>
         <div class="flex flex-col sm:flex-row gap-4 justify-center">
           <a href="/contact" class="inline-flex items-center justify-center px-8 py-4 bg-white text-primary font-semibold rounded-lg hover:bg-gray-100 transition-colors">
-            Contact Us
+            Contact FableTech Group
           </a>
-          <a href="tel:+862112345678" class="inline-flex items-center justify-center px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white/10 transition-colors">
+          <a href="tel:+8613812345678" class="inline-flex items-center justify-center px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white/10 transition-colors">
             <Phone class="mr-2 h-5 w-5" />
-            +86 21 1234 5678
+            +86 138 1234 5678
           </a>
+        </div>
+        <div class="mt-8 text-gray-300">
+          <p class="text-sm">FableTech Group - Your trusted partner for quality metal solutions</p>
         </div>
       </div>
     </div>
   </section>
+
+  <script is:inline>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Auto-detect FAQ count from DOM
+      const faqButtons = document.querySelectorAll('[id^="faq-btn-"]');
+      const faqCount = faqButtons.length;
+      
+      for (let i = 0; i < faqCount; i++) {
+        const btn = document.getElementById(`faq-btn-${i}`);
+        if (btn) {
+          btn.addEventListener('click', () => toggleFaq(i));
+        }
+      }
+      
+      // Open first FAQ by default
+      const firstChevron = document.getElementById('faq-chevron-0');
+      const firstAnswer = document.getElementById('faq-answer-0');
+      if (firstChevron && firstAnswer) {
+        firstChevron.style.transform = 'rotate(180deg)';
+        firstAnswer.style.maxHeight = '500px';
+      }
+    });
+
+    function toggleFaq(index) {
+      const chevron = document.getElementById(`faq-chevron-${index}`);
+      const answer = document.getElementById(`faq-answer-${index}`);
+      
+      if (chevron && answer) {
+        if (answer.style.maxHeight === '500px') {
+          chevron.style.transform = 'rotate(0deg)';
+          answer.style.maxHeight = '0';
+        } else {
+          chevron.style.transform = 'rotate(180deg)';
+          answer.style.maxHeight = '500px';
+        }
+      }
+    }
+  </script>
 </MainLayout>
