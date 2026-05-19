@@ -1,21 +1,17 @@
 ---
 import MainLayout from '../../layouts/MainLayout.astro';
 import { ArrowLeft, Calendar, Tag } from '@lucide/astro';
-import { getNewsById } from '../../data/news';
+import { news, getNewsBySlug } from '../../data/news';
 
 export async function getStaticPaths() {
-  const news = [
-    { id: 'news-001' },
-    { id: 'news-002' },
-    { id: 'news-003' },
-  ];
-  return news.map(({ id }) => ({
-    params: { id },
+  return news.map((article) => ({
+    params: { id: article.slug },
+    props: { article },
   }));
 }
 
 const locale = 'en';
-const article = getNewsById(Astro.params.id as string);
+const { article } = Astro.props;
 ---
 
 {article && (
@@ -35,7 +31,7 @@ const article = getNewsById(Astro.params.id as string);
 
         <article class="bg-white rounded-xl shadow-lg overflow-hidden">
           <div class="h-80 bg-gray-200 flex items-center justify-center">
-            <img src={article.image} alt={`${article.title[locale]} - FableTechGroup ${article.category}`} class="w-full h-full object-cover" />
+            <img src={article.image} alt={`${article.title[locale]} - FableTech Group ${article.category}`} class="w-full h-full object-cover" />
           </div>
 
           <div class="p-8">

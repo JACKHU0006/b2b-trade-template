@@ -103,11 +103,11 @@ const breadcrumbItems = [
             <div 
               id={`answer-${index}`}
               class="overflow-hidden transition-all duration-300 max-h-0"
-            >
-              <div class="px-6 pb-5 text-gray-600 pl-14">
-                {faq.answer}
-              </div>
-            </div>
+    >
+      <div class="px-6 pb-5 pt-3 text-gray-600 pl-14">
+        {faq.answer}
+      </div>
+    </div>
           </div>
         ))}
       </div>
@@ -128,7 +128,7 @@ const breadcrumbItems = [
     const firstAnswer = document.getElementById('answer-0');
     if (firstChevron && firstAnswer) {
       firstChevron.style.transform = 'rotate(180deg)';
-      firstAnswer.style.maxHeight = '96px';
+      firstAnswer.style.maxHeight = '500px';
     }
   });
 
@@ -137,12 +137,12 @@ const breadcrumbItems = [
     const answer = document.getElementById(`answer-${index}`);
     
     if (chevron && answer) {
-      if (answer.style.maxHeight === '96px') {
+      if (answer.style.maxHeight === '500px') {
         chevron.style.transform = 'rotate(0deg)';
         answer.style.maxHeight = '0';
       } else {
         chevron.style.transform = 'rotate(180deg)';
-        answer.style.maxHeight = '96px';
+        answer.style.maxHeight = '500px';
       }
     }
   }

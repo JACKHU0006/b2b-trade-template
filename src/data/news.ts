@@ -1,5 +1,6 @@
 export interface News {
   id: string;
+  slug: string;
   title: Record<string, string>;
   content: Record<string, string>;
   summary: Record<string, string>;
@@ -11,6 +12,7 @@ export interface News {
 export const news: News[] = [
   {
     id: 'news-001',
+    slug: 'new-production-facility-expansion',
     title: {
       en: 'New Production Facility Expansion',
       de: 'Erweiterung der neuen Produktionsstätte',
@@ -38,6 +40,7 @@ export const news: News[] = [
   },
   {
     id: 'news-002',
+    slug: 'iso-9001-2015-certification-renewed',
     title: {
       en: 'ISO 9001:2015 Certification Renewed',
       de: 'ISO 9001:2015-Zertifizierung erneuert',
@@ -65,6 +68,7 @@ export const news: News[] = [
   },
   {
     id: 'news-003',
+    slug: 'sustainable-steel-product-line-launch',
     title: {
       en: 'New Product Line: Sustainable Steel Solutions',
       de: 'Neue Produktlinie: Nachhaltige Stahl-Lösungen',
@@ -83,7 +87,7 @@ export const news: News[] = [
       en: 'Eco-friendly steel products now available.',
       de: 'Umweltfreundliche Stahlprodukte jetzt verfügbar.',
       fr: 'Produits d\'acier écologiques maintenant disponibles.',
-      es: 'Productos de acero ecológicos ahora disponibles.',
+      es: 'Productos de acero écologiques ahora disponibles.',
       ar: 'المنتجات الفولاذية الصديقة للبيئة متاحة الآن.'
     },
     date: '2024-01-05',
@@ -92,6 +96,7 @@ export const news: News[] = [
   },
   {
     id: 'news-004',
+    slug: 'global-shipping-partnership-announcement',
     title: {
       en: 'Partnership with Global Shipping Provider',
       de: 'Partnerschaft mit globalem Spediteur',
@@ -119,6 +124,7 @@ export const news: News[] = [
   },
   {
     id: 'news-005',
+    slug: 'advanced-rd-laboratory-grand-opening',
     title: {
       en: 'Advanced R&D Laboratory Opens',
       de: 'Hochentwickeltes Forschungslabor eröffnet',
@@ -146,6 +152,7 @@ export const news: News[] = [
   },
   {
     id: 'news-006',
+    slug: 'industry-awards-for-excellence-recognition',
     title: {
       en: 'Industry Awards for Excellence',
       de: 'Industriepreise für Exzellenz',
@@ -173,6 +180,7 @@ export const news: News[] = [
   },
   {
     id: 'news-007',
+    slug: '24-7-customer-support-expansion',
     title: {
       en: 'Expanded Customer Support Hours',
       de: 'Erweiterte Kundenbetreuungszeiten',
@@ -200,6 +208,7 @@ export const news: News[] = [
   },
   {
     id: 'news-008',
+    slug: 'southeast-asia-market-expansion',
     title: {
       en: 'New Export Market Expansion: Southeast Asia',
       de: 'Neue Exportmarktexpansion: Südostasien',
@@ -227,6 +236,7 @@ export const news: News[] = [
   },
   {
     id: 'news-009',
+    slug: 'erp-system-digital-transformation',
     title: {
       en: 'Digital Transformation: New ERP System Launch',
       de: 'Digitale Transformation: Neues ERP-System gestartet',
@@ -254,6 +264,7 @@ export const news: News[] = [
   },
   {
     id: 'news-010',
+    slug: 'quality-excellence-award-third-consecutive-year',
     title: {
       en: 'Quality Excellence Award from Industry Association',
       de: 'Qualitäts Excellence Award vom Branchenverband',
@@ -281,6 +292,7 @@ export const news: News[] = [
   },
   {
     id: 'news-011',
+    slug: 'carbon-neutral-initiative-sustainability',
     title: {
       en: 'Sustainable Manufacturing: Carbon Neutral Initiative',
       de: 'Nachhaltige Fertigung: CO2-Neutral-Initiative',
@@ -308,6 +320,7 @@ export const news: News[] = [
   },
   {
     id: 'news-012',
+    slug: 'employee-training-skills-development-program',
     title: {
       en: 'Employee Training Program: Skills Development',
       de: 'Mitarbeiterschulungsprogramm: Kompetenzentwicklung',
@@ -335,6 +348,7 @@ export const news: News[] = [
   },
   {
     id: 'news-013',
+    slug: 'technical-documentation-portal-launch',
     title: {
       en: 'Enhanced Technical Documentation Portal',
       de: 'Verbessertes technisches Dokumentationsportal',
@@ -362,6 +376,7 @@ export const news: News[] = [
   },
   {
     id: 'news-014',
+    slug: 'hannover-messe-2024-invitation',
     title: {
       en: 'International Trade Show: Hannover Messe 2024',
       de: 'Internationale Fachmesse: Hannover Messe 2024',
@@ -395,6 +410,10 @@ export function getNews(locale: string = 'en'): News[] {
 
 export function getNewsById(id: string): News | undefined {
   return news.find(n => n.id === id);
+}
+
+export function getNewsBySlug(slug: string): News | undefined {
+  return news.find(n => n.slug === slug);
 }
 
 export function getNewsCategories(): string[] {
