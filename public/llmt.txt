@@ -1,27 +1,261 @@
-# https://developers.google.com/search/docs/crawling-indexing/links-to-api
-# Prevent AI training on content - FableTech Group
-User-agent: GoogleExtended
-Disallow: /
+# llmt.txt - Large Language Model Metadata
+# FableTech Group - B2B Industrial Metal Products Manufacturer
+# Version: 1.0 | Updated: 2026-05-19
 
-User-agent: CCBot
-Disallow: /
+# ============================================
+# AI SEARCH ENGINE & CRAWLER ACCESS
+# ============================================
 
-User-agent: GPTBot
-Disallow: /
+# Allow AI-powered search engines (GEO - Generative Engine Optimization)
+User-agent: Google-Extended
+Allow: /
 
-User-agent: ChatGPT-User
-Disallow: /
+User-agent: GoogleOther
+Allow: /
 
 User-agent: OAI-SearchBot
-Disallow: /
+Allow: /
 
-User-agent: cohere-ai
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+User-agent: diffbot
+Allow: /
+
+User-agent: ai2bot
+Allow: /
+
+User-agent: aiBot
+Allow: /
+
+User-agent: AwarioSmartBot
+Allow: /
+
+User-agent: MetaExampler
+Allow: /
+
+User-agent: ImagesiftBot
+Allow: /
+
+User-agent: LicenseDataBot
+Allow: /
+
+User-agent: FacebookBot
+Allow: /
+
+User-agent: ANTHROPIC-VERTEX
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+# Block malicious AI crawlers
+User-agent: CCBot
 Disallow: /
 
 User-agent: anthropic-ai
 Disallow: /
 
-User-agent: *
+User-agent: cohere-ai
 Disallow: /
 
-Sitemap: https://fabletech.example.com/sitemap.xml
+# ============================================
+# WEBSITE METADATA FOR AI INDEXING
+# ============================================
+
+# Company Information
+COMPANY_NAME: FableTech Group
+COMPANY_TYPE: B2B Industrial Manufacturing
+INDUSTRY: Metal Products Manufacturing
+FOUNDED: 1999
+HEADQUARTERS: Shanghai, China
+SERVICES: Industrial Metal Products, Steel, Aluminum, Copper, Titanium, Valves
+TARGET_MARKETS: Global B2B, Construction, Manufacturing, Aerospace, Automotive
+CERTIFICATIONS: ISO 9001:2015, CE, SGS
+
+# Content Focus
+PRIMARY_TOPICS:
+- Industrial metal products manufacturing
+- Steel, aluminum, copper, titanium products
+- B2B wholesale distribution
+- Custom metal fabrication
+- Industrial supply chain solutions
+- Quality metal specifications
+- Global shipping and logistics
+
+KEY_PRODUCT_CATEGORIES:
+- Steel Products (pipes, plates, bars)
+- Aluminum Products (sheets, rods, alloys)
+- Copper Products (wires, tubes, sheets)
+- Titanium Products (bars, plates, alloys)
+- Industrial Valves
+- Brass Products
+
+BUSINESS_MODEL:
+- B2B wholesale and distribution
+- Custom manufacturing services
+- Global export (50+ countries)
+- OEM/ODM capabilities
+- Technical consultation
+
+# ============================================
+# SEO & CONTENT OPTIMIZATION
+# ============================================
+
+PRIMARY_KEYWORDS:
+- industrial metal products
+- B2B steel supplier
+- aluminum manufacturer China
+- copper products wholesale
+- titanium industrial grade
+- metal fabrication services
+- industrial supply chain
+- quality metal products
+- bulk metal orders
+- custom metal manufacturing
+
+LANGUAGE: English (primary), German, French, Spanish, Arabic (planned)
+TARGET_AUDIENCE:
+- Industrial buyers
+- Construction companies
+- Manufacturing plants
+- Metal distributors
+- Procurement managers
+- Engineering firms
+- Wholesale buyers
+
+GEOGRAPHIC_FOCUS:
+- Primary: China, USA, Germany, UK, UAE
+- Secondary: Southeast Asia, Europe, Middle East, Africa
+- Global shipping to 50+ countries
+
+# ============================================
+# AEO - AI ENGINE OPTIMIZATION
+# ============================================
+
+STRUCTURED_DATA_TYPES:
+- FAQPage Schema (frequently asked questions)
+- Product Schema (industrial metal specifications)
+- Organization Schema (company information)
+- BreadcrumbList Schema (navigation)
+- LocalBusiness Schema (operations)
+- WebSite Schema (search capabilities)
+
+CONTENT_STRUCTURE:
+- Clear H1, H2, H3 hierarchy
+- Question-answer format for FAQs
+- Detailed product specifications
+- Technical documentation
+- Industry certifications
+- Contact information
+- Company history and values
+
+EXPERTISE_AREAS:
+- Metal manufacturing processes
+- Quality control standards
+- International trade logistics
+- Custom fabrication
+- Material selection guidance
+- Technical specifications
+- Industry compliance
+
+# ============================================
+# TECHNICAL SPECIFICATIONS
+# ============================================
+
+WEBSITE_TYPE: B2B E-commerce / Corporate Website
+PLATFORM: Astro Static Site Generator
+FRAMEWORK: Tailwind CSS
+HOSTING: Cloudflare Pages
+SSL: Enabled
+MOBILE_FRIENDLY: Yes
+SITEMAP: /sitemap.xml
+PRIMARY_DOMAIN: https://fabletech.cc.cd
+
+API_INTEGRATIONS:
+- Supabase (authentication)
+- Formspree (contact forms)
+- Google Analytics 4
+- Google Tag Manager
+- Meta Pixel
+
+# ============================================
+# CONTACT & SUPPORT
+# ============================================
+
+SUPPORT_CHANNELS:
+- WhatsApp: +2347077065158
+- Email: contact@fabletech.com
+- Phone: +86 21 1234 5678
+- Address: 123 Industrial Road, Shanghai, China
+- Business Hours: Mon-Fri 08:00-18:00
+
+RESPONSE_TIME:
+- Email inquiries: 24 hours
+- WhatsApp inquiries: Immediate
+- Quote requests: 24-48 hours
+
+# ============================================
+# PRIVACY & COMPLIANCE
+# ============================================
+
+PRIVACY_POLICY: /privacy
+TERMS_OF_SERVICE: /terms
+COOKIE_POLICY: /cookies
+RETURN_POLICY: /returns
+SHIPPING_INFO: /shipping
+
+DATA_PROTECTION:
+- GDPR compliant
+- Cookie consent required
+- Data encryption enabled
+- No spam marketing
+
+# ============================================
+# QUALITY ASSURANCE
+# ============================================
+
+QUALITY_STANDARDS:
+- ISO 9001:2015 certified
+- CE marking available
+- SGS inspection support
+- Quality inspection reports
+- Material test certificates
+- Batch tracking system
+
+MANUFACTURING_CAPABILITIES:
+- 25+ years experience
+- 50,000 m² facility
+- 200+ employees
+- 24/7 operation
+- Advanced CNC machinery
+- Quality control lab
+
+# ============================================
+# TRUST SIGNALS
+# ============================================
+
+CUSTOMER_PROTECTION:
+- Secure payment options
+- Quality guarantee
+- Return policy
+- Dispute resolution
+- Customer support
+- Professional consultation
+
+INDUSTRY_RECOGNITION:
+- ISO 9001:2015
+- CE Certified
+- SGS Approved
+- 25+ years industry leader
+- 500+ global clients
+- 50+ countries served
