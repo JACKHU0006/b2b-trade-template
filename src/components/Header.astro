@@ -158,7 +158,7 @@ const locales = [
   </div>
 </header>
 
-<script id="search-data" type="application/json" data-locale={locale}>{JSON.stringify(searchData)}</script>
+<script id="search-data" type="application/json" data-locale={locale} set:html={JSON.stringify(searchData)} />
 
 <div id="search-modal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden flex items-start justify-center pt-20">
   <div class="bg-white rounded-lg shadow-xl w-full max-w-2xl mx-4">
