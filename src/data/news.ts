@@ -34,7 +34,7 @@ export const news: News[] = [
       es: 'Proyecto de expansión de planta de producción de FableTech Group en marcha con inversión de $5M.',
       ar: 'مشروع توسع منشأة الإنتاج FableTech Group قيد التنفيذ مع استثمار 5 ملايين دولار.'
     },
-    date: '2024-01-15',
+    date: '2025-05-10',
     category: 'Company News',
     image: '/images/news/fabletech-factory.jpg'
   },
@@ -62,7 +62,7 @@ export const news: News[] = [
       es: 'FableTech Group mantiene su certificación de calidad ISO 9001:2015.',
       ar: 'تحتفظ FableTech Group بثمارة الجودة ISO 9001:2015.'
     },
-    date: '2024-01-10',
+    date: '2025-04-18',
     category: 'Certification',
     image: '/images/news/fabletech-certification.jpg'
   },
@@ -202,7 +202,7 @@ export const news: News[] = [
       es: 'FableTech Group lanza soporte al cliente multilingüe 24/7.',
       ar: 'تطلق FableTech Group دعم عملاء متعدد اللغات 24/7.'
     },
-    date: '2024-02-15',
+    date: '2024-10-20',
     category: 'Customer Service',
     image: '/images/news/fabletech-support.jpg'
   },
@@ -258,7 +258,7 @@ export const news: News[] = [
       es: 'FableTech Group completa una transformación digital importante.',
       ar: 'تكمل FableTech Group تحولًا رقميًا كبيرًا.'
     },
-    date: '2024-02-25',
+    date: '2024-08-28',
     category: 'Technology',
     image: '/images/news/fabletech-erp.jpg'
   },
@@ -314,7 +314,7 @@ export const news: News[] = [
       es: 'FableTech Group se compromete a la neutralidad de carbono para 2030.',
       ar: 'تلتزم FableTech Group بالحياد الكربوني بحلول عام 2030.'
     },
-    date: '2024-03-05',
+    date: '2024-08-12',
     category: 'New Products',
     image: '/images/news/fabletech-carbon-neutral.jpg'
   },
@@ -342,7 +342,7 @@ export const news: News[] = [
       es: 'FableTech Group invierte en programas de desarrollo de empleados.',
       ar: 'تستثمر FableTech Group في برامج تطوير الموظفين.'
     },
-    date: '2024-03-10',
+    date: '2024-05-18',
     category: 'Company News',
     image: '/images/news/fabletech-training.jpg'
   },
@@ -398,7 +398,7 @@ export const news: News[] = [
       es: 'FableTech Group participa en la feria industrial líder.',
       ar: 'تشارك FableTech Group في المعرض الصناعي الرائد.'
     },
-    date: '2024-03-20',
+    date: '2024-04-08',
     category: 'Company News',
     image: '/images/news/fabletech-hannover.jpg'
   },
@@ -482,7 +482,7 @@ export const news: News[] = [
       es: 'FableTech Group establece nuevas alianzas de distribución europeas.',
       ar: 'تنشئ FableTech Group شراكات توزيع أوروبية جديدة.'
     },
-    date: '2024-04-15',
+    date: '2024-03-18',
     category: 'Partnership',
     image: '/images/news/fabletech-europe.jpg'
   },
@@ -510,7 +510,7 @@ export const news: News[] = [
       es: 'FableTech Group se compromete con la fabricación cero residuos para 2025.',
       ar: 'تلتزم FableTech Group بالتصنيع بدون نفايات بحلول عام 2025.'
     },
-    date: '2024-05-20',
+    date: '2024-02-08',
     category: 'New Products',
     image: '/images/news/fabletech-sustainability.jpg'
   },
@@ -594,12 +594,7 @@ export const news: News[] = [
       es: 'FableTech Group se compromete con 100% energía renovable.',
       ar: 'تلتزم FableTech Group بالطاقة المتجددة 100%.'
     },
-    date: '2023-06-18',
-    category: 'Partnership',
-    image: '/images/news/fabletech-renewable.jpg'
-  },
-  {
-    id: 'news-022',
+    date: '2023-05-12',
     slug: 'online-catalog-launch-2022',
     title: {
       en: 'FableTech Group Launches Enhanced Online Product Catalog',
@@ -650,7 +645,7 @@ export const news: News[] = [
       es: 'FableTech Group establece presencia en Medio Oriente en Dubái.',
       ar: 'تنشئ FableTech Group وجودها في الشرق الأوسط في دبي.'
     },
-    date: '2022-03-15',
+    date: '2022-06-20',
     category: 'Company News',
     image: '/images/news/fabletech-dubai.jpg'
   },
@@ -678,7 +673,7 @@ export const news: News[] = [
       es: 'FableTech Group prioriza la seguridad de los empleados con certificación ISO.',
       ar: 'تعطي FableTech Group الأولوية لسلامة الموظفين من خلال شهادة ISO.'
     },
-    date: '2021-11-30',
+    date: '2021-10-08',
     category: 'Certification',
     image: '/images/news/fabletech-safety.jpg'
   },
@@ -706,7 +701,7 @@ export const news: News[] = [
       es: 'FableTech Group contribuye $500K a esfuerzos de alivio pandémico.',
       ar: 'تساهم FableTech Group بمبلغ 500 ألف دولار في جهود الإغاثة من الجائحة.'
     },
-    date: '2020-05-15',
+    date: '2020-08-15',
     category: 'Company News',
     image: '/images/news/fabletech-donation.jpg'
   }
