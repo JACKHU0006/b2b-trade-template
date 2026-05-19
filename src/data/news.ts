@@ -34,7 +34,7 @@ export const news: News[] = [
       es: 'Proyecto de expansión de planta de producción de FableTech Group en marcha con inversión de $5M.',
       ar: 'مشروع توسع منشأة الإنتاج FableTech Group قيد التنفيذ مع استثمار 5 ملايين دولار.'
     },
-    date: '2025-05-10',
+    date: '2025-03-15',
     category: 'Company News',
     image: '/images/news/fabletech-factory.jpg'
   },
@@ -62,7 +62,7 @@ export const news: News[] = [
       es: 'FableTech Group mantiene su certificación de calidad ISO 9001:2015.',
       ar: 'تحتفظ FableTech Group بثمارة الجودة ISO 9001:2015.'
     },
-    date: '2025-04-18',
+    date: '2025-01-22',
     category: 'Certification',
     image: '/images/news/fabletech-certification.jpg'
   },
@@ -90,7 +90,7 @@ export const news: News[] = [
       es: 'FableTech Group lanza línea de productos de acero ecológicos.',
       ar: 'تطلق FableTech Group خط منتجات الفولاذ الصديق للبيئة.'
     },
-    date: '2024-01-05',
+    date: '2024-11-08',
     category: 'New Products',
     image: '/images/news/fabletech-sustainable-steel.jpg'
   },
@@ -118,7 +118,7 @@ export const news: News[] = [
       es: 'FableTech Group se asocia con proveedor logístico de primer nivel.',
       ar: 'تعاون FableTech Group مع مورد لوجستي رائد.'
     },
-    date: '2024-01-20',
+    date: '2024-07-19',
     category: 'Partnership',
     image: '/images/news/fabletech-shipping.jpg'
   },
@@ -146,7 +146,7 @@ export const news: News[] = [
       es: 'FableTech Group invierte $2M en investigación y desarrollo.',
       ar: 'تستثمر FableTech Group 2 ملايين دولار في البحث والتطوير.'
     },
-    date: '2024-02-01',
+    date: '2024-04-03',
     category: 'Technology',
     image: '/images/news/fabletech-rd-lab.jpg'
   },
@@ -174,7 +174,7 @@ export const news: News[] = [
       es: 'FableTech Group reconocida con premios de excelencia industrial.',
       ar: 'تعترف FableTech Group بجوائز التميز الصناعي.'
     },
-    date: '2024-02-10',
+    date: '2024-02-14',
     category: 'Recognition',
     image: '/images/news/fabletech-awards.jpg'
   },
@@ -202,7 +202,7 @@ export const news: News[] = [
       es: 'FableTech Group lanza soporte al cliente multilingüe 24/7.',
       ar: 'تطلق FableTech Group دعم عملاء متعدد اللغات 24/7.'
     },
-    date: '2024-10-20',
+    date: '2024-09-26',
     category: 'Customer Service',
     image: '/images/news/fabletech-support.jpg'
   },
@@ -230,7 +230,7 @@ export const news: News[] = [
       es: 'FableTech Group entra en nuevos mercados en el sudeste asiático.',
       ar: 'تدخل FableTech Group أسواق جديدة في جنوب شرق آسيا.'
     },
-    date: '2024-02-20',
+    date: '2024-05-11',
     category: 'Partnership',
     image: '/images/news/fabletech-southeast-asia.jpg'
   },
@@ -258,7 +258,7 @@ export const news: News[] = [
       es: 'FableTech Group completa una transformación digital importante.',
       ar: 'تكمل FableTech Group تحولًا رقميًا كبيرًا.'
     },
-    date: '2024-08-28',
+    date: '2024-06-07',
     category: 'Technology',
     image: '/images/news/fabletech-erp.jpg'
   },
@@ -276,7 +276,7 @@ export const news: News[] = [
       en: 'FableTech Group is honored to receive the Quality Excellence Award from the China Metal Industry Association for the third consecutive year. This prestigious recognition reflects FableTech unwavering commitment to quality, innovation, and customer satisfaction. Our FableTech quality management systems and continuous improvement initiatives have set new standards in the industry.',
       de: 'FableTech Group ist geehrt, den Qualitätsexzellenzpreis der China Metal Industry Association zum dritten Mal in Folge zu erhalten. Diese renommierte Anerkennung spiegelt das unerschütterliche Engagement von FableTech für Qualität, Innovation und Kundenzufriedenheit wider.',
       fr: 'FableTech Group est honorée de recevoir le Prix d\'Excellence en Qualité de l\'Association Chinoise de l\'Industrie Métallurgique pour la troisième année consécutive. Cette reconnaissance prestigieuse reflète l\'engagement inébranlable de FableTech envers la qualité, l\'innovation et la satisfaction client.',
-      es: 'FableTech Group se siente honrada en recibir el Premio a la Excelencia en Calidad de la Asociación de la Industria Metalúrgica de China por tercer año consecutivo. Este reconocimiento prestigioso refleja el compromiso inquebrantable de FableTech con la calidad, la innovación y la satisfacción del cliente.',
+      es: 'FableTech Group se siente honrada en recibir el Premio a la Excelencia en Calidad de la Asociación de la Industria Metalúrgica de China por tercer año consecutivo. Este reconocimiento prestigieux refleja el compromiso inquebrantable de FableTech con la calidad, la innovación y la satisfacción del cliente.',
       ar: 'تتشرف FableTech Group بأن تتلقى جائزة التميز في الجودة من جمعية صناعة المعادن الصينية للسنة الثالثة على التوالي. يعكس هذا التقدير المرموق التزام FableTech الثابت بالجودة والابتكار ورضا العملاء.'
     },
     summary: {
@@ -286,7 +286,7 @@ export const news: News[] = [
       es: 'Calidad de FableTech Group reconocida por tercer año consecutivo.',
       ar: 'تم الاعتراف بجودة FableTech Group للسنة الثالثة على التوالي.'
     },
-    date: '2024-03-01',
+    date: '2023-12-03',
     category: 'Recognition',
     image: '/images/news/fabletech-quality-award.jpg'
   },
@@ -314,7 +314,7 @@ export const news: News[] = [
       es: 'FableTech Group se compromete a la neutralidad de carbono para 2030.',
       ar: 'تلتزم FableTech Group بالحياد الكربوني بحلول عام 2030.'
     },
-    date: '2024-08-12',
+    date: '2023-08-19',
     category: 'New Products',
     image: '/images/news/fabletech-carbon-neutral.jpg'
   },
@@ -342,7 +342,7 @@ export const news: News[] = [
       es: 'FableTech Group invierte en programas de desarrollo de empleados.',
       ar: 'تستثمر FableTech Group في برامج تطوير الموظفين.'
     },
-    date: '2024-05-18',
+    date: '2023-04-22',
     category: 'Company News',
     image: '/images/news/fabletech-training.jpg'
   },
@@ -370,7 +370,7 @@ export const news: News[] = [
       es: 'FableTech Group mejora el acceso de clientes a recursos técnicos.',
       ar: 'تحسن FableTech Group وصول العملاء إلى الموارد التقنية.'
     },
-    date: '2024-03-15',
+    date: '2023-01-30',
     category: 'Customer Service',
     image: '/images/news/fabletech-portal.jpg'
   },
@@ -398,7 +398,7 @@ export const news: News[] = [
       es: 'FableTech Group participa en la feria industrial líder.',
       ar: 'تشارك FableTech Group في المعرض الصناعي الرائد.'
     },
-    date: '2024-04-08',
+    date: '2023-03-14',
     category: 'Company News',
     image: '/images/news/fabletech-hannover.jpg'
   },
@@ -426,7 +426,7 @@ export const news: News[] = [
       es: 'FableTech Group lanza material innovador de aleación de aluminio.',
       ar: 'تطلق FableTech Group مادة سبيكة ألومنيوم ابتكارية.'
     },
-    date: '2024-03-25',
+    date: '2023-10-05',
     category: 'New Products',
     image: '/images/news/fabletech-aluminum.jpg'
   },
@@ -454,7 +454,7 @@ export const news: News[] = [
       es: 'FableTech Group lanza centro de soporte al cliente dedicado.',
       ar: 'تطلق FableTech Group مركز دعم العملاء المخصص.'
     },
-    date: '2024-03-30',
+    date: '2022-11-18',
     category: 'Customer Service',
     image: '/images/news/fabletech-success-center.jpg'
   },
@@ -482,7 +482,7 @@ export const news: News[] = [
       es: 'FableTech Group establece nuevas alianzas de distribución europeas.',
       ar: 'تنشئ FableTech Group شراكات توزيع أوروبية جديدة.'
     },
-    date: '2024-03-18',
+    date: '2022-07-25',
     category: 'Partnership',
     image: '/images/news/fabletech-europe.jpg'
   },
@@ -510,7 +510,7 @@ export const news: News[] = [
       es: 'FableTech Group se compromete con la fabricación cero residuos para 2025.',
       ar: 'تلتزم FableTech Group بالتصنيع بدون نفايات بحلول عام 2025.'
     },
-    date: '2024-02-08',
+    date: '2022-03-09',
     category: 'New Products',
     image: '/images/news/fabletech-sustainability.jpg'
   },
@@ -538,7 +538,7 @@ export const news: News[] = [
       es: 'El control de calidad con IA de FableTech Group logra 99.8% de precisión.',
       ar: 'يصل التحكم في الجودة بالذكاء الاصطناعي من FableTech Group إلى دقة 99.8%.'
     },
-    date: '2023-09-10',
+    date: '2022-09-28',
     category: 'Technology',
     image: '/images/news/fabletech-ai-quality.jpg'
   },
@@ -566,7 +566,7 @@ export const news: News[] = [
       es: 'FableTech Group entre los 5 principales proveedores globales de metales.',
       ar: 'تحتل FableTech Group المرتبة الخامسة بين موردي المعادن العالميين.'
     },
-    date: '2023-11-05',
+    date: '2021-06-14',
     category: 'Recognition',
     image: '/images/news/fabletech-global-award.jpg'
   },
@@ -594,7 +594,12 @@ export const news: News[] = [
       es: 'FableTech Group se compromete con 100% energía renovable.',
       ar: 'تلتزم FableTech Group بالطاقة المتجددة 100%.'
     },
-    date: '2023-05-12',
+    date: '2021-02-08',
+    category: 'Technology',
+    image: '/images/news/fabletech-green-energy.jpg'
+  },
+  {
+    id: 'news-022',
     slug: 'online-catalog-launch-2022',
     title: {
       en: 'FableTech Group Launches Enhanced Online Product Catalog',
@@ -617,7 +622,7 @@ export const news: News[] = [
       es: 'FableTech Group lanza catálogo digital con más de 5,000 productos.',
       ar: 'تطلق FableTech Group كتالوج رقمي يضم أكثر من 5000 منتج.'
     },
-    date: '2022-08-22',
+    date: '2020-12-15',
     category: 'New Products',
     image: '/images/news/fabletech-catalog.jpg'
   },
@@ -645,7 +650,7 @@ export const news: News[] = [
       es: 'FableTech Group establece presencia en Medio Oriente en Dubái.',
       ar: 'تنشئ FableTech Group وجودها في الشرق الأوسط في دبي.'
     },
-    date: '2022-06-20',
+    date: '2020-05-20',
     category: 'Company News',
     image: '/images/news/fabletech-dubai.jpg'
   },
@@ -673,7 +678,7 @@ export const news: News[] = [
       es: 'FableTech Group prioriza la seguridad de los empleados con certificación ISO.',
       ar: 'تعطي FableTech Group الأولوية لسلامة الموظفين من خلال شهادة ISO.'
     },
-    date: '2021-10-08',
+    date: '2020-08-30',
     category: 'Certification',
     image: '/images/news/fabletech-safety.jpg'
   },
@@ -691,7 +696,7 @@ export const news: News[] = [
       en: 'During the global pandemic, FableTech Group contributed to relief efforts by donating medical supplies and protective equipment to hospitals and healthcare facilities. FableTech contributed over $500,000 in donations and mobilized our supply chain to deliver critical supplies where they were needed most.',
       de: 'Während der globalen Pandemie trug FableTech Group zu den Hilfsmaßnahmen bei, indem medizinische Versorgung und Schutzausrüstung an Krankenhäuser und Gesundheitseinrichtungen gespendet wurden. FableTech steuerte über 500.000 Dollar an Spenden bei.',
       fr: 'Pendant la pandémie mondiale, FableTech Group a contribué aux efforts de secours en faisant don de fournitures médicales et d\'équipements de protection aux hôpitaux et aux établissements de santé. FableTech a contribué à hauteur de plus de 500 000 dollars en dons.',
-      es: 'Durante la pandemia global, FableTech Group contribuyó a los esfuerzos de alivio donando suministros médicos y equipos de protección a hospitales e instalaciones de salud. FableTech contribuyó con más de $500,000 en donaciones.',
+      es: 'Pendant la pandémie mondiale, FableTech Group a contribué aux efforts de secours en faisant don de fournitures médicales et d\'équipements de protection aux hôpitaux et aux établissements de santé. FableTech a contribué à hauteur de plus de 500 000 dollars en dons.',
       ar: 'خلال الجائحة العالمية، ساهمت FableTech Group في جهود الإغاثة من خلال التبرع بالإمدادات الطبية ومعدات الحماية للمستشفيات ومرافق الرعاية الصحية. ساهمت FableTech بأكثر من 500,000 دولار في التبرعات.'
     },
     summary: {
@@ -701,7 +706,7 @@ export const news: News[] = [
       es: 'FableTech Group contribuye $500K a esfuerzos de alivio pandémico.',
       ar: 'تساهم FableTech Group بمبلغ 500 ألف دولار في جهود الإغاثة من الجائحة.'
     },
-    date: '2020-08-15',
+    date: '2020-03-25',
     category: 'Company News',
     image: '/images/news/fabletech-donation.jpg'
   }
