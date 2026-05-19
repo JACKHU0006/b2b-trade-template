@@ -1,5 +1,6 @@
 ---
 import MainLayout from '../layouts/MainLayout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
 import ReCAPTCHA from '../components/ReCAPTCHA.astro';
 import { MapPin, Phone, Mail, Clock, Send, CheckCircle } from '@lucide/astro';
 
@@ -11,6 +12,10 @@ const contactInfo = [
   { icon: Mail, label: 'Email', value: 'contact@fabletech.com' },
   { icon: Clock, label: 'Hours', value: 'Mon-Fri: 8:00 - 18:00' },
 ];
+
+const breadcrumbItems = [
+  { name: 'Contact Us', href: '/contact' }
+];
 ---
 
 <MainLayout 
@@ -18,6 +23,8 @@ const contactInfo = [
   description="Get in touch with our team for inquiries, quotes, or support."
   locale={locale}
 >
+  <Breadcrumbs items={breadcrumbItems} locale={locale} />
+  
   <section class="bg-primary text-white py-16">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center">

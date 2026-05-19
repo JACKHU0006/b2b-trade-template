@@ -1,10 +1,16 @@
 ---
 import MainLayout from '../layouts/MainLayout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import InquiryForm from '../components/InquiryForm.astro';
 import { Calendar, ArrowRight } from '@lucide/astro';
 import { news, getNewsCategories } from '../data/news';
 
 const locale = 'en';
 const categories = getNewsCategories();
+
+const breadcrumbItems = [
+  { name: 'News', href: '/news' }
+];
 ---
 
 <MainLayout 
@@ -12,6 +18,8 @@ const categories = getNewsCategories();
   description="Stay updated with the latest news, events, and announcements from FableTech Group."
   locale={locale}
 >
+  <Breadcrumbs items={breadcrumbItems} locale={locale} />
+  
   <section class="bg-primary text-white py-16">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center">
@@ -77,4 +85,9 @@ const categories = getNewsCategories();
       </div>
     </div>
   </section>
+
+  <InquiryForm 
+    title="Subscribe to Our Newsletter"
+    subtitle="Stay updated with the latest industry news, product releases, and company announcements"
+  />
 </MainLayout>

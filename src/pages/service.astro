@@ -1,5 +1,6 @@
 ---
 import MainLayout from '../layouts/MainLayout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
 import { Wrench, Truck, FileText, Phone, Clock, Headphones } from '@lucide/astro';
 
 const locale = 'en';
@@ -30,6 +31,10 @@ const services = [
     features: ['24/7 support', 'Expert advice', 'Quick response']
   },
 ];
+
+const breadcrumbItems = [
+  { name: 'Services', href: '/service' }
+];
 ---
 
 <MainLayout 
@@ -37,6 +42,8 @@ const services = [
   description="Comprehensive services to support your business needs, from custom manufacturing to technical support."
   locale={locale}
 >
+  <Breadcrumbs items={breadcrumbItems} locale={locale} />
+  
   <section class="bg-primary text-white py-16">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center">

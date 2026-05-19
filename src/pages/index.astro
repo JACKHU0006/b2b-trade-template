@@ -1,5 +1,6 @@
 ---
 import MainLayout from '../layouts/MainLayout.astro';
+import InquiryForm from '../components/InquiryForm.astro';
 import { ArrowRight, TrendingUp, Award, Globe, Shield, Zap } from '@lucide/astro';
 import { products } from '../data/products';
 import { news } from '../data/news';
@@ -219,6 +220,11 @@ const localizedNews = news.slice(0, 3);
       </div>
     </div>
   </section>
+
+  <InquiryForm 
+    title="Send Us an Inquiry"
+    subtitle="Get personalized quotes and expert consultation for your industrial metal needs"
+  />
 
   <section class="bg-primary text-white py-16">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

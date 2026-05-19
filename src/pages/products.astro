@@ -1,6 +1,8 @@
 ---
 import MainLayout from '../layouts/MainLayout.astro';
 import ProductSchema from '../components/ProductSchema.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import InquiryForm from '../components/InquiryForm.astro';
 import { Search, Filter, Grid, List, ArrowRight, Lock, Eye, User } from '@lucide/astro';
 import { products, getProductCategories } from '../data/products';
 import { supabase, getCurrentUser } from '../lib/supabase';
@@ -9,6 +11,12 @@ const locale = 'en';
 const categories = getProductCategories();
 const user = supabase ? await getCurrentUser() : null;
 const isAuthenticated = !!user;
+
+const breadcrumbItems = [
+  { name: 'Products', href: '/products' }
+];
+
+const productList = products.map(p => ({ id: p.id, name: p.name[locale] }));
 ---
 
 <MainLayout 
@@ -16,6 +24,8 @@ const isAuthenticated = !!user;
   description="Browse our comprehensive range of industrial metal products including steel, aluminum, copper, and titanium."
   locale={locale}
 >
+  <Breadcrumbs items={breadcrumbItems} locale={locale} />
+  
   <section class="bg-primary text-white py-16">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center">
@@ -179,6 +189,13 @@ const isAuthenticated = !!user;
       )}
     </div>
   </section>
+
+  <InquiryForm 
+    title="Request a Quote"
+    subtitle="Tell us about your product requirements and we'll provide you with competitive pricing"
+    showProductSelect={true}
+    products={productList}
+  />
 </MainLayout>
 
 <script>

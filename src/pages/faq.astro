@@ -1,5 +1,7 @@
 ---
 import MainLayout from '../layouts/MainLayout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import FAQSchema from '../components/FAQSchema.astro';
 import { ChevronDown, HelpCircle } from '@lucide/astro';
 
 const locale = 'en';
@@ -38,6 +40,10 @@ const faqs = [
     answer: 'Yes, we ship to over 50 countries worldwide. We work with major shipping carriers to ensure safe and timely delivery. Shipping costs depend on the destination and order weight.'
   },
 ];
+
+const breadcrumbItems = [
+  { name: 'FAQ', href: '/faq' }
+];
 ---
 
 <MainLayout 
@@ -45,6 +51,10 @@ const faqs = [
   description="Frequently asked questions about our products, services, and ordering process."
   locale={locale}
 >
+  <Breadcrumbs items={breadcrumbItems} locale={locale} />
+  
+  <FAQSchema faqs={faqs} />
+  
   <section class="bg-primary text-white py-16">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center">
