@@ -11,111 +11,341 @@ const breadcrumbItems = [
 const siteMap = [
   {
     title: 'Main Pages',
+    description: 'Core navigation and key sections',
+    icon: 'home',
     links: [
-      { href: '/', label: 'Home' },
-      { href: '/about', label: 'About Us' },
-      { href: '/products', label: 'Products' },
-      { href: '/news', label: 'News & Events' },
-      { href: '/factory', label: 'Our Factory' },
-      { href: '/service', label: 'Services' },
-      { href: '/faq', label: 'FAQ' },
-      { href: '/contact', label: 'Contact' },
+      { href: '/', label: 'Home - Industrial Metal Products Manufacturer', description: 'Leading B2B metal products supplier' },
+      { href: '/about', label: 'About Us - Company History & Mission', description: '25+ years of manufacturing excellence' },
+      { href: '/products', label: 'Products - Industrial Metal Catalog', description: 'Steel, aluminum, copper, titanium' },
+      { href: '/news', label: 'News & Events - Industry Updates', description: 'Latest company and industry news' },
+      { href: '/factory', label: 'Our Factory - Manufacturing Facility', description: '50,000 m² advanced production' },
+      { href: '/service', label: 'Services - Custom Solutions', description: 'Manufacturing, logistics, support' },
+      { href: '/faq', label: 'FAQ - Frequently Asked Questions', description: 'Common questions about products & orders' },
+      { href: '/contact', label: 'Contact Us - Get a Quote', description: 'Reach our sales team worldwide' },
     ],
   },
   {
     title: 'Product Categories',
+    description: 'Browse by material type',
+    icon: 'package',
     links: [
-      { href: '/products?category=Steel Products', label: 'Steel Products' },
-      { href: '/products?category=Valves', label: 'Valves' },
-      { href: '/products?category=Aluminum', label: 'Aluminum' },
-      { href: '/products?category=Copper', label: 'Copper' },
-      { href: '/products?category=Brass', label: 'Brass' },
-      { href: '/products?category=Titanium', label: 'Titanium' },
+      { href: '/products?category=Steel+Products', label: 'Steel Products - Pipes, Plates, Bars', description: 'Industrial grade steel materials' },
+      { href: '/products?category=Aluminum', label: 'Aluminum Products - Sheets, Rods', description: 'Lightweight aluminum alloys' },
+      { href: '/products?category=Copper', label: 'Copper Products - Wires, Tubes', description: 'High-conductivity copper' },
+      { href: '/products?category=Titanium', label: 'Titanium Products - Aerospace Grade', description: 'Premium titanium materials' },
+      { href: '/products?category=Valves', label: 'Industrial Valves - All Types', description: 'Control and safety valves' },
+      { href: '/products?category=Brass', label: 'Brass Products - Alloys', description: 'Corrosion-resistant brass' },
     ],
   },
   {
-    title: 'Legal & Support',
+    title: 'Support & Resources',
+    description: 'Help and documentation',
+    icon: 'support',
     links: [
-      { href: '/privacy', label: 'Privacy Policy' },
-      { href: '/terms', label: 'Terms of Service' },
-      { href: '/cookies', label: 'Cookie Policy' },
-      { href: '/returns', label: 'Returns Policy' },
-      { href: '/shipping', label: 'Shipping Information' },
-      { href: '/support', label: 'Support Center' },
+      { href: '/faq', label: 'FAQ - Product & Order Questions', description: 'Detailed answers to common questions' },
+      { href: '/support', label: 'Support Center - Technical Help', description: '24/7 customer support' },
+      { href: '/downloads', label: 'Downloads - Catalogs & Specs', description: 'Product documentation' },
+      { href: '/agent', label: 'Agent Program - Partnership', description: 'Become a regional agent' },
+      { href: '/careers', label: 'Careers - Job Opportunities', description: 'Join our team' },
+    ],
+  },
+  {
+    title: 'Legal & Policies',
+    description: 'Terms and compliance',
+    icon: 'legal',
+    links: [
+      { href: '/privacy', label: 'Privacy Policy - Data Protection', description: 'How we handle your data' },
+      { href: '/terms', label: 'Terms of Service - Usage Agreement', description: 'Service terms and conditions' },
+      { href: '/cookies', label: 'Cookie Policy - Privacy', description: 'Cookie usage information' },
+      { href: '/returns', label: 'Returns Policy - Refunds', description: 'Product return procedures' },
+      { href: '/shipping', label: 'Shipping Information - Delivery', description: 'Global shipping details' },
     ],
   },
 ];
+
+const schemaData = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Sitemap - FableTech Group - Industrial Metal Products",
+  "description": "Complete website sitemap for FableTech Group. Navigate all pages including products, services, support, and legal policies. B2B metal products manufacturer.",
+  "url": "https://www.fabletech.cc.cd/sitemap",
+  "inLanguage": "en",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "FableTech Group",
+    "url": "https://www.fabletech.cc.cd",
+    "publisher": {
+      "@type": "Organization",
+      "name": "FableTech Group",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://fabletech.cc.cd/favicon.svg"
+      }
+    }
+  },
+  "about": {
+    "@type": "Organization",
+    "name": "FableTech Group",
+    "description": "B2B Industrial Metal Products Manufacturer",
+    "url": "https://www.fabletech.cc.cd",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Shanghai",
+      "addressRegion": "Shanghai",
+      "addressCountry": "CN"
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+2347077065158",
+      "contactType": "sales",
+      "availableLanguage": ["English", "German", "French", "Spanish"]
+    }
+  },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://www.fabletech.cc.cd/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Sitemap",
+        "item": "https://www.fabletech.cc.cd/sitemap"
+      }
+    ]
+  }
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What types of metal products does FableTech Group offer?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "FableTech Group offers a comprehensive range of industrial metal products including steel products (pipes, plates, bars), aluminum products (sheets, rods, alloys), copper products (wires, tubes, sheets), titanium products (bars, plates, aerospace grade), industrial valves, and brass products. We serve B2B customers in construction, manufacturing, aerospace, and automotive industries worldwide."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What are the minimum order quantities?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Minimum order quantities vary by product type. Standard products typically have MOQ of 100 pieces. Custom orders may have different requirements. Contact our sales team for specific product MOQs and flexible ordering options for large projects."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you ship internationally?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, FableTech Group ships to over 50 countries worldwide. We work with major shipping carriers to ensure safe and timely delivery. Shipping costs depend on destination, order weight, and shipping method. Contact us for a shipping quote to your location."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What certifications do your products have?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "All FableTech Group products are ISO 9001:2015 certified. Depending on the product, we also provide CE, SGS, and other relevant certifications. Material test certificates and quality inspection reports are available upon request for all orders."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How can I get a quote?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "You can request a quote through multiple channels: 1) Submit an inquiry through our contact form, 2) Email sales@fabletech.com, 3) Contact us via WhatsApp at +2347077065158, 4) Call our sales team. We typically respond within 24-48 hours with detailed pricing."
+      }
+    }
+  ]
+};
 ---
 
 <MainLayout 
-  title="Sitemap - FableTech Group" 
-  description="Complete sitemap of FableTech Group website. Navigate through all our pages including products, services, about us, and more."
+  title="Complete Website Sitemap - FableTech Group - Industrial Metal Products Manufacturer" 
+  description="Full sitemap of FableTech Group website. Find all pages: products (steel, aluminum, copper, titanium), services, about us, support, FAQ, contact. B2B industrial metal supplier with 25+ years experience."
   locale={locale}
 >
+  <script type="application/ld+json" set:html={JSON.stringify(schemaData)} />
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+  
   <Breadcrumbs items={breadcrumbItems} locale={locale} />
   
-  <section class="bg-primary text-white py-16">
+  <section class="bg-gradient-to-r from-primary to-secondary text-white py-16">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center">
-        <h1 class="text-4xl md:text-5xl font-bold mb-4">Website Sitemap</h1>
-        <p class="text-lg text-gray-200 max-w-2xl mx-auto">
-          Navigate through our complete website structure. Find all pages, products, and resources in one place.
+        <h1 class="text-4xl md:text-5xl font-bold mb-4">
+          Complete Website Sitemap
+        </h1>
+        <p class="text-lg md:text-xl text-gray-200 max-w-3xl mx-auto mb-6">
+          Navigate through our complete website structure. Find all pages, products, services, and resources in one place.
         </p>
+        <div class="flex flex-wrap justify-center gap-4 text-sm">
+          <span class="bg-white/20 px-4 py-2 rounded-full">📦 500+ Products</span>
+          <span class="bg-white/20 px-4 py-2 rounded-full">🌍 50+ Countries</span>
+          <span class="bg-white/20 px-4 py-2 rounded-full">🏭 25+ Years Experience</span>
+        </div>
       </div>
     </div>
   </section>
 
-  <section class="py-16">
+  <section class="py-16 bg-gray-50">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {siteMap.map((section) => (
-          <div key={section.title} class="bg-white rounded-xl shadow-lg p-6">
-            <h2 class="text-2xl font-bold mb-6 text-gray-900 border-b-2 border-primary pb-3">
-              {section.title}
-            </h2>
-            <ul class="space-y-3">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        {siteMap.map((section, sectionIndex) => (
+          <article key={section.title} class="bg-white rounded-2xl shadow-lg p-8 hover:shadow-xl transition-shadow">
+            <header class="mb-6">
+              <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-2 flex items-center gap-3">
+                {section.icon === 'home' && (
+                  <span class="text-3xl">🏠</span>
+                )}
+                {section.icon === 'package' && (
+                  <span class="text-3xl">📦</span>
+                )}
+                {section.icon === 'support' && (
+                  <span class="text-3xl">💼</span>
+                )}
+                {section.icon === 'legal' && (
+                  <span class="text-3xl">📋</span>
+                )}
+                {section.title}
+              </h2>
+              <p class="text-gray-600">{section.description}</p>
+            </header>
+            
+            <div class="space-y-3">
               {section.links.map((link) => (
-                <li key={link.label}>
-                  <a href={link.href} class="flex items-center text-gray-600 hover:text-primary transition-colors group">
-                    <svg class="w-4 h-4 mr-2 text-gray-400 group-hover:text-primary transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <a 
+                  key={link.href} 
+                  href={link.href}
+                  class="block p-4 rounded-lg border border-gray-200 hover:border-primary hover:bg-primary/5 transition-all group"
+                >
+                  <div class="flex items-start justify-between">
+                    <div class="flex-1">
+                      <h3 class="font-semibold text-gray-900 group-hover:text-primary transition-colors mb-1">
+                        {link.label}
+                      </h3>
+                      <p class="text-sm text-gray-600">{link.description}</p>
+                    </div>
+                    <svg class="w-5 h-5 text-gray-400 group-hover:text-primary group-hover:translate-x-1 transition-all flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
                     </svg>
-                    {link.label}
-                  </a>
-                </li>
+                  </div>
+                </a>
               ))}
-            </ul>
-          </div>
+            </div>
+          </article>
         ))}
       </div>
 
-      <div class="mt-16 bg-gradient-to-r from-primary to-secondary rounded-xl p-8 text-white text-center">
-        <h2 class="text-3xl font-bold mb-4">Looking for Something Specific?</h2>
-        <p class="text-lg mb-6 opacity-90 max-w-2xl mx-auto">
-          Can't find what you're looking for? Contact our team and we'll help you locate it quickly.
-        </p>
-        <div class="flex flex-col sm:flex-row gap-4 justify-center">
-          <a href="/contact" class="inline-flex items-center justify-center px-8 py-4 bg-white text-primary font-semibold rounded-lg hover:bg-gray-100 transition-colors">
-            Contact Us
+      <div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="bg-gradient-to-br from-green-500 to-green-600 text-white rounded-xl p-6 text-center">
+          <div class="text-4xl mb-3">📱</div>
+          <h3 class="text-xl font-bold mb-2">WhatsApp Support</h3>
+          <p class="text-green-100 text-sm mb-4">Instant communication</p>
+          <a href="https://wa.me/2347077065158" class="inline-block bg-white text-green-600 px-6 py-2 rounded-lg font-semibold hover:bg-green-50 transition-colors">
+            Chat Now
           </a>
-          <a href="/products" class="inline-flex items-center justify-center px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white/10 transition-colors">
-            Browse Products
+        </div>
+
+        <div class="bg-gradient-to-br from-blue-500 to-blue-600 text-white rounded-xl p-6 text-center">
+          <div class="text-4xl mb-3">📧</div>
+          <h3 class="text-xl font-bold mb-2">Email Support</h3>
+          <p class="text-blue-100 text-sm mb-4">24-hour response</p>
+          <a href="mailto:contact@fabletech.com" class="inline-block bg-white text-blue-600 px-6 py-2 rounded-lg font-semibold hover:bg-blue-50 transition-colors">
+            Email Us
+          </a>
+        </div>
+
+        <div class="bg-gradient-to-br from-purple-500 to-purple-600 text-white rounded-xl p-6 text-center">
+          <div class="text-4xl mb-3">📞</div>
+          <h3 class="text-xl font-bold mb-2">Phone Support</h3>
+          <p class="text-purple-100 text-sm mb-4">Business hours</p>
+          <a href="tel:+862112345678" class="inline-block bg-white text-purple-600 px-6 py-2 rounded-lg font-semibold hover:bg-purple-50 transition-colors">
+            Call Now
           </a>
         </div>
       </div>
 
-      <div class="mt-12 bg-blue-50 rounded-xl p-8">
-        <h3 class="text-xl font-bold text-blue-900 mb-4">XML Sitemap</h3>
-        <p class="text-blue-800 mb-4">
-          For search engines and technical users, we also provide an XML version of our sitemap.
-        </p>
-        <a href="/sitemap.xml" class="inline-flex items-center text-blue-900 font-semibold hover:underline">
-          <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
-          </svg>
-          Download XML Sitemap
-        </a>
+      <div class="mt-12 bg-white rounded-2xl shadow-lg p-8">
+        <h2 class="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
+          <span class="text-3xl">🔍</span>
+          Can't Find What You're Looking For?
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div>
+            <h3 class="font-semibold text-gray-900 mb-3">Try These Resources:</h3>
+            <ul class="space-y-2 text-gray-600">
+              <li>• <a href="/products" class="text-primary hover:underline">Browse All Products</a></li>
+              <li>• <a href="/faq" class="text-primary hover:underline">Check FAQ Section</a></li>
+              <li>• <a href="/support" class="text-primary hover:underline">Visit Support Center</a></li>
+              <li>• <a href="/contact" class="text-primary hover:underline">Contact Our Team</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="font-semibold text-gray-900 mb-3">Popular Searches:</h3>
+            <div class="flex flex-wrap gap-2">
+              <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">Steel Products</span>
+              <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">Aluminum Sheets</span>
+              <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">Copper Tubes</span>
+              <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">Titanium Bars</span>
+              <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">Industrial Valves</span>
+              <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">Custom Fabrication</span>
+            </div>
+          </div>
+        </div>
       </div>
+
+      <div class="mt-12 bg-gradient-to-r from-primary to-secondary text-white rounded-2xl p-8">
+        <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+          <div>
+            <h2 class="text-3xl font-bold mb-2">Ready to Get Started?</h2>
+            <p class="text-gray-200">Contact our team for a personalized quote on your metal products needs.</p>
+          </div>
+          <div class="flex flex-col sm:flex-row gap-4">
+            <a href="/contact" class="inline-flex items-center justify-center px-8 py-4 bg-white text-primary font-semibold rounded-lg hover:bg-gray-100 transition-colors">
+              Get a Quote
+            </a>
+            <a href="/products" class="inline-flex items-center justify-center px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white/10 transition-colors">
+              Browse Products
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-12 bg-blue-50 border-l-4 border-blue-500 rounded-r-xl p-6">
+        <div class="flex items-start gap-4">
+          <div class="text-3xl">📄</div>
+          <div>
+            <h3 class="text-lg font-bold text-blue-900 mb-2">XML Sitemap for Search Engines</h3>
+            <p class="text-blue-800 mb-4">
+              For search engines and technical SEO purposes, we provide a comprehensive XML sitemap that includes all pages, update frequencies, and priority levels.
+            </p>
+            <a 
+              href="/sitemap.xml" 
+              class="inline-flex items-center gap-2 bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+            >
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+              </svg>
+              View XML Sitemap
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <footer class="mt-12 text-center text-gray-600 text-sm">
+        <p>FableTech Group - Industrial Metal Products Manufacturer</p>
+        <p class="mt-2">ISO 9001:2015 Certified | CE | SGS Approved</p>
+        <p class="mt-2">Serving 50+ countries worldwide since 1999</p>
+      </footer>
     </div>
   </section>
 </MainLayout>
