@@ -15,6 +15,21 @@ const categories = getNewsCategories();
   <section class="bg-primary text-white py-16">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center">
+        <div class="mb-6">
+          <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg" class="mx-auto">
+            <defs>
+              <linearGradient id="newsPageLogoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" style="stop-color:#ffffff"/>
+                <stop offset="50%" style="stop-color:#d1fae5"/>
+                <stop offset="100%" style="stop-color:#ffffff"/>
+              </linearGradient>
+            </defs>
+            <circle cx="40" cy="40" r="38" fill="url(#newsPageLogoGrad)" opacity="0.1"/>
+            <circle cx="40" cy="40" r="36" stroke="url(#newsPageLogoGrad)" stroke-width="2" fill="none"/>
+            <text x="40" y="32" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="700" text-anchor="middle" fill="url(#newsPageLogoGrad)">Fable</text>
+            <text x="40" y="52" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="700" text-anchor="middle" fill="url(#newsPageLogoGrad)">Tech</text>
+          </svg>
+        </div>
         <h1 class="text-4xl md:text-5xl font-bold mb-4">Latest News</h1>
         <p class="text-lg text-gray-200">
           Stay informed about our company, products, and industry news
