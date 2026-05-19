@@ -713,7 +713,7 @@ export const news: News[] = [
 ];
 
 export function getNews(locale: string = 'en'): News[] {
-  return news;
+  return [...news].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 }
 
 export function getNewsById(id: string): News | undefined {
