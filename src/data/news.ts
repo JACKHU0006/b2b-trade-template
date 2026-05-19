@@ -34,7 +34,7 @@ export const news: News[] = [
       es: 'Proyecto de expansión de planta de producción de FableTech Group en marcha con inversión de $5M.',
       ar: 'مشروع توسع منشأة الإنتاج FableTech Group قيد التنفيذ مع استثمار 5 ملايين دولار.'
     },
-    date: '2025-03-15',
+    date: '2025-02-08',
     category: 'Company News',
     image: '/images/news/fabletech-factory.jpg'
   },
@@ -62,7 +62,7 @@ export const news: News[] = [
       es: 'FableTech Group mantiene su certificación de calidad ISO 9001:2015.',
       ar: 'تحتفظ FableTech Group بثمارة الجودة ISO 9001:2015.'
     },
-    date: '2025-01-22',
+    date: '2025-05-15',
     category: 'Certification',
     image: '/images/news/fabletech-certification.jpg'
   },
@@ -90,7 +90,7 @@ export const news: News[] = [
       es: 'FableTech Group lanza línea de productos de acero ecológicos.',
       ar: 'تطلق FableTech Group خط منتجات الفولاذ الصديق للبيئة.'
     },
-    date: '2024-11-08',
+    date: '2025-08-20',
     category: 'New Products',
     image: '/images/news/fabletech-sustainable-steel.jpg'
   },
@@ -118,7 +118,7 @@ export const news: News[] = [
       es: 'FableTech Group se asocia con proveedor logístico de primer nivel.',
       ar: 'تعاون FableTech Group مع مورد لوجستي رائد.'
     },
-    date: '2024-07-19',
+    date: '2025-11-05',
     category: 'Partnership',
     image: '/images/news/fabletech-shipping.jpg'
   },
@@ -146,7 +146,7 @@ export const news: News[] = [
       es: 'FableTech Group invierte $2M en investigación y desarrollo.',
       ar: 'تستثمر FableTech Group 2 ملايين دولار في البحث والتطوير.'
     },
-    date: '2024-04-03',
+    date: '2025-07-12',
     category: 'Technology',
     image: '/images/news/fabletech-rd-lab.jpg'
   },
