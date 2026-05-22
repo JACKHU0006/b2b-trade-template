@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f59e0b"/>
+      <stop offset="100%" style="stop-color:#d97706"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#bg)"/>
+  <circle cx="400" cy="250" r="80" fill="white" opacity="0.3"/>
+  <path d="M400 170 L430 230 L490 230 L440 270 L460 330 L400 290 L340 330 L360 270 L310 230 L370 230 Z" fill="white" opacity="0.5"/>
+  <text x="400" y="420" font-family="Arial" font-size="28" font-weight="bold" fill="white" text-anchor="middle">Safety First</text>
+  <text x="400" y="470" font-family="Arial" font-size="18" fill="white" text-anchor="middle" opacity="0.8">ISO 45001 Certified</text>
+  <text x="400" y="500" font-family="Arial" font-size="14" fill="white" text-anchor="middle" opacity="0.6">FableTech Group</text>
+</svg>

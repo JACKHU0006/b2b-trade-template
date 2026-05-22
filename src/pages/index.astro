@@ -211,7 +211,7 @@ const localizedNews = news.slice(0, 3);
               </span>
               <h3 class="text-lg font-semibold mb-2">{item.title[locale]}</h3>
               <p class="text-gray-600 text-sm mb-4 line-clamp-2">{item.summary[locale]}</p>
-              <a href={`/news/${item.id}`} class="text-secondary font-medium hover:underline">
+              <a href={`/news/${item.slug}`} class="text-secondary font-medium hover:underline">
                 Read More
               </a>
             </div>
