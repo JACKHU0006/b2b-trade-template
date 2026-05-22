@@ -1,0 +1,9 @@
+<svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="600" fill="#e2e8f0"/>
+  <circle cx="400" cy="250" r="150" fill="#4299e1"/>
+  <circle cx="400" cy="250" r="110" fill="#63b3ed"/>
+  <circle cx="400" cy="250" r="70" fill="#90cdf4"/>
+  <text x="400" y="240" font-family="Arial" font-size="24" fill="#ffffff" text-anchor="middle">200+</text>
+  <text x="400" y="280" font-family="Arial" font-size="14" fill="#ffffff" text-anchor="middle">Employees</text>
+  <text x="400" y="550" font-family="Arial" font-size="20" fill="#2b6cb0" text-anchor="middle">FableTech Training Program</text>
+</svg>

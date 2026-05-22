@@ -1,0 +1,11 @@
+<svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="600" fill="#e2e8f0"/>
+  <rect x="50" y="50" width="700" height="500" rx="20" fill="#4a5568"/>
+  <rect x="80" y="80" width="640" height="300" rx="10" fill="#2d3748"/>
+  <circle cx="400" cy="230" r="100" fill="#718096" opacity="0.5"/>
+  <rect x="100" y="420" width="200" height="20" rx="5" fill="#a0aec0"/>
+  <rect x="100" y="450" width="400" height="15" rx="5" fill="#718096"/>
+  <rect x="100" y="475" width="350" height="15" rx="5" fill="#718096"/>
+  <rect x="100" y="500" width="300" height="15" rx="5" fill="#718096"/>
+  <text x="400" y="550" font-family="Arial" font-size="18" fill="#e2e8f0" text-anchor="middle">FableTech Factory</text>
+</svg>

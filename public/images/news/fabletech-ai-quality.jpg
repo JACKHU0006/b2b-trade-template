@@ -1,0 +1,10 @@
+<svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="600" fill="#e2e8f0"/>
+  <rect x="100" y="100" width="600" height="400" rx="20" fill="#805ad5"/>
+  <rect x="150" y="150" width="200" height="150" rx="10" fill="#9f7aea"/>
+  <circle cx="400" cy="225" r="70" fill="#b794f4"/>
+  <text x="400" y="220" font-family="Arial" font-size="24" fill="#ffffff" text-anchor="middle">AI</text>
+  <text x="400" y="250" font-family="Arial" font-size="14" fill="#ffffff" text-anchor="middle">Quality</text>
+  <rect x="150" y="330" width="500" height="120" rx="10" fill="#d6bcfa"/>
+  <text x="400" y="400" font-family="Arial" font-size="20" fill="#553c9a" text-anchor="middle">99.8% Accuracy</text>
+</svg>

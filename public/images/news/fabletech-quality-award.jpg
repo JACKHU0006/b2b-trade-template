@@ -1,0 +1,7 @@
+<svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="600" fill="#e2e8f0"/>
+  <circle cx="400" cy="250" r="150" fill="#ecc94b" opacity="0.8"/>
+  <path d="M400,150 L430,200 L490,200 L440,235 L460,290 L400,250 L340,290 L360,235 L310,200 L370,200 Z" fill="#d69e2e"/>
+  <text x="400" y="470" font-family="Arial" font-size="24" fill="#744210" text-anchor="middle">Quality Excellence Award</text>
+  <text x="400" y="510" font-family="Arial" font-size="18" fill="#975a16" text-anchor="middle">Third Consecutive Year</text>
+</svg>

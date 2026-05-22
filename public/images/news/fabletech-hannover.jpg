@@ -1,0 +1,8 @@
+<svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="600" fill="#e2e8f0"/>
+  <rect x="100" y="80" width="600" height="440" rx="20" fill="#805ad5"/>
+  <text x="400" y="250" font-family="Arial" font-size="48" fill="#ffffff" text-anchor="middle">HANNOVER</text>
+  <text x="400" y="310" font-family="Arial" font-size="36" fill="#d6bcfa" text-anchor="middle">MESSE 2024</text>
+  <rect x="250" y="380" width="300" height="80" rx="10" fill="#9f7aea"/>
+  <text x="400" y="430" font-family="Arial" font-size="20" fill="#ffffff" text-anchor="middle">FableTech Booth</text>
+</svg>

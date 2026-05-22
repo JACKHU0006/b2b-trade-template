@@ -1,0 +1,8 @@
+<svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="600" fill="#e2e8f0"/>
+  <path d="M100,400 L200,300 L300,350 L400,250 L500,300 L600,200 L700,250 L700,500 L100,500 Z" fill="#3182ce" opacity="0.5"/>
+  <circle cx="600" cy="250" r="80" fill="#3182ce"/>
+  <text x="600" y="260" font-family="Arial" font-size="40" fill="#ffffff" text-anchor="middle">60+</text>
+  <text x="400" y="550" font-family="Arial" font-size="20" fill="#2b6cb0" text-anchor="middle">Global Shipping Partnership</text>
+  <text x="400" y="580" font-family="Arial" font-size="18" fill="#2c5282" text-anchor="middle">FableTech Group</text>
+</svg>

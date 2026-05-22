@@ -1,0 +1,159 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import { Search, ArrowRight, Package, FileText, Home } from '@lucide/astro';
+import { search, searchData } from '../data/search';
+
+const locale = 'en';
+const query = Astro.url.searchParams.get('q') || '';
+const results = query ? search(query, locale) : [];
+
+const breadcrumbItems = [
+  { name: 'Search', href: '/search' }
+];
+---
+
+<MainLayout 
+  title="Search Results - FableTech Group" 
+  description={query ? `Search results for "${query}"` : 'Search our website'}
+  locale={locale}
+>
+  <Breadcrumbs items={breadcrumbItems} locale={locale} />
+  
+  <section class="bg-primary text-white py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center">
+        <h1 class="text-4xl md:text-5xl font-bold mb-4">
+          Search Results
+        </h1>
+        <p class="text-lg text-gray-200">
+          {query ? `Results for "${query}"` : 'Enter a search term to find what you need'}
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-12">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <form method="GET" action="/search" class="mb-8">
+        <div class="relative">
+          <Search class="absolute left-4 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-400" />
+          <input
+            type="text"
+            name="q"
+            value={query}
+            class="w-full pl-12 pr-4 py-4 bg-white border-2 border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent text-lg"
+            placeholder="Search products, news, and more..."
+            autofocus={!query}
+          />
+          <button 
+            type="submit"
+            class="absolute right-2 top-1/2 transform -translate-y-1/2 px-6 py-2 bg-primary text-white rounded-lg hover:bg-primary/90 transition-colors"
+          >
+            Search
+          </button>
+        </div>
+      </form>
+
+      {query && (
+        <div class="mb-6">
+          <p class="text-gray-600">
+            Found <span class="font-semibold text-gray-900">{results.length}</span> results
+          </p>
+        </div>
+      )}
+
+      {results.length > 0 ? (
+        <div class="space-y-6">
+          {results.map((result) => (
+            <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
+              <div class="flex items-start gap-4">
+                <div class="flex-shrink-0">
+                  {result.type === 'product' && (
+                    <div class="w-12 h-12 bg-secondary/10 rounded-lg flex items-center justify-center">
+                      <Package class="h-6 w-6 text-secondary" />
+                    </div>
+                  )}
+                  {result.type === 'news' && (
+                    <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
+                      <FileText class="h-6 w-6 text-primary" />
+                    </div>
+                  )}
+                  {result.type === 'page' && (
+                    <div class="w-12 h-12 bg-success/10 rounded-lg flex items-center justify-center">
+                      <Home class="h-6 w-6 text-success" />
+                    </div>
+                  )}
+                </div>
+                <div class="flex-1">
+                  <div class="flex items-center gap-2 mb-2">
+                    <span class={`px-2 py-1 text-xs font-medium rounded ${
+                      result.type === 'product' ? 'bg-secondary/10 text-secondary' :
+                      result.type === 'news' ? 'bg-primary/10 text-primary' :
+                      'bg-success/10 text-success'
+                    }`}>
+                      {result.type === 'product' ? 'Product' :
+                       result.type === 'news' ? 'News' : 'Page'}
+                    </span>
+                    {result.category && (
+                      <span class="px-2 py-1 text-xs font-medium bg-gray-100 text-gray-600 rounded">
+                        {result.category}
+                      </span>
+                    )}
+                  </div>
+                  <h3 class="text-xl font-semibold mb-2">
+                    <a href={result.url} class="hover:text-primary transition-colors">
+                      {result.title[locale] || result.title['en']}
+                    </a>
+                  </h3>
+                  <p class="text-gray-600 mb-3 line-clamp-2">
+                    {result.description[locale] || result.description['en']}
+                  </p>
+                  <a 
+                    href={result.url}
+                    class="inline-flex items-center text-secondary font-medium hover:underline"
+                  >
+                    View Details
+                    <ArrowRight class="ml-2 h-4 w-4" />
+                  </a>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      ) : query ? (
+        <div class="text-center py-16">
+          <div class="text-6xl mb-4">🔍</div>
+          <h3 class="text-2xl font-semibold text-gray-900 mb-2">No Results Found</h3>
+          <p class="text-gray-600 mb-6">We couldn't find anything matching your search term.</p>
+          <p class="text-gray-500 text-sm">Try different keywords or browse our categories:</p>
+          <div class="flex flex-wrap justify-center gap-2 mt-4">
+            <a href="/products" class="px-4 py-2 bg-gray-100 text-gray-700 rounded-lg hover:bg-gray-200 transition-colors">
+              Products
+            </a>
+            <a href="/news" class="px-4 py-2 bg-gray-100 text-gray-700 rounded-lg hover:bg-gray-200 transition-colors">
+              News
+            </a>
+            <a href="/faq" class="px-4 py-2 bg-gray-100 text-gray-700 rounded-lg hover:bg-gray-200 transition-colors">
+              FAQ
+            </a>
+          </div>
+        </div>
+      ) : (
+        <div class="text-center py-16">
+          <div class="text-6xl mb-4">💡</div>
+          <h3 class="text-2xl font-semibold text-gray-900 mb-2">What are you looking for?</h3>
+          <p class="text-gray-600 mb-6">Try searching for products, news, or information about our services.</p>
+          <div class="flex flex-wrap justify-center gap-2">
+            <a href="/products" class="px-4 py-2 bg-primary text-white rounded-lg hover:bg-primary/90 transition-colors">
+              Browse Products
+            </a>
+            <a href="/news" class="px-4 py-2 bg-secondary text-white rounded-lg hover:bg-secondary/90 transition-colors">
+              Latest News
+            </a>
+          </div>
+        </div>
+      )}
+    </div>
+  </section>
+</MainLayout>

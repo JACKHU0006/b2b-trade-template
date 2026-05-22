@@ -710,6 +710,120 @@ export const news: News[] = [
     category: 'Company News',
     image: '/images/news/fabletech-donation.jpg'
   }
+,
+  {
+    id: 'news-1779335410740',
+    slug: 'news-1779335410740',
+    title: {
+      en: 'FableTech Group Introduces New Product Line',
+      de: 'FableTech Group stellt neue Produktlinie vor',
+      fr: 'FableTech Group introduit une nouvelle gamme',
+      es: 'FableTech Group introduce nueva linea de productos',
+      ar: 'taqdem FableTech Group khat muntajat jadid'
+    },
+    content: {
+      en: 'FableTech Group is pleased to announce this exciting development. Our commitment to excellence continues as we expand our capabilities and strengthen our position in the global metal industry.',
+      de: 'FableTech Group freut sich, diese spannende Entwicklung anzukuendigen. Unser Engagement fuer Exzellenz setzt sich fort.',
+      fr: 'FableTech Group a le plaisir dannoncer cette nouvelle passionnante. Notre engagement envers lexcellence se poursuit.',
+      es: 'FableTech Group se complace en anunciar este emocionante desarrollo. Nuestro compromiso con la excelencia continua.',
+      ar: 'yus3ad FableTech Group an ta3lan 3an hadha altatwir almutheer. ittizamanuna lil tamayuz mustamir.'
+    },
+    summary: {
+      en: 'New innovative products now available from FableTech Group.',
+      de: 'Neue innovative Produkte jetzt bei FableTech Group verfuegbar.',
+      fr: 'Nouveaux produits innovants disponibles chez FableTech Group.',
+      es: 'Nuevos productos innovadores disponibles en FableTech Group.',
+      ar: 'muntajat mubtakra jadida mutawafira min FableTech Group.'
+    },
+    date: '2026-05-10',
+    category: 'New Products',
+    image: '/images/news/fabletech-new-products.jpg'
+  },
+  {
+    id: 'news-1779335410740',
+    slug: 'news-1779335410740',
+    title: {
+      en: 'FableTech Group Introduces New Product Line',
+      de: 'FableTech Group stellt neue Produktlinie vor',
+      fr: 'FableTech Group introduit une nouvelle gamme',
+      es: 'FableTech Group introduce nueva linea de productos',
+      ar: 'taqdem FableTech Group khat muntajat jadid'
+    },
+    content: {
+      en: 'FableTech Group is pleased to announce this exciting development. Our commitment to excellence continues as we expand our capabilities and strengthen our position in the global metal industry.',
+      de: 'FableTech Group freut sich, diese spannende Entwicklung anzukuendigen. Unser Engagement fuer Exzellenz setzt sich fort.',
+      fr: 'FableTech Group a le plaisir dannoncer cette nouvelle passionnante. Notre engagement envers lexcellence se poursuit.',
+      es: 'FableTech Group se complace en anunciar este emocionante desarrollo. Nuestro compromiso con la excelencia continua.',
+      ar: 'yus3ad FableTech Group an ta3lan 3an hadha altatwir almutheer. ittizamanuna lil tamayuz mustamir.'
+    },
+    summary: {
+      en: 'New innovative products now available from FableTech Group.',
+      de: 'Neue innovative Produkte jetzt bei FableTech Group verfuegbar.',
+      fr: 'Nouveaux produits innovants disponibles chez FableTech Group.',
+      es: 'Nuevos productos innovadores disponibles en FableTech Group.',
+      ar: 'muntajat mubtakra jadida mutawafira min FableTech Group.'
+    },
+    date: '2026-05-21',
+    category: 'New Products',
+    image: '/images/news/fabletech-new-products.jpg'
+  }
+,
+  {
+    id: 'news-1779335469284-0',
+    slug: 'news-1779335469284-0',
+    title: {
+      en: 'FableTech Group Introduces New Product Line',
+      de: 'FableTech Group stellt neue Produktlinie vor',
+      fr: 'FableTech Group introduit une nouvelle gamme',
+      es: 'FableTech Group introduce nueva linea de productos',
+      ar: 'taqdem FableTech Group khat muntajat jadid'
+    },
+    content: {
+      en: 'FableTech Group is pleased to announce this exciting development. Our commitment to excellence continues as we expand our capabilities and strengthen our position in the global metal industry.',
+      de: 'FableTech Group freut sich, diese spannende Entwicklung anzukuendigen. Unser Engagement fuer Exzellenz setzt sich fort.',
+      fr: 'FableTech Group a le plaisir dannoncer cette nouvelle passionnante. Notre engagement envers lexcellence se poursuit.',
+      es: 'FableTech Group se complace en anunciar este emocionante desarrollo. Nuestro compromiso con la excelencia continua.',
+      ar: 'yus3ad FableTech Group an ta3lan 3an hadha altatwir almutheer. ittizamanuna lil tamayuz mustamir.'
+    },
+    summary: {
+      en: 'New innovative products now available from FableTech Group.',
+      de: 'Neue innovative Produkte jetzt bei FableTech Group verfuegbar.',
+      fr: 'Nouveaux produits innovants disponibles chez FableTech Group.',
+      es: 'Nuevos productos innovadores disponibles en FableTech Group.',
+      ar: 'muntajat mubtakra jadida mutawafira min FableTech Group.'
+    },
+    date: '2026-05-07',
+    category: 'New Products',
+    image: '/images/news/fabletech-new-products.jpg'
+  },
+  {
+    id: 'news-1779335469284-1',
+    slug: 'news-1779335469284-1',
+    title: {
+      en: 'FableTech Group Introduces New Product Line',
+      de: 'FableTech Group stellt neue Produktlinie vor',
+      fr: 'FableTech Group introduit une nouvelle gamme',
+      es: 'FableTech Group introduce nueva linea de productos',
+      ar: 'taqdem FableTech Group khat muntajat jadid'
+    },
+    content: {
+      en: 'FableTech Group is pleased to announce this exciting development. Our commitment to excellence continues as we expand our capabilities and strengthen our position in the global metal industry.',
+      de: 'FableTech Group freut sich, diese spannende Entwicklung anzukuendigen. Unser Engagement fuer Exzellenz setzt sich fort.',
+      fr: 'FableTech Group a le plaisir dannoncer cette nouvelle passionnante. Notre engagement envers lexcellence se poursuit.',
+      es: 'FableTech Group se complace en anunciar este emocionante desarrollo. Nuestro compromiso con la excelencia continua.',
+      ar: 'yus3ad FableTech Group an ta3lan 3an hadha altatwir almutheer. ittizamanuna lil tamayuz mustamir.'
+    },
+    summary: {
+      en: 'New innovative products now available from FableTech Group.',
+      de: 'Neue innovative Produkte jetzt bei FableTech Group verfuegbar.',
+      fr: 'Nouveaux produits innovants disponibles chez FableTech Group.',
+      es: 'Nuevos productos innovadores disponibles en FableTech Group.',
+      ar: 'muntajat mubtakra jadida mutawafira min FableTech Group.'
+    },
+    date: '2026-05-08',
+    category: 'New Products',
+    image: '/images/news/fabletech-new-products.jpg'
+  }
 ];
 
 export function getNews(locale: string = 'en'): News[] {
@@ -727,3 +841,5 @@ export function getNewsBySlug(slug: string): News | undefined {
 export function getNewsCategories(): string[] {
   return [...new Set(news.map(n => n.category))];
 }
+
+export const sortedNews = [...news].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());

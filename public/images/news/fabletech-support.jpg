@@ -1,0 +1,8 @@
+<svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="600" fill="#e2e8f0"/>
+  <circle cx="400" cy="250" r="150" fill="#ed8936" opacity="0.8"/>
+  <circle cx="400" cy="250" r="100" fill="#f6ad55"/>
+  <text x="400" y="230" font-family="Arial" font-size="48" fill="#ffffff" text-anchor="middle">24/7</text>
+  <text x="400" y="280" font-family="Arial" font-size="16" fill="#ffffff" text-anchor="middle">Customer Support</text>
+  <text x="400" y="520" font-family="Arial" font-size="20" fill="#c05621" text-anchor="middle">FableTech Customer Service</text>
+</svg>

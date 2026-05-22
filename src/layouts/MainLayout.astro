@@ -35,6 +35,15 @@ const {
 const defaultDescription = 'FableTech Group - Professional B2B industrial solutions provider with global reach. Quality manufacturing, competitive pricing, and reliable supply chain solutions.';
 const gaId = import.meta.env.PUBLIC_GA_ID;
 const gtmId = import.meta.env.PUBLIC_GTM_ID;
+const pathname = Astro.url.pathname;
+
+function getHreflangUrl(lang: string) {
+  const baseUrl = 'https://www.fabletech.cc.cd';
+  if (lang === 'en') {
+    return baseUrl + pathname;
+  }
+  return baseUrl + `/${lang}${pathname}`;
+}
 ---
 
 <!DOCTYPE html>
@@ -59,14 +68,14 @@ const gtmId = import.meta.env.PUBLIC_GTM_ID;
     
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght400;500;600;700&display=swap" rel="stylesheet" />
     
-    <link rel="alternate" hreflang="en" href="https://www.fabletech.cc.cd/" />
-    <link rel="alternate" hreflang="de" href="https://www.fabletech.cc.cd/" />
-    <link rel="alternate" hreflang="fr" href="https://www.fabletech.cc.cd/" />
-    <link rel="alternate" hreflang="es" href="https://www.fabletech.cc.cd/" />
-    <link rel="alternate" hreflang="ar" href="https://www.fabletech.cc.cd/" />
-    <link rel="alternate" hreflang="x-default" href="https://www.fabletech.cc.cd/" />
+    <link rel="alternate" hreflang="en" href={getHreflangUrl('en')} />
+    <link rel="alternate" hreflang="de" href={getHreflangUrl('de')} />
+    <link rel="alternate" hreflang="fr" href={getHreflangUrl('fr')} />
+    <link rel="alternate" hreflang="es" href={getHreflangUrl('es')} />
+    <link rel="alternate" hreflang="ar" href={getHreflangUrl('ar')} />
+    <link rel="alternate" hreflang="x-default" href={getHreflangUrl('en')} />
     
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />

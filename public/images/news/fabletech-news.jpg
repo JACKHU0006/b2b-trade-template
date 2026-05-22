@@ -1,0 +1,10 @@
+<svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="600" fill="#e2e8f0"/>
+  <circle cx="400" cy="250" r="180" fill="#4299e1" opacity="0.8"/>
+  <rect x="250" y="150" width="300" height="200" rx="10" fill="#63b3ed"/>
+  <rect x="280" y="180" width="240" height="20" rx="5" fill="#bee3f8"/>
+  <rect x="280" y="220" width="200" height="15" rx="5" fill="#bee3f8"/>
+  <rect x="280" y="250" width="220" height="15" rx="5" fill="#bee3f8"/>
+  <rect x="280" y="280" width="180" height="15" rx="5" fill="#bee3f8"/>
+  <text x="400" y="520" font-family="Arial" font-size="20" fill="#2b6cb0" text-anchor="middle">Latest News from FableTech</text>
+</svg>

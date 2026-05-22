@@ -1,0 +1,9 @@
+<svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="600" fill="#e2e8f0"/>
+  <circle cx="400" cy="250" r="180" fill="#38a169"/>
+  <circle cx="400" cy="250" r="140" fill="#48bb78"/>
+  <circle cx="400" cy="250" r="100" fill="#68d391"/>
+  <text x="400" y="240" font-family="Arial" font-size="32" fill="#ffffff" text-anchor="middle">CO₂</text>
+  <text x="400" y="280" font-family="Arial" font-size="20" fill="#ffffff" text-anchor="middle">Neutral</text>
+  <text x="400" y="550" font-family="Arial" font-size="20" fill="#22543d" text-anchor="middle">FableTech Carbon Neutral Initiative</text>
+</svg>

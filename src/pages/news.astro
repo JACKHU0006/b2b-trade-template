@@ -3,15 +3,15 @@ import MainLayout from '../layouts/MainLayout.astro';
 import Breadcrumbs from '../components/Breadcrumbs.astro';
 import InquiryForm from '../components/InquiryForm.astro';
 import { Calendar, ArrowRight, Filter } from '@lucide/astro';
-import { news, getNewsCategories } from '../data/news';
+import { sortedNews, getNewsCategories } from '../data/news';
 
 const locale = 'en';
 const categories = getNewsCategories();
 
 const selectedCategory = Astro.url.searchParams.get('category') || 'all';
 const filteredNews = selectedCategory === 'all' 
-  ? news 
-  : news.filter(n => n.category === selectedCategory);
+  ? sortedNews 
+  : sortedNews.filter(n => n.category === selectedCategory);
 
 const breadcrumbItems = [
   { name: 'News', href: '/news' },

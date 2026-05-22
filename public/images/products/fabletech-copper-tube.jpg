@@ -1,0 +1,7 @@
+<svg width="400" height="300" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="300" fill="#e2e8f0"/>
+  <ellipse cx="200" cy="100" rx="60" ry="20" fill="#b87333"/>
+  <rect x="140" y="100" width="120" height="120" fill="#cd7f32"/>
+  <ellipse cx="200" cy="220" rx="60" ry="20" fill="#8b4513"/>
+  <text x="200" y="260" font-family="Arial" font-size="14" fill="#4a5568" text-anchor="middle">Copper Tube</text>
+</svg>

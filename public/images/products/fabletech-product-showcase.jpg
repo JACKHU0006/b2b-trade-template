@@ -1,0 +1,9 @@
+<svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="600" fill="#e2e8f0"/>
+  <rect x="100" y="100" width="600" height="400" rx="20" fill="#4a5568"/>
+  <rect x="150" y="150" width="150" height="150" rx="10" fill="#718096"/>
+  <rect x="325" y="150" width="150" height="150" rx="10" fill="#718096"/>
+  <rect x="500" y="150" width="150" height="150" rx="10" fill="#718096"/>
+  <rect x="150" y="325" width="500" height="150" rx="10" fill="#a0aec0"/>
+  <text x="400" y="540" font-family="Arial" font-size="20" fill="#2d3748" text-anchor="middle">FableTech Industrial Metal Products</text>
+</svg>

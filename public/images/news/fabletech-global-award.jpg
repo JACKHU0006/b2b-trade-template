@@ -1,0 +1,7 @@
+<svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="600" fill="#e2e8f0"/>
+  <circle cx="400" cy="250" r="180" fill="#ecc94b" opacity="0.8"/>
+  <polygon points="400,150 420,200 480,200 430,235 450,290 400,250 350,290 370,235 320,200 380,200" fill="#d69e2e"/>
+  <text x="400" y="470" font-family="Arial" font-size="24" fill="#744210" text-anchor="middle">Global Supplier</text>
+  <text x="400" y="510" font-family="Arial" font-size="24" fill="#744210" text-anchor="middle">Excellence Award</text>
+</svg>

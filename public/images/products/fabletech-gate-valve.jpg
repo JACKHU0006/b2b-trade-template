@@ -1,0 +1,7 @@
+<svg width="400" height="300" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="300" fill="#e2e8f0"/>
+  <rect x="150" y="80" width="100" height="140" rx="10" fill="#4a5568"/>
+  <rect x="160" y="90" width="80" height="120" rx="5" fill="#2d3748"/>
+  <rect x="195" y="200" width="10" height="40" fill="#718096"/>
+  <text x="200" y="260" font-family="Arial" font-size="14" fill="#4a5568" text-anchor="middle">Gate Valve</text>
+</svg>
