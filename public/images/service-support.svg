@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
+  <defs>
+    <linearGradient id="bg4" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#be123c"/>
+      <stop offset="100%" style="stop-color:#f43f5e"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#bg4)"/>
+  <polygon points="400,180 470,280 430,280 430,380 370,380 370,280 330,280" fill="white" opacity="0.3"/>
+  <circle cx="280" cy="320" r="60" fill="white" opacity="0.15"/>
+  <circle cx="520" cy="320" r="60" fill="white" opacity="0.15"/>
+  <text x="400" y="460" font-family="Arial" font-size="20" font-weight="bold" fill="white" text-anchor="middle">Customer Support</text>
+  <text x="400" y="500" font-family="Arial" font-size="28" font-weight="bold" fill="white" text-anchor="middle">24/7 Available</text>
+  <text x="400" y="540" font-family="Arial" font-size="16" fill="white" text-anchor="middle" opacity="0.8">FableTech Group</text>
+</svg>

@@ -594,9 +594,9 @@ export const news: News[] = [
       es: 'FableTech Group se compromete con 100% energía renovable.',
       ar: 'تلتزم FableTech Group بالطاقة المتجددة 100%.'
     },
-    date: '2021-02-08',
+    date: '2023-02-08',
     category: 'Technology',
-    image: '/images/news/fabletech-green-energy.jpg'
+    image: '/images/news/fabletech-green-energy.svg'
   },
   {
     id: 'news-022',
@@ -622,9 +622,9 @@ export const news: News[] = [
       es: 'FableTech Group lanza catálogo digital con más de 5,000 productos.',
       ar: 'تطلق FableTech Group كتالوج رقمي يضم أكثر من 5000 منتج.'
     },
-    date: '2020-12-15',
+    date: '2022-12-15',
     category: 'New Products',
-    image: '/images/news/fabletech-catalog.jpg'
+    image: '/images/news/fabletech-catalog.svg'
   },
   {
     id: 'news-023',
@@ -650,9 +650,9 @@ export const news: News[] = [
       es: 'FableTech Group establece presencia en Medio Oriente en Dubái.',
       ar: 'تنشئ FableTech Group وجودها في الشرق الأوسط في دبي.'
     },
-    date: '2020-05-20',
+    date: '2022-05-20',
     category: 'Company News',
-    image: '/images/news/fabletech-dubai.jpg'
+    image: '/images/news/fabletech-dubai.svg'
   },
   {
     id: 'news-024',
@@ -678,9 +678,9 @@ export const news: News[] = [
       es: 'FableTech Group prioriza la seguridad de los empleados con certificación ISO.',
       ar: 'تعطي FableTech Group الأولوية لسلامة الموظفين من خلال شهادة ISO.'
     },
-    date: '2020-08-30',
+    date: '2021-06-14',
     category: 'Certification',
-    image: '/images/news/fabletech-safety.jpg'
+    image: '/images/news/fabletech-safety.svg'
   },
   {
     id: 'news-025',
@@ -708,7 +708,7 @@ export const news: News[] = [
     },
     date: '2020-03-25',
     category: 'Company News',
-    image: '/images/news/fabletech-donation.jpg'
+    image: '/images/news/fabletech-donation.svg'
   }
 ,
   {
@@ -737,7 +737,7 @@ export const news: News[] = [
     },
     date: '2026-05-10',
     category: 'New Products',
-    image: '/images/news/fabletech-new-products.jpg'
+    image: '/images/news/fabletech-new-products.svg'
   },
   {
     id: 'news-1779335410740',
@@ -765,7 +765,7 @@ export const news: News[] = [
     },
     date: '2026-05-21',
     category: 'New Products',
-    image: '/images/news/fabletech-new-products.jpg'
+    image: '/images/news/fabletech-new-products.svg'
   }
 ,
   {
@@ -794,7 +794,7 @@ export const news: News[] = [
     },
     date: '2026-05-07',
     category: 'New Products',
-    image: '/images/news/fabletech-new-products.jpg'
+    image: '/images/news/fabletech-new-products.svg'
   },
   {
     id: 'news-1779335469284-1',
@@ -822,7 +822,7 @@ export const news: News[] = [
     },
     date: '2026-05-08',
     category: 'New Products',
-    image: '/images/news/fabletech-new-products.jpg'
+    image: '/images/news/fabletech-new-products.svg'
   }
 ];
 

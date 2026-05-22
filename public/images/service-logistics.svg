@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
+  <defs>
+    <linearGradient id="bg3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4338ca"/>
+      <stop offset="100%" style="stop-color:#8b5cf6"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#bg3)"/>
+  <path d="M100 300 Q200 200 300 300 T500 300 T700 300" stroke="white" stroke-width="3" fill="none" opacity="0.3"/>
+  <circle cx="200" cy="280" r="40" fill="white" opacity="0.3"/>
+  <circle cx="400" cy="320" r="50" fill="white" opacity="0.35"/>
+  <circle cx="600" cy="270" r="35" fill="white" opacity="0.3"/>
+  <rect x="180" y="260" width="40" height="40" rx="5" fill="white" opacity="0.6"/>
+  <rect x="380" y="295" width="40" height="50" rx="5" fill="white" opacity="0.7"/>
+  <rect x="585" y="250" width="30" height="40" rx="5" fill="white" opacity="0.6"/>
+  <text x="400" y="480" font-family="Arial" font-size="24" font-weight="bold" fill="white" text-anchor="middle">Global Logistics</text>
+  <text x="400" y="520" font-family="Arial" font-size="16" fill="white" text-anchor="middle" opacity="0.8">FableTech Group</text>
+</svg>
