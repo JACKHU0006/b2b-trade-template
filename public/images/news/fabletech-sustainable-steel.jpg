@@ -1,9 +1,26 @@
-<svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
-  <rect width="800" height="600" fill="#e2e8f0"/>
-  <rect x="100" y="100" width="600" height="400" rx="20" fill="#38a169"/>
-  <rect x="150" y="150" width="200" height="150" rx="10" fill="#48bb78"/>
-  <rect x="380" y="150" width="270" height="150" rx="10" fill="#68d391"/>
-  <rect x="150" y="330" width="500" height="120" rx="10" fill="#9ae6b4"/>
-  <text x="400" y="520" font-family="Arial" font-size="20" fill="#22543d" text-anchor="middle">Sustainable Steel Products</text>
-  <text x="400" y="550" font-family="Arial" font-size="18" fill="#276749" text-anchor="middle">FableTech New Products</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
+  <defs>
+    <linearGradient id="sustainGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#059669"/>
+      <stop offset="50%" style="stop-color:#10b981"/>
+      <stop offset="100%" style="stop-color:#059669"/>
+    </linearGradient>
+    <linearGradient id="sustainShine" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#d1fae5"/>
+      <stop offset="50%" style="stop-color:#6ee7b7"/>
+      <stop offset="100%" style="stop-color:#34d399"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#sustainGrad)"/>
+  
+  <path d="M200,300 Q300,150 400,300 T600,300" stroke="url(#sustainShine)" stroke-width="8" fill="none" opacity="0.4"/>
+  <circle cx="400" cy="300" r="80" fill="url(#sustainShine)" opacity="0.2"/>
+  
+  <path d="M360,260 L400,300 L360,340 L400,300 L440,260 L400,300 L440,340" stroke="white" stroke-width="3" fill="none" opacity="0.6"/>
+  
+  <rect x="350" y="360" width="100" height="40" rx="5" fill="white" opacity="0.3"/>
+  
+  <text x="400" y="480" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="white" text-anchor="middle">Sustainable Steel</text>
+  <text x="400" y="520" font-family="Arial, sans-serif" font-size="18" fill="#d1fae5" text-anchor="middle">100% Recycled Materials</text>
+  <text x="400" y="550" font-family="Arial, sans-serif" font-size="14" fill="#d1fae5" text-anchor="middle" opacity="0.8">FableTech Group</text>
 </svg>

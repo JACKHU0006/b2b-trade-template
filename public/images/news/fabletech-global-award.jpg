@@ -1,7 +1,28 @@
-<svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
-  <rect width="800" height="600" fill="#e2e8f0"/>
-  <circle cx="400" cy="250" r="180" fill="#ecc94b" opacity="0.8"/>
-  <polygon points="400,150 420,200 480,200 430,235 450,290 400,250 350,290 370,235 320,200 380,200" fill="#d69e2e"/>
-  <text x="400" y="470" font-family="Arial" font-size="24" fill="#744210" text-anchor="middle">Global Supplier</text>
-  <text x="400" y="510" font-family="Arial" font-size="24" fill="#744210" text-anchor="middle">Excellence Award</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
+  <defs>
+    <linearGradient id="globalGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#b45309"/>
+      <stop offset="50%" style="stop-color:#d97706"/>
+      <stop offset="100%" style="stop-color:#b45309"/>
+    </linearGradient>
+    <linearGradient id="globalShine" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#fef3c7"/>
+      <stop offset="50%" style="stop-color:#fbbf24"/>
+      <stop offset="100%" style="stop-color:#f59e0b"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#globalGrad)"/>
+  
+  <circle cx="400" cy="280" r="120" fill="url(#globalShine)" opacity="0.1"/>
+  
+  <path d="M250,280 Q300,200 400,220 Q500,240 550,280 Q500,320 400,340 Q300,360 250,280" fill="none" stroke="url(#globalShine)" stroke-width="3" opacity="0.5"/>
+  
+  <circle cx="400" cy="280" r="25" fill="url(#globalShine)" opacity="0.4"/>
+  
+  <rect x="350" y="380" width="100" height="50" rx="8" fill="url(#globalShine)" opacity="0.3"/>
+  
+  <text x="400" y="415" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#b45309" text-anchor="middle">TOP 5 GLOBAL</text>
+  
+  <text x="400" y="490" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="white" text-anchor="middle">Global Excellence Award</text>
+  <text x="400" y="530" font-family="Arial, sans-serif" font-size="14" fill="#fef3c7" text-anchor="middle" opacity="0.8">FableTech Group</text>
 </svg>

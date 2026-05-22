@@ -1,8 +1,30 @@
-<svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
-  <rect width="800" height="600" fill="#e2e8f0"/>
-  <rect x="100" y="80" width="600" height="440" rx="20" fill="#805ad5"/>
-  <text x="400" y="250" font-family="Arial" font-size="48" fill="#ffffff" text-anchor="middle">HANNOVER</text>
-  <text x="400" y="310" font-family="Arial" font-size="36" fill="#d6bcfa" text-anchor="middle">MESSE 2024</text>
-  <rect x="250" y="380" width="300" height="80" rx="10" fill="#9f7aea"/>
-  <text x="400" y="430" font-family="Arial" font-size="20" fill="#ffffff" text-anchor="middle">FableTech Booth</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
+  <defs>
+    <linearGradient id="hannoverGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#dc2626"/>
+      <stop offset="50%" style="stop-color:#ef4444"/>
+      <stop offset="100%" style="stop-color:#dc2626"/>
+    </linearGradient>
+    <linearGradient id="hannoverShine" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#fee2e2"/>
+      <stop offset="50%" style="stop-color:#fca5a5"/>
+      <stop offset="100%" style="stop-color:#f87171"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#hannoverGrad)"/>
+  
+  <rect x="250" y="200" width="300" height="200" rx="10" fill="url(#hannoverShine)" opacity="0.1"/>
+  
+  <rect x="280" y="230" width="240" height="140" rx="8" fill="white" opacity="0.15"/>
+  
+  <rect x="300" y="260" width="80" height="60" rx="5" fill="url(#hannoverShine)" opacity="0.3"/>
+  <rect x="420" y="260" width="80" height="60" rx="5" fill="url(#hannoverShine)" opacity="0.3"/>
+  <rect x="300" y="340" width="200" height="30" rx="5" fill="url(#hannoverShine)" opacity="0.25"/>
+  
+  <circle cx="340" cy="290" r="15" fill="url(#hannoverShine)" opacity="0.5"/>
+  <circle cx="460" cy="290" r="15" fill="url(#hannoverShine)" opacity="0.5"/>
+  
+  <text x="400" y="480" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="white" text-anchor="middle">Hannover Messe 2024</text>
+  <text x="400" y="520" font-family="Arial, sans-serif" font-size="20" fill="#fee2e2" text-anchor="middle">World Leading Trade Fair</text>
+  <text x="400" y="550" font-family="Arial, sans-serif" font-size="14" fill="#fee2e2" text-anchor="middle" opacity="0.8">FableTech Group</text>
 </svg>

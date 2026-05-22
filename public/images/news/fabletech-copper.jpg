@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
+  <defs>
+    <linearGradient id="copperGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#b45309"/>
+      <stop offset="50%" style="stop-color:#d97706"/>
+      <stop offset="100%" style="stop-color:#b45309"/>
+    </linearGradient>
+    <linearGradient id="copperShine" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#fef3c7"/>
+      <stop offset="50%" style="stop-color:#f59e0b"/>
+      <stop offset="100%" style="stop-color:#d97706"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#copperGrad)"/>
+  
+  <circle cx="400" cy="300" r="150" fill="url(#copperShine)" opacity="0.2"/>
+  <circle cx="400" cy="300" r="100" fill="url(#copperShine)" opacity="0.15"/>
+  
+  <rect x="200" y="250" width="80" height="100" fill="url(#copperShine)" opacity="0.4"/>
+  <rect x="300" y="230" width="80" height="140" fill="url(#copperShine)" opacity="0.35"/>
+  <rect x="400" y="240" width="80" height="120" fill="url(#copperShine)" opacity="0.4"/>
+  <rect x="500" y="250" width="80" height="100" fill="url(#copperShine)" opacity="0.35"/>
+  <rect x="600" y="260" width="80" height="80" fill="url(#copperShine)" opacity="0.3"/>
+  
+  <text x="400" y="520" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="white" text-anchor="middle">Copper Excellence</text>
+  <text x="400" y="560" font-family="Arial, sans-serif" font-size="18" fill="#fef3c7" text-anchor="middle">FableTech Group</text>
+</svg>

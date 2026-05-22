@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
+  <defs>
+    <linearGradient id="titaniumGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f172a"/>
+      <stop offset="50%" style="stop-color:#1e293b"/>
+      <stop offset="100%" style="stop-color:#0f172a"/>
+    </linearGradient>
+    <linearGradient id="titaniumShine" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#e2e8f0"/>
+      <stop offset="50%" style="stop-color:#94a3b8"/>
+      <stop offset="100%" style="stop-color:#475569"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#titaniumGrad)"/>
+  
+  <path d="M200,300 L300,200 L500,200 L600,300 L500,400 L300,400 Z" fill="url(#titaniumShine)" opacity="0.2"/>
+  <path d="M250,300 L330,230 L470,230 L550,300 L470,370 L330,370 Z" fill="url(#titaniumShine)" opacity="0.15"/>
+  
+  <circle cx="400" cy="300" r="40" fill="url(#titaniumShine)" opacity="0.3"/>
+  <circle cx="400" cy="300" r="25" fill="url(#titaniumShine)" opacity="0.2"/>
+  
+  <text x="400" y="520" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="white" text-anchor="middle">Titanium Innovation</text>
+  <text x="400" y="560" font-family="Arial, sans-serif" font-size="18" fill="#cbd5e1" text-anchor="middle">FableTech Group</text>
+</svg>

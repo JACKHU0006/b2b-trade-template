@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
+  <defs>
+    <linearGradient id="safetyGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#b45309"/>
+      <stop offset="50%" style="stop-color:#d97706"/>
+      <stop offset="100%" style="stop-color:#b45309"/>
+    </linearGradient>
+    <linearGradient id="safetyShine" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#fef3c7"/>
+      <stop offset="50%" style="stop-color:#fbbf24"/>
+      <stop offset="100%" style="stop-color:#f59e0b"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#safetyGrad)"/>
+  
+  <circle cx="400" cy="280" r="100" fill="url(#safetyShine)" opacity="0.2"/>
+  
+  <path d="M360,240 L400,180 L440,240 L440,320 L400,380 L360,320 Z" fill="url(#safetyShine)" opacity="0.5"/>
+  
+  <circle cx="400" cy="280" r="25" fill="url(#safetyShine)" opacity="0.7"/>
+  
+  <text x="400" y="460" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="white" text-anchor="middle">Safety First</text>
+  <text x="400" y="500" font-family="Arial, sans-serif" font-size="20" fill="#fef3c7" text-anchor="middle">ISO 45001 Certified</text>
+  <text x="400" y="530" font-family="Arial, sans-serif" font-size="14" fill="#fef3c7" text-anchor="middle" opacity="0.8">FableTech Group</text>
+</svg>

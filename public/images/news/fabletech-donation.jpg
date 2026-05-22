@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
+  <defs>
+    <linearGradient id="donationGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#dc2626"/>
+      <stop offset="50%" style="stop-color:#ef4444"/>
+      <stop offset="100%" style="stop-color:#dc2626"/>
+    </linearGradient>
+    <linearGradient id="donationShine" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#fee2e2"/>
+      <stop offset="50%" style="stop-color:#fca5a5"/>
+      <stop offset="100%" style="stop-color:#f87171"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#donationGrad)"/>
+  
+  <path d="M300,300 L350,250 L500,380 L350,400 Z" fill="url(#donationShine)" opacity="0.3"/>
+  
+  <rect x="300" y="200" width="200" height="80" rx="10" fill="url(#donationShine)" opacity="0.2"/>
+  
+  <text x="400" y="245" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="white" text-anchor="middle">COVID-19 Relief</text>
+  
+  <text x="400" y="480" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="white" text-anchor="middle">Community Support</text>
+  <text x="400" y="520" font-family="Arial, sans-serif" font-size="20" fill="#fee2e2" text-anchor="middle">Humanitarian Donation</text>
+  <text x="400" y="550" font-family="Arial, sans-serif" font-size="14" fill="#fee2e2" text-anchor="middle" opacity="0.8">FableTech Group</text>
+</svg>

@@ -1,7 +1,25 @@
-<svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
-  <rect width="800" height="600" fill="#e2e8f0"/>
-  <circle cx="400" cy="250" r="150" fill="#ecc94b" opacity="0.8"/>
-  <polygon points="400,150 420,200 480,200 430,235 450,290 400,250 350,290 370,235 320,200 380,200" fill="#d69e2e"/>
-  <text x="400" y="500" font-family="Arial" font-size="24" fill="#744210" text-anchor="middle">Industry Excellence Awards</text>
-  <text x="400" y="540" font-family="Arial" font-size="18" fill="#975a16" text-anchor="middle">FableTech Recognition</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
+  <defs>
+    <linearGradient id="awardGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#b45309"/>
+      <stop offset="50%" style="stop-color:#d97706"/>
+      <stop offset="100%" style="stop-color:#b45309"/>
+    </linearGradient>
+    <linearGradient id="awardShine" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#fef3c7"/>
+      <stop offset="50%" style="stop-color:#fbbf24"/>
+      <stop offset="100%" style="stop-color:#f59e0b"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#awardGrad)"/>
+  
+  <circle cx="400" cy="300" r="120" fill="url(#awardShine)" opacity="0.15"/>
+  <circle cx="400" cy="300" r="80" fill="url(#awardShine)" opacity="0.1"/>
+  
+  <polygon points="400,160 430,260 530,260 450,320 470,420 400,360 330,420 350,320 270,260 370,260" fill="url(#awardShine)" opacity="0.4"/>
+  
+  <circle cx="400" cy="300" r="20" fill="url(#awardShine)" opacity="0.6"/>
+  
+  <text x="400" y="520" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="white" text-anchor="middle">Industry Awards</text>
+  <text x="400" y="560" font-family="Arial, sans-serif" font-size="18" fill="#fef3c7" text-anchor="middle">FableTech Group</text>
 </svg>

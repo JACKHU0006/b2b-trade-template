@@ -1,10 +1,26 @@
-<svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
-  <rect width="800" height="600" fill="#e2e8f0"/>
-  <rect x="100" y="100" width="600" height="400" rx="20" fill="#805ad5"/>
-  <rect x="150" y="150" width="200" height="150" rx="10" fill="#9f7aea"/>
-  <circle cx="400" cy="225" r="70" fill="#b794f4"/>
-  <text x="400" y="220" font-family="Arial" font-size="24" fill="#ffffff" text-anchor="middle">AI</text>
-  <text x="400" y="250" font-family="Arial" font-size="14" fill="#ffffff" text-anchor="middle">Quality</text>
-  <rect x="150" y="330" width="500" height="120" rx="10" fill="#d6bcfa"/>
-  <text x="400" y="400" font-family="Arial" font-size="20" fill="#553c9a" text-anchor="middle">99.8% Accuracy</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
+  <defs>
+    <linearGradient id="aiGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#7c3aed"/>
+      <stop offset="50%" style="stop-color:#a855f7"/>
+      <stop offset="100%" style="stop-color:#7c3aed"/>
+    </linearGradient>
+    <linearGradient id="aiShine" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f5f3ff"/>
+      <stop offset="50%" style="stop-color:#e9d5ff"/>
+      <stop offset="100%" style="stop-color:#d8b4fe"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#aiGrad)"/>
+  
+  <circle cx="400" cy="280" r="80" fill="url(#aiShine)" opacity="0.2"/>
+  
+  <circle cx="400" cy="280" r="40" fill="url(#aiShine)" opacity="0.3"/>
+  
+  <path d="M380,250 L420,250 L420,290 L380,290 Z" fill="white" opacity="0.6"/>
+  <circle cx="400" cy="330" r="15" fill="white" opacity="0.5"/>
+  
+  <text x="400" y="400" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="white" text-anchor="middle">AI Quality Control</text>
+  <text x="400" y="440" font-family="Arial, sans-serif" font-size="32" font-weight="bold" fill="#f5f3ff" text-anchor="middle">99.8% Accuracy</text>
+  <text x="400" y="480" font-family="Arial, sans-serif" font-size="14" fill="#f5f3ff" text-anchor="middle" opacity="0.8">FableTech Group</text>
 </svg>
