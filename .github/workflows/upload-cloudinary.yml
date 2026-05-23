@@ -1,0 +1,34 @@
+name: Upload Images to Cloudinary
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'public/images/**'
+      - '.github/workflows/upload-cloudinary.yml'
+
+  workflow_dispatch:
+
+jobs:
+  upload:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Upload images to Cloudinary
+        uses: cloudinary-community/cloudinary-upload-action@v0.0.4
+        with:
+          cloud_name: ${{ secrets.CLOUDINARY_CLOUD_NAME }}
+          api_key: ${{ secrets.CLOUDINARY_API_KEY }}
+          api_secret: ${{ secrets.CLOUDINARY_API_SECRET }}
+          folder: fabletech/images
+          image_path: public/images/
+          overwrite: true
+
+      - name: Output CDN URLs
+        run: |
+          echo "✅ Images uploaded to Cloudinary!"
+          echo "Base URL: https://res.cloudinary.com/${{ secrets.CLOUDINARY_CLOUD_NAME }}/image/upload"

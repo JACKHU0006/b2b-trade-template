@@ -1,20 +1,48 @@
 /**
- * Image CDN URL Builder
- * Automatically uses R2 CDN URL in production, local path in development
+ * Image CDN URL Builder for Cloudinary
+ * Automatically uses Cloudinary CDN URL in production, local path in development
  */
 
-const CDN_BASE_URL = import.meta.env.PUBLIC_CDN_URL || '';
+const CLOUDINARY_CLOUD_NAME = import.meta.env.PUBLIC_CLOUDINARY_CLOUD_NAME || '';
+const CDN_BASE_URL = CLOUDINARY_CLOUD_NAME 
+  ? `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload`
+  : '';
 
-export function getImageUrl(path: string): string {
-  // In production with CDN
+export function getImageUrl(path: string, options?: { 
+  width?: number; 
+  height?: number;
+  format?: string;
+  quality?: string;
+}): string {
+  // Remove leading slash for Cloudinary
+  const cleanPath = path.replace(/^\//, '');
+  
+  // In production with Cloudinary
   if (CDN_BASE_URL && import.meta.env.PROD) {
-    return `${CDN_BASE_URL}${path}`;
+    const transformations: string[] = [];
+    
+    if (options?.width) transformations.push(`w_${options.width}`);
+    if (options?.height) transformations.push(`h_${options.height}`);
+    if (options?.format) transformations.push(`f_${options.format}`);
+    if (options?.quality) transformations.push(`q_${options.quality}`);
+    
+    const transform = transformations.length > 0 ? `${transformations.join(',')}/` : '';
+    return `${CDN_BASE_URL}/${transform}${cleanPath}`;
   }
+  
   // Fallback to local path
   return path;
 }
 
-// Pre-configured image paths
+export function getOptimizedImageUrl(path: string, width?: number): string {
+  return getImageUrl(path, { 
+    width, 
+    format: 'auto',
+    quality: 'auto' 
+  });
+}
+
+// Pre-configured image paths (local paths, will be converted to Cloudinary URLs in production)
 export const imagePaths = {
   news: {
     factory: '/images/news/fabletech-factory.jpg',
