@@ -1,43 +1,32 @@
-# Image Management Guide
+# Cloudinary 图片存储配置
 
-## Image Formats
-- **SVG**: Preferred format for diagrams, logos, and vector graphics
-- **PNG/JPG**: For photographs and complex images
+## 使用方法
 
-## Directory Structure
+### 第一步：手动上传图片到 Cloudinary
+
+1. 打开 [Cloudinary Media Library](https://cloudinary.com/console/media_library)
+2. 点击 **Upload** 按钮
+3. 选择 `public/images/` 下的所有图片文件夹拖入或选择上传
+4. 上传后在 `publicId 会在 Cloudinary 中
+
+### 第二步：复制 Cloudinary URL 使用方法
+
 ```
-public/
-├── images/
-│   ├── news/          # News article images
-│   ├── products/      # Product images
-│   └── about/         # About page images
-├── og-image.jpg       # Open Graph social media image
-└── favicon.svg        # Website favicon
+https://res.cloudinary.com/dynyhyfbe/image/upload/fabletech/images/xxx.jpg
+
+或者直接使用 GitHub Pages 中的图片
+
+### 当前图片访问方式
+
+方式一：直接使用 GitHub Pages（推荐，最简单）
+
+继续使用原来的 `/images/xxx.jpg` 路径，GitHub Pages 会自动处理
+
+方式二：手动使用 Cloudinary CDN
+
+```typescript
+import { getImageUrl } from './utils/images';
+
+// 工具函数会根据环境自动使用 CDN 或本地路径
+const url = getImageUrl('/images/news/fabletech-factory.jpg');
 ```
-
-## Image Naming Convention
-- Use lowercase letters and hyphens
-- Format: `category-description.svg`
-- Examples: `news-factory.svg`, `products-steel-pipe.svg`
-
-## Updating Images
-
-### 1. Adding News Images
-1. Place SVG file in `public/images/news/`
-2. Update reference in `src/data/news.ts`
-
-### 2. Adding Product Images
-1. Place SVG file in `public/images/products/`
-2. Update reference in `src/data/products.ts`
-
-### 3. Replacing Placeholder Images
-To replace a placeholder with a real photo:
-1. Save new image in the appropriate directory
-2. Update the file extension in data files (e.g., .svg → .jpg)
-3. Verify the image loads correctly
-
-## Creating Good Placeholder SVGs
-- Use company brand colors (primary, secondary)
-- Include "FableTech Group" text
-- Keep aspect ratio consistent (4:3 recommended)
-- Use clear, simple designs

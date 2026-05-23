@@ -43,28 +43,42 @@ jobs:
             api_secret: process.env.CLOUDINARY_API_SECRET
           });
           
+          function getAllFiles(dir, fileList = []) {
+            const files = fs.readdirSync(dir);
+            for (const file of files) {
+              const filePath = path.join(dir, file);
+              const stat = fs.lstatSync(filePath);
+              if (stat.isDirectory()) {
+                getAllFiles(filePath, fileList);
+              } else {
+                fileList.push(filePath);
+              }
+            }
+            return fileList;
+          }
+          
           async function uploadImages() {
             const baseDir = 'public/images';
-            const files = fs.readdirSync(baseDir, { recursive: true });
+            const allFiles = getAllFiles(baseDir);
+            const imageExtensions = ['.jpg', '.jpeg', '.png', '.svg', '.webp', '.gif'];
             
-            for (const file of files) {
-              if (fs.lstatSync(path.join(baseDir, file)).isFile() && 
-                  !file.startsWith('.') && 
-                  /\.(jpg|jpeg|png|svg|webp|gif)$/i.test(file)) {
-                const filePath = path.join(baseDir, file);
-                const publicId = `fabletech/${file.replace(/\\/g, '/').replace(/^public\//, '')}`;
-                
-                try {
-                  console.log(`Uploading: ${file}`);
-                  await cloudinary.uploader.upload(filePath, {
-                    public_id: publicId,
-                    overwrite: true,
-                    invalidate: true
-                  });
-                  console.log(`✅ Uploaded: ${file}`);
-                } catch (error) {
-                  console.error(`❌ Failed: ${file}`, error.message);
-                }
+            for (const file of allFiles) {
+              const ext = path.extname(file).toLowerCase();
+              if (!imageExtensions.includes(ext)) continue;
+              
+              const relativePath = file.replace(/^public\//, '');
+              const publicId = `fabletech/${relativePath}`;
+              
+              try {
+                console.log(`Uploading: ${relativePath}`);
+                await cloudinary.uploader.upload(file, {
+                  public_id: publicId,
+                  overwrite: true,
+                  invalidate: true
+                });
+                console.log(`✅ Uploaded: ${relativePath}`);
+              } catch (error) {
+                console.error(`❌ Failed: ${relativePath}`, error.message);
               }
             }
             
